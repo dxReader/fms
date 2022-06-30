@@ -1,0 +1,612 @@
+.costburden {
+    position: relative;
+
+    .costburden-left {
+        width: 426px;
+        height: 872px;
+        margin: 0 20px;
+        padding-left: 0;
+        padding-right: 0;
+
+        .left-content {
+            .box {
+                position: relative;
+                padding-left: 20px;
+
+                .chart {
+                    height: 260px;
+                    z-index: 1;
+                }
+            }
+
+            .line-bar {
+                .chart {
+                    height: 540px;
+                    margin-top: 6px;
+                    padding-bottom: 5px;
+                    overflow: hidden;
+
+                    .rankList {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .search {
+        position: absolute;
+        height: 50px;
+        width: 986px;
+
+        .list {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            max-height: 100%;
+
+            .det {
+                margin-bottom: 20px;
+                // font-weight: bold;
+
+                @include themify($themes) {
+                    color: themed("key-word-color");
+                }
+
+                .typeIcon {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-top: 4px;
+                }
+
+                .category {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-right: 10px;
+                }
+
+                .content {
+                    display: inline-block;
+                    margin-right: 64px;
+
+                    .names {
+                        position: relative;
+                        margin-bottom: 12px;
+
+                        .name {
+                            line-height: 12px;
+                            margin-right: 10px;
+                        }
+
+                        .close {
+                            position: absolute;
+                            cursor: pointer;
+                            width: 11px;
+                            height: 11px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .costburden-center {
+        width: 986px;
+        height: 872px;
+        margin-top: 0;
+        position: relative;
+
+        .center-content {
+            position: relative;
+            top: 38px;
+
+            .search {
+                position: absolute;
+                height: 50px;
+                width: 986px;
+
+                .list {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    max-height: 100%;
+
+                    .det {
+                        font-size: 18px;
+                        margin-bottom: 20px;
+
+                        .typeIcon {
+                            display: inline-block;
+                            font-size: 12px;
+                            vertical-align: top;
+                            margin-top: 4px;
+                        }
+
+                        .category {
+                            display: inline-block;
+                            vertical-align: top;
+                            margin-right: 10px;
+
+                            @include themify($themes) {
+                                color: themed("develop-main-color");
+                            }
+                        }
+
+                        .content {
+                            display: inline-block;
+                            margin-right: 64px;
+
+                            .names {
+                                position: relative;
+                                margin-bottom: 12px;
+
+                                .name {
+                                    line-height: 12px;
+                                    margin-right: 10px;
+                                }
+
+                                .close {
+                                    width: 11px;
+                                    height: 11px;
+                                    position: absolute;
+                                    top: 3px;
+                                    right: -6px;
+                                    cursor: pointer;
+                                    font-size: 12px;
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .menu-title {
+                font-size: 18px;
+                position: absolute;
+                top: 10px;
+
+                @include themify($themes) {
+                    color: themed("key-word-color");
+                }
+
+                p {
+                    line-height: 30px;
+                }
+
+                .name {
+                    margin-right: 20px;
+                }
+
+                .num {
+                    font-size: 22px;
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+
+                .unit {
+                    font-size: 16px;
+                }
+            }
+
+            .mjz-top-menu {
+                width: 980px;
+                height: 430px;
+                margin-bottom: 20px;
+                position: relative;
+                top: 30px;
+
+                .menu-content {
+                    padding-top: 4px;
+
+                    #treeChart {
+                        width: 980px;
+                        height: 460px;
+                    }
+                }
+            }
+
+            .zy-top-menu {
+                width: 550px;
+                height: 330px;
+                position: relative;
+                top: 30px;
+
+                .menu-content {
+                    margin-top: 24px;
+
+                    #time-trend {
+                        width: 550px;
+                        height: 320px;
+                    }
+                }
+            }
+
+            .analysisChart {
+                width: 986px;
+                height: 346px;
+                position: relative;
+                top: 30px;
+
+                .tabTitle {
+                    height: 56px;
+                    line-height: 56px;
+
+                    ul {
+                        li {
+                            @include themify($themes) {
+                                color: rgba(themed("normal-word-color"), 0.5);
+                            }
+
+                            .detail {
+                                width: 40px;
+                                text-align: right;
+                                padding-right: 12px;
+                                cursor: pointer;
+
+                                .iconfont {
+                                    position: relative;
+                                    z-index: 1;
+                                    color: #fff;
+                                    border-radius: 2px;
+                                    opacity: 0.6;
+
+                                    @include themify($themes) {
+                                        background: themed("question-mark");
+                                    }
+                                }
+                            }
+
+                            .title {
+                                margin-right: 22px;
+                                cursor: pointer;
+                            }
+
+                            .is-active {
+                                opacity: 1;
+
+                                @include themify($themes) {
+                                    color: themed("key-word-color");
+                                }
+
+                                .iconfont {
+                                    opacity: 1;
+                                }
+                            }
+
+                            .el-tooltip {
+                                height: 20px;
+                            }
+                        }
+
+                        li:last-child {
+                            .divider {
+                                background: transparent;
+                            }
+                        }
+                    }
+                }
+
+                .lineBox {
+                    width: 966px;
+                    height: 282px;
+
+                    #LineChart {
+                        width: 950px !important;
+                        height: 250px;
+                    }
+                }
+            }
+        }
+
+        .center-content1 {
+            height: 832px;
+        }
+
+        .center-content2 {
+            height: 397px;
+            width: 582px;
+
+            .zy-center-top {
+                height: 397px;
+            }
+        }
+    }
+
+    .costburden-center2 {
+        width: 582px;
+
+        .zy-center-bottom {
+            width: 582px;
+            height: 417px;
+            margin-top: 20px;
+
+            .classTitle {
+                font-size: 16px;
+                padding-bottom: 20px;
+            }
+
+            .gl-noData {
+                position: absolute;
+                top: 0;
+                text-align: center;
+                width: 100%;
+            }
+
+            .chart {
+                height: 352px;
+            }
+        }
+    }
+
+    .mjz-costburden-right {
+        width: 426px;
+        height: 850px;
+        margin: 0 20px;
+
+        .right-content {
+            .box {
+                position: relative;
+
+                .classTitle {
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .line-bar {
+                .chart {
+                    height: 780px;
+                    margin-top: 6px;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        .right-top {
+            width: 426px;
+            height: 397px;
+
+            .classTitle {
+                font-size: 16px;
+                padding-bottom: 20px;
+            }
+
+            #pieChart1 {
+                width: 366px;
+                height: 309px;
+                // padding: 0 30px;
+            }
+
+            .gl-noData {
+                position: absolute;
+                top: 0;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+
+    .mjz-costburden-right {
+        margin-top: 38px;
+        height: 832px;
+    }
+
+    .zy-costburden-right {
+        width: 832px;
+        height: 800px;
+        margin: 38px 20px 0 20px;
+        border: none;
+
+        .zy-right-left {
+            width: 405px;
+            height: 397px;
+            margin-right: 20px;
+        }
+
+        .zy-right-right {
+            width: 405px;
+            height: 397px;
+
+            .content {
+                box-sizing: border-box;
+
+                #myBar {
+                    width: 385px;
+                    height: 350px;
+                }
+            }
+        }
+
+        .zy-right-bottom {
+            width: 830px;
+            height: 417px;
+            margin-top: 20px;
+            position: relative;
+
+            .content {
+                box-sizing: border-box;
+
+                #myBar {
+                    width: 450px;
+                    height: 360px;
+                }
+            }
+
+            .line-box {
+                position: absolute;
+
+                @include themify($themes) {
+                    border: 1px dotted themed("costburden-line-color");
+                    border-bottom: none;
+                }
+            }
+
+            .line-box1 {
+                width: 394px;
+                height: 15px;
+                top: 65px;
+                left: 50%;
+                margin-left: -158px;
+            }
+
+            .line-box2 {
+                width: 1px;
+                height: 48px;
+                top: 154px;
+                left: 254px;
+
+                @include themify($themes) {
+                    border: none;
+                    border-left: 1px dotted themed("costburden-line-color");
+                }
+            }
+
+            .line-box3 {
+                width: 316px;
+                height: 22px;
+                margin-left: -95px;
+                top: 178px;
+                left: 194px;
+            }
+
+            .line-box4 {
+                width: 1px;
+                height: 20px;
+                top: 274px;
+                left: 254px;
+
+                @include themify($themes) {
+                    border: none;
+                    border-left: 1px dotted themed("costburden-line-color");
+                }
+            }
+
+            .line-box5 {
+                width: 176px;
+                height: 20px;
+                margin-left: -95px;
+                top: 294px;
+                left: 262px;
+            }
+
+            .line-box6 {
+                width: 1px;
+                height: 23px;
+                top: 154px;
+                right: 174px;
+
+                @include themify($themes) {
+                    border: none;
+                    border-left: 1px dotted themed("costburden-line-color");
+                }
+            }
+
+            .line-box7 {
+                width: 176px;
+                height: 22px;
+                margin-left: -95px;
+                top: 178px;
+                right: 86px;
+            }
+
+            .con-box {
+                width: 170px;
+                height: 72px;
+                border-radius: 10px;
+                position: absolute;
+
+                @include themify($themes) {
+                    border: 1px solid themed("costburden-line-color");
+                }
+
+                p {
+                    text-align: center;
+                    margin-top: 8px;
+
+                    .name {
+                        font-size: 16px;
+                    }
+
+                    .value {
+                        font-size: 20px;
+
+                        @include themify($themes) {
+                            color: themed("main-color");
+                        }
+                    }
+
+                    .unit {
+                        @include themify($themes) {
+                            color: themed("main-color");
+                        }
+                    }
+                }
+            }
+
+            .con-box0 {
+                top: 80px;
+                left: 170px;
+
+                .item-box0 {
+                    top: 120px;
+                    left: -146px;
+                }
+
+                .item-box1 {
+                    top: 120px;
+                    left: 10px;
+                }
+
+                .item-box2 {
+                    top: 120px;
+                    left: 170px;
+                }
+
+                .item-box10 {
+                    top: 114px;
+                    left: -90px;
+                }
+
+                .item-box11 {
+                    top: 114px;
+                    left: 90px;
+                }
+            }
+
+            .con-box1 {
+                top: 80px;
+                left: 564px;
+                
+                .item-box0 {
+                    top: 120px;
+                    left: -64px;
+                }
+
+                .item-box1 {
+                    top: 120px;
+                    left: 95px;
+                }
+            }
+
+            .item-box {
+                width: 146px;
+
+                p {
+
+                    .value,
+                    .unit {
+                        @include themify($themes) {
+                            color: themed("normal-word-color");
+                        }
+                    }
+                }
+            }
+        }
+
+        .chart {
+            height: 352px;
+        }
+    }
+}

@@ -1,0 +1,382 @@
+.present {
+    position: relative;
+    width: 100%;
+    padding: 15px 0;
+    .el-col-4 {
+        width: 382px;
+        height: 100%;
+        margin: 0 15px;
+        position: relative;
+    }
+    .el-col-16 {
+        width: calc(100% - 824px);
+        height: 100%;
+        position: relative;
+        @include themify($themes) {
+            background-color: rgba(themed("box-bg"), 0.13);
+        }
+        .all {
+            height: 935px;
+        }
+        .project {
+            .el-tabs {
+                height: 100%;
+            }
+            .el-tabs__header {
+                padding: 20px 0;
+                height: 18px;
+                .el-tabs__nav-wrap,
+                .el-tabs__nav-scroll {
+                    overflow: inherit;
+                    &::after {
+                        display: none;
+                    }
+                }
+                .el-tabs__item {
+                    font-size: inherit;
+                    @include themify($themes) {
+                        color: themed("normal-word-color");
+                        font-weight: themed("tab-font");
+                    }
+                    opacity: 0.7;
+                    height: 100%;
+                    line-height: 18px;
+                }
+                .el-tabs__item.is-active {
+                    font-size: inherit;
+                    @include themify($themes) {
+                        color: themed("indicatords-menu-active-color");
+                        font-weight: bold;
+                    }
+                    opacity: 1;
+                }
+                .el-tabs__active-bar {
+                    height: 10px;
+                    @include themify($themes) {
+                        background: themed("indicatords-menu-bar-bg");
+                        bottom: themed("indicatords-menu-bar-bottom");
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+            .el-tabs__content {
+                margin: 10px auto 0;
+                width: 946px;
+                min-height: 840px;
+                max-height: 880px;
+            }
+        }
+    }
+    .congestion {
+        padding: 22px 0;
+        height: 890px;
+        .mar-title {
+            position: relative;
+            font-size: 18px;
+            padding: 0 0 10px 15px;
+            @include themify($themes) {
+                color: themed("key-word-color");
+            }
+            z-index: 2;
+        }
+        #congestion {
+            width: 100%;
+            height: 890px;
+            .iconjiancha-dengdai {
+                // background-color: rgba(182, 144, 247, 0.1);
+                @include themify($themes) {
+                    background-color: rgba(themed("main-color"), .05);
+                }
+            }
+            .detail {
+                display: inherit;
+                padding: 8px 0 8px 20px;
+                & > i {
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 18px;
+                    border-radius: 4px;
+                    text-align: center;
+                }
+                .name {
+                    position: relative;
+                    left: 16px;
+                    line-height: 30px;
+                    font-size: 18px;
+                    @include themify($themes) {
+                        color: themed("key-word-color");
+                    }
+                    font-weight: normal;
+                }
+                .record {
+                    position: relative;
+                    top: 4px;
+                    left: 46px;
+                    width: 280px;
+                    padding-bottom: 5px;
+                    line-height: 24px;
+                    font-size: 16px;
+                    b {
+                        @include themify($themes) {
+                            color: themed("main-color");
+                        }
+                        margin: 0 4px;
+                    }
+                }
+            }
+        }
+    }
+    .misce {
+        position: relative;
+        .weather {
+            position: relative;
+            height: 105px;
+            width: 240px;
+            .icon {
+                display: inline-block;
+                position: relative;
+                width: 67px;
+                height: 71px;
+                top: 7px;
+                left: 16px;
+                @include themify($themes) {
+                    background-image: url('#{themed("bg-url")}/jrdt_icon_weather.png');
+                    background-size: 100% 100%;
+                }
+            }
+            .broadcast {
+                position: absolute;
+                left: 100px;
+                top: 0;
+                right: 10px;
+                height: 100%;
+                span {
+                    display: inline-block;
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                }
+            }
+        }
+        .Birthday {
+            position: absolute;
+            top: 0;
+            left: 254px;
+            width: 128px;
+            height: 105px;
+            text-align: center;
+            #marquee2 {
+                height: 40px;
+            }
+            &::after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                width: 100%;
+                height: 20px;
+                @include themify($themes) {
+                    border-bottom: 20px solid
+                        rgba(themed("layout-bg-color"), 0.5);
+                }
+            }
+            .icon {
+                display: inline-block;
+                width: 62px;
+                height: 46px;
+                margin-top: 12px;
+                @include themify($themes) {
+                    background-image: url('#{themed("bg-url")}/jrdt_icon_Birthday.png');
+                    background-size: 100% 100%;
+                }
+            }
+            p {
+                display: inline-block;
+                font-size: 12px;
+                margin-top: 11px;
+            }
+        }
+        .center {
+            position: relative;
+            height: 462px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            .list {
+                height: 50%;
+                overflow: hidden;
+                overflow-y: auto;
+                .marquee {
+                    max-height: 65%;
+                }
+                h2 {
+                    margin: 18px 24px;
+                    margin-bottom: 4px;
+                }
+                .link {
+                    display: inherit;
+                    width: 338px;
+                    line-height: 34px;
+                    font-size: 16px;
+                    padding: 0 28px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .link:hover {
+                    @include themify($themes) {
+                        color: themed("key-word-color");
+                        background-image: themed("menu-active-bg");
+                    }
+                    text-decoration: underline;
+                }
+            }
+        }
+        .bottom {
+            position: relative;
+            height: 338px;
+            &::before {
+                position: absolute;
+                top: -4px;
+                left: 12px;
+                content: "";
+                display: block;
+                width: 21px;
+                height: 26px;
+                @include themify($themes) {
+                    background-image: url('#{themed("bg-url")}/jrdt-jb.png');
+                    background-size: 100% 100%;
+                }
+            }
+            .el-steps {
+                position: relative;
+                height: 88%;
+                overflow: hidden;
+                overflow-y: auto;
+                top: 31px;
+                left: 18px;
+                bottom: 21px;
+                right: 17px;
+                padding-left: 18px;
+                display: inline-block;
+                .el-step {
+                    padding: 0 0 17px 24px;
+                    margin-right: 20px;
+                    &::before {
+                        position: absolute;
+                        left: -1px;
+                        top: 30px;
+                        content: "";
+                        display: inline-block;
+                        width: 1px;
+                        height: 100%;
+                        @include themify($themes) {
+                            background-color: rgba(themed("dot-color"), 0.2);
+                        }
+                    }
+                    .el-step__title {
+                        line-height: 21px;
+                        font-size: 14px;
+                    }
+                    .step-inner {
+                        position: relative;
+                        top: 12px;
+                        left: -27.5px;
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 50%;
+                        @include themify($themes) {
+                            background-color: themed("dot-color");
+                        }
+                        opacity: 0.5;
+                    }
+                    &:first-child {
+                        .step-inner {
+                            width: 20px;
+                            height: 20px;
+                            left: -34px;
+                            top: 19px;
+                            opacity: 1;
+                            @include themify($themes) {
+                                background-color: rgba(
+                                    themed("dot-color"),
+                                    0.1
+                                );
+                            }
+                            &::before {
+                                position: absolute;
+                                left: 3px;
+                                top: 3px;
+                                content: "";
+                                display: inline-block;
+                                width: 14px;
+                                height: 14px;
+                                border-radius: 50%;
+                                @include themify($themes) {
+                                    background-color: rgba(
+                                        themed("dot-color"),
+                                        0.21
+                                    );
+                                }
+                            }
+                            &::after {
+                                content: "";
+                                display: inline-block;
+                                width: 6px;
+                                height: 6px;
+                                margin: 7px;
+                                border-radius: 50%;
+                                @include themify($themes) {
+                                    background-color: rgba(
+                                        themed("dot-color"),
+                                        0.5
+                                    );
+                                }
+                            }
+                        }
+                    }
+                    &:last-child {
+                        padding-bottom: 0;
+                        &::before {
+                            height: calc(100% - 30px);
+                        }
+                    }
+                }
+            }
+            .icon {
+                position: absolute;
+                width: 70px;
+                height: 84px;
+                bottom: 12px;
+                right: 12px;
+                @include themify($themes) {
+                    background-image: url("~src/assets/images/theme-1/jrdt_bg_schedule.png");
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
+    .gl-box-default {
+        padding: 0 !important;
+    }
+}
+
+//单独处理特殊
+.theme-2 .present,
+.theme-3 .present {
+    .el-col-16 {
+        background: none !important;
+        border: none;
+        box-shadow: none;
+    }
+    .misce .bottom::before {
+        content: none;
+    }
+}

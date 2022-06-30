@@ -1,0 +1,534 @@
+.produce {
+    height: 100%;
+    overflow: hidden;
+
+    @include themify($themes) {
+        background: url('#{themed("bg-url")}/produce/produce_Wired_Bg.png') no-repeat center center;
+        background-size: 100% 100%;
+    }
+
+    .leftTop,
+    .leftBottom,
+    .rightTop {
+        position: relative;
+        margin-left: 14px;
+
+        .divider {
+            display: inline-block;
+            width: 1px;
+            height: 18px;
+            vertical-align: middle;
+
+            @include themify($themes) {
+                background-color: themed('sub-color');
+            }
+        }
+
+        ul {
+            li {
+                @include themify($themes) {
+                    color: rgba(themed('key-word-color'), .5);
+                }
+
+                .detail {
+                    width: 40px;
+                    text-align: right;
+                    padding-right: 12px;
+                    cursor: pointer;
+
+                    .iconfont {
+                        position: relative;
+                        z-index: 1;
+                        color: #fff;
+                        border-radius: 2px;
+                        opacity: .6;
+
+                        @include themify($themes) {
+                            background: themed('question-mark')
+                        }
+                    }
+                }
+
+                .title {
+                    margin-right: 22px;
+                    cursor: pointer;
+                }
+
+                .is-active {
+                    opacity: 1;
+
+                    @include themify($themes) {
+                        color: themed('key-word-color');
+                    }
+
+                    .iconfont {
+                        opacity: 1;
+                    }
+                }
+
+                .el-tooltip {
+                    height: 20px;
+                }
+            }
+
+            li:last-child {
+                .divider {
+                    background: transparent;
+                }
+            }
+        }
+    }
+
+    .leftTop {
+        height: 106px;
+
+        ul {
+            line-height: 16px;
+        }
+    }
+
+    .leftBottom {
+        height: 80px;
+
+        ul {
+            line-height: 16px;
+        }
+    }
+
+    .rightTop {
+        height: 80px;
+
+        ul {
+            line-height: 16px;
+        }
+    }
+
+    .gl-box-title {
+        margin: 20px;
+    }
+
+    .left {
+        width: 736px;
+        height: 915px;
+        position: relative;
+        margin-top: 40px;
+
+        .lineBox {
+            padding-top: 16px;
+            width: 710px;
+            height: 334px;
+            position: relative;
+            left: 50px;
+        }
+
+        .leftBottom {
+            .divider {
+                top: 27px;
+                left: 132px;
+            }
+        }
+
+        .pieBox {
+            width: 692px;
+            height: 310px;
+            position: relative;
+            margin-left: 16px;
+
+            .public-chart .gl-noData {
+                margin-top: 25%;
+            }
+
+            .pieBg {
+                width: 486px;
+                height: 184px;
+                position: absolute;
+                top: 50%;
+                margin-top: -92px;
+                right: 0;
+
+                @include themify($themes) {
+                    background: url('#{themed("bg-url")}/produce/pieBg.png') no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+
+            .legend {
+                width: 398px;
+                height: 156px;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                margin-top: -76px;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .legend-item {
+                    flex: 0 0 94px;
+                    width: 94px;
+                    height: 60px;
+                    line-height: 22px;
+                    margin: 0;
+                    font-size: 12px;
+
+                    .legend-color {
+                        width: 21px;
+                        height: 13px;
+                    }
+
+                    .legend-name,
+                    .legend-num {
+                        width: 94px;
+                    }
+
+                    .legend-num {
+                        font-size: 16px;
+                    }
+
+                    p:nth-child(1) {
+                        margin-bottom: 6px;
+                        border-radius: 3px;
+                    }
+                }
+            }
+
+            .pie-name {
+                z-index: 10;
+                position: absolute;
+                top: 50%;
+                left: 110px;
+                margin-top: -28px;
+                font-size: 20px;
+            }
+
+            #pieChart {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 692px;
+                height: 320px;
+            }
+        }
+
+        .leftLine .left-chart-box {
+            width: 706px;
+            height: 354px;
+            margin-left: 45px;
+        }
+    }
+
+    .center {
+        width: 446px;
+        height: 915px;
+        position: relative;
+
+        .dateBox {
+            width: 160px;
+            height: 40px;
+            position: relative;
+            top: 26px;
+            left: 50%;
+            margin-left: -69px;
+        }
+        
+        .num {
+            width: 330px;
+            height: 74px;
+            position: relative;
+            left: 50%;
+            top: 40px;
+            margin-left: -165px;
+
+            div {
+                width: 110px;
+                text-align: center;
+                float: left;
+
+                >span {
+                    display: inline-block;
+                    font-size: 18px;
+                    margin-bottom: 10px;
+
+                    @include themify($themes) {
+                        color: themed('normal-word-color');
+                    }
+                }
+
+                >p {
+                    font-size: 18px;
+
+                    span {
+                        @include themify($themes) {
+                            color: themed('key-word-color2');
+                        }
+                    }
+
+                    span:nth-child(2) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .produce-nav {
+            width: 272px;
+            height: 272px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -90px 0 0 -135px;
+            overflow: hidden;
+
+            .mark1 {
+                width: 138px;
+                height: 138px;
+                border-radius: 50%;
+                position: absolute;
+                z-index: 3;
+                top: 50%;
+                left: 50%;
+                margin: -70px 0 0 -70px;
+
+                @include themify($themes) {
+                    background: url('#{themed("bg-url")}/produce/menuBg.png') no-repeat 100% 100%;
+                    background-size: 100% 100%;
+                }
+            }
+
+            .menu-item {
+                font-size: 22px;
+                width: 126px;
+                height: 133px;
+                text-align: center;
+                line-height: 135.4px;
+                cursor: pointer;
+
+                @include themify($themes) {
+                    color: rgba(themed('normal-word-color'), .8);
+                }
+            }
+
+            .menu-item:nth-child(1) {
+                padding-top: 3px;
+                padding-left: 10px;
+            }
+
+            .menu-item:nth-child(2) {
+                padding-top: 3px;
+                padding-right: 10px;
+            }
+
+            .menu-item:nth-child(3) {
+                padding-bottom: 3px;
+                padding-left: 10px;
+            }
+
+            .menu-item:nth-child(4) {
+                padding-bottom: 3px;
+                padding-right: 10px;
+            }
+
+            .menu-icon {
+                width: 34px;
+                height: 36px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -20px 0 0 -18px;
+                z-index: 4;
+
+                @include themify($themes) {
+                    background: url('#{themed("bg-url")}/produce/produce_icon.png') no-repeat 100% 100%;
+                    background-size: 100% 100%;
+                }
+            }
+
+            .activeMenu {
+                @include themify($themes) {
+                    color: themed('key-word-color');
+                }
+            }
+
+            .menuActive {
+                width: 137px;
+                height: 137px;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                @include themify($themes) {
+                    background: url('#{themed("bg-url")}/produce/menuActive.png') no-repeat 100% 100%;
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
+
+    .right {
+        width: 736px;
+        height: 915px;
+        position: relative;
+        margin-top: 40px;
+
+        .rightTop {
+            .divider {
+                top: 27px;
+                left: 132px;
+            }
+        }
+
+        .lineBox {
+            width: 700px;
+            height: 330px;
+            padding-top: 26px;
+            position: relative;
+            margin-bottom: 80px;
+            left: 20px;
+
+            #rightLine {
+                width: 720px;
+                height: 330px;
+                margin-top: 10px;
+                position: absolute;
+                right: 30px;
+            }
+        }
+
+        .rightLine {
+            width: 700px;
+            position: absolute;
+            top: 490px;
+
+            @include themify($themes) {
+                border-top: 1px solid themed("sub-color");
+            }
+        }
+
+        .trendRatio-box {
+            table {
+                width: 665px;
+                border-collapse: collapse;
+
+                tr {
+                    height: 62px;
+                    font-size: 14px;
+
+                    @include themify($themes) {
+                        color: themed('normal-word-color');
+                    }
+
+                    td {
+                        @include themify($themes) {
+                            border-bottom: 1px solid rgba(themed('normal-word-color'), .1);
+                        }
+
+                        .trendRatio-img {
+                            width: 38px;
+                            height: 38px;
+                            margin-right: 15px;
+
+                            @include themify($themes) {
+                                background: url('#{themed("bg-url")}/produce/explain.png') no-repeat 100% 100%;
+                                background-size: 100% 100%;
+                            }
+                        }
+
+                        span {
+                            @include themify($themes) {
+                                color: themed('sub-main-color');
+                            }
+                        }
+                    }
+
+                    td:nth-child(1) {
+                        width: 38px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.el-select-dropdown.monthBox {
+    left: 0;
+    top: 0;
+}
+
+.theme-1 {
+    $color-list:
+        "#03f9fc",
+        "#1794f5",
+        "#641ff3",
+        "#19d39e",
+        "#25b346",
+        "#87cd00",
+        "#e8f517",
+        "#f5c917",
+        "#f59a17",
+        "#f57017",
+        "#f517f2",
+        "#ec3838";
+
+    .produce {
+        @each $color in $color-list {
+            $i: index($color-list, $color) - 1;
+
+            .color-#{$i} {
+                background-color : #{$color};
+            }
+        }
+    }
+}
+
+.theme-2 {
+    $color-list:
+        "#62a9ff",
+        "#6f76fb",
+        "#ac74ed",
+        "#53cee9",
+        "#c3e14c",
+        "#59e992",
+        "#eebc23",
+        "#fb8e35",
+        "#f17ef2",
+        "#fb7daf",
+        "#8aef6f",
+        "#afb1d5";
+
+    .produce {
+        @each $color in $color-list {
+            $i: index($color-list, $color) - 1;
+
+            .color-#{$i} {
+                background-color : #{$color};
+            }
+        }
+    }
+}
+
+.theme-3 {
+    $color-list:
+        "#81d8cd",
+        "#65b1e7",
+        "#6579de",
+        "#a26be0",
+        "#73db8c",
+        "#b6e376",
+        "#e7e879",
+        "#e2bf6a",
+        "#e49872",
+        "#e167af",
+        "#e76880",
+        "#92b4cc";
+
+    .produce {
+        @each $color in $color-list {
+            $i: index($color-list, $color) - 1;
+
+            .color-#{$i} {
+                background-color : #{$color};
+            }
+        }
+    }
+}

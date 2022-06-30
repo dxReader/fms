@@ -1,0 +1,95 @@
+.dept-bed {
+    div, ul {
+        box-sizing: border-box;
+    }
+    .top,
+    .bottom {
+        height: 354px;
+        display: flex;
+        justify-content: space-between;
+        .top-list {
+            // margin-top: 10px;
+            height: 72px;
+            .top-li {
+                display: inline-block;
+                width: 33.3%;
+                text-align: center;
+                .top-name {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+
+    .top {
+        margin-bottom: 20px;
+        .left-box {
+            flex-basis: 526px;
+        }
+        .right-box {
+            flex-basis: 1264px;
+            .left-content {
+                width: 50%;
+                padding-right: 20px;
+                @include themify($themes) {
+                    border-right: 1px solid rgba(themed('sub-color'), .3);
+                }
+                
+                .gl-linear-bd-row {
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                    height: 56px;
+                    line-height: 1.2;
+                    align-items: center;
+                    .td {
+                        flex: 1;
+                        text-align: center;
+                    }
+                }
+                .bed-dept-chart {
+                    height: 140px;
+                }
+            }
+            .right-content {
+                width: 50%;
+                padding-left: 20px;
+                .top-li {
+                    width: 50%;
+                }
+                .los-chart {
+                    margin-top: 10px;
+                    height: 186px;
+                }
+            }
+        }
+    }
+    .bottom {
+        .left-box {
+            flex-basis: 526px;
+            .top-li {
+                width: 50%;
+            }
+            .profit-chart {
+                margin-top: 10px;
+                height: 186px;
+            }
+        }
+        .center-box {
+            flex-basis: 616px;
+            .resource-chart {
+                margin-top: 10px;
+                height: 186px;
+            }
+        }
+        .right-box {
+            flex-basis: 628px;
+            .text-con {
+                height: 268px;
+                border-radius: 10px;
+                @include themify($themes) {
+                    background-color: themed('vario-bg-color');
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,205 @@
+.disPatient {
+    .content {
+        position: relative;
+        margin: 0 auto;
+        width: 1880px;
+
+        .left-main {
+            width: 376px;
+            height: 892px;
+            padding-left: 0;
+            padding-right: 0;
+
+            .search {
+                padding: 0 20px;
+            }
+
+            .disease {
+                margin: 30px 0 10px 0;
+
+                .rank-title {
+                    display: inline-block;
+                    margin: 0 0 10px 20px;
+                    line-height: 1;
+                    cursor: pointer;
+
+                    .triangle {
+                        display: inline-block;
+                        position: relative;
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    .rank-icon {
+                        position: absolute;
+                        font-size: 20px;
+                        transform: scale(.5, .5);
+                        @include themify($themes) {
+                            color: rgba(themed('main-color'), .2);
+                        }
+
+                        &.iconrankbottom {
+                            top: 8px;
+                            left: 0;
+                        }
+
+                        &.icon-active {
+                            @include themify($themes) {
+                                color: themed('main-color')
+                            }
+                        }
+                    }
+                }
+
+                .lists {
+                    height: 734px;
+                    overflow-y: auto;
+
+                    .item {
+                        height: 58px;
+                        line-height: 58px;
+                        padding: 0 20px;
+                        cursor: pointer;
+
+                        .name {
+                            display: inline-block;
+                            width: 240px;
+                            height: 100%;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+
+                        .num {
+                            float: right;
+                        }
+                    }
+                }
+
+                .loadMore {
+                    text-align: center;
+                    opacity: .6;
+
+                    @include themify($themes) {
+                        color: themed("main-color");
+                    }
+                }
+            }
+        }
+
+        .center-main {
+            position: absolute;
+            top: 5px;
+            left: 398px;
+            width: 590px;
+
+            .title {
+                height: 38px;
+
+                @include themify($themes) {
+                    color: themed("key-word-color");
+                }
+            }
+
+            .block {
+                position: relative;
+                height: 414px;
+
+                // margin: 14px 0;
+                .card {
+                    position: absolute;
+                    width: 380px;
+                    height: 180px;
+                    top: 10px;
+
+                    .gl-linear-bd-row {
+                        &::before {
+                            display: none;
+                        }
+                    }
+
+                    .iconList {
+                        width: 536px;
+                        height: 76px;
+                        line-height: 76px;
+                        padding: 0;
+                        padding-left: 30px;
+                        margin-bottom: 0;
+                        position: relative;
+
+                        .listImg {
+                            font-size: 22px;
+                            position: absolute;
+                            top: 0;
+                            left: 42px;
+
+                            @include themify($themes) {
+                                color: themed("sub-main-color");
+                            }
+                        }
+
+                        .column1 {
+                            margin: 16px 20px 0 0;
+                            display: inline-block;
+                            width: 46px;
+                            height: 46px;
+                        }
+
+                        .column2 {
+                            width: 200px;
+                        }
+
+                        .column3 {
+                            width: 200px;
+
+                            .unit {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .center-bottom {
+                margin: 20px 0;
+
+                .card {
+                    width: 550px;
+                    height: 380px;
+                    top: 20px;
+
+                    .chart {
+                        width: 530px;
+                        height: 360px;
+                    }
+                }
+            }
+        }
+
+        .right-main {
+            width: 870px;
+            position: absolute;
+            top: 23px;
+            left: 1010px;
+
+            .block {
+                height: 414px;
+                margin: 20px 0;
+
+                .card {
+                    width: 830px;
+                    height: 360px;
+
+                    .chart {
+                        width: 830px;
+                        height: 360px;
+                    }
+
+                    .con {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

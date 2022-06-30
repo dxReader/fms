@@ -1,0 +1,78 @@
+/*
+综合目标和科室能力用
+*/
+@mixin box($opacity) {
+    @include themify($themes) {
+        background: rgba(themed('box-bg'), $opacity);
+        border: themed('box-bd');
+        box-shadow: themed('box-shadow');
+    }
+}
+@mixin main-entry{
+    position: relative;
+    width: 100%;
+    padding: 15px 0;
+    .el-row{
+        height:100%;
+    }
+  .right {
+    .desCon {
+        padding: 0 26px;
+        height: 850px;
+        overflow: auto;
+    }
+     
+    .right-list {
+        .right-item {
+            margin-bottom: 30px;
+            line-height: 30px;
+            span {
+                display: inline-block;
+                width: 11px;
+                height: 11px;
+                @include themify($themes) {
+                    background-color: themed('dot-color');
+                }
+                opacity: .5;
+                border-radius: 50%;
+                margin-right: 10px;
+                margin-top: 8.5px;
+                cursor: pointer;
+            }
+        }
+    }
+    .rule {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        cursor: pointer;
+        @include themify($themes) {
+            color: themed('main-color');
+        }
+        span{
+            display: inline-block;
+            transform: scale(.7, .7);
+        }
+        &:hover {
+            font-weight: 600;
+        }
+    }
+  }
+  .left-box, .right-box {
+        width: 382px;
+        height: 940px;
+        margin: 0 15px;
+        position: relative;
+    }
+    .right-box {
+        width: 567px;
+    }
+    .center-box {
+        width: calc(100% - 1012px);
+        height: 940px;
+        position: relative;
+        @include themify($themes) {
+            background-color: themed('box-bg2');
+        }
+    }
+}

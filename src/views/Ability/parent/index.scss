@@ -1,0 +1,252 @@
+$position: (
+	1: (
+		top: 97px,
+		left: 112px,
+		cTop: 128px,
+		cLeft: 539px,
+	),
+	2: (
+		top: 97px,
+		left: 1288px,
+		cTop: 128px,
+		cLeft: -160px,
+	),
+	3: (
+		top: 545px,
+		left: 112px,
+		cTop: 20px,
+		cLeft: 539px,
+	),
+	4: (
+		top: 545px,
+		left: 1288px,
+		cTop: 20px,
+		cLeft: -160px,
+	),
+);
+.ability {
+	position: relative;
+	width: 100%;
+	height: 964px;
+	padding: 15px 0;
+	font-size: 18px;
+	@include themify($themes) {
+		color: themed("key-word-color");
+	}
+	.ability-cascader {
+		position: absolute;
+		.cascaderBox {
+			margin: 0 0 14px 40px;
+		}
+		z-index: 2;
+	}
+	.wrapper {
+		width: 100%;
+		height: 100%;
+		@include themify($themes) {
+			background-image: themed("ability-home-bg");
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		position: relative;
+		.dept-img-1 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 514px;
+			height: 514px;
+			margin-left: -257px;
+			margin-top: -257px;
+			@include themify($themes) {
+				background-image: url("~src/assets/images/theme-1/ability/pool.png");
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+			animation: rotation 8s linear infinite;
+			-moz-animation: rotation 8s linear infinite;
+			-webkit-animation: rotation 8s linear infinite;
+			-o-animation: rotation 8s linear infinite;
+			-webkit-animation-play-state: paused;
+			animation-play-state: paused;
+		}
+		.dept-img-2 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: 0;
+			width: 475px;
+			height: 475px;
+			transform: translate(-50%, -50%);
+			border: 3px dotted #62a9ff;
+			border-radius: 50%;
+			.img {
+				@include themify($themes) {
+					background-image: url('#{themed("bg-url")}/ability/ability_arrow.png');
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+				width: 103px;
+				height: 98px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -49px;
+				margin-left: -51.5px;
+				transition: transform .5s;
+			}
+		}
+		.dept-img-active {
+			-webkit-animation-play-state: running;
+			animation-play-state: running;
+		}
+		@-webkit-keyframes rotation {
+			from {
+				-webkit-transform: rotate(0deg);
+			}
+			to {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+		.dept-list {
+			.dept-li {
+				position: absolute;
+				.dept-name-wraper {
+					width: 138px;
+					height: 158px;
+					//line-height:158px;
+					text-align: center;
+					font-size: 30px;
+					@include themify($themes) {
+						background: themed("ability-list-bg");
+					}
+					position: absolute;
+					cursor: pointer;
+					&:hover {
+						@include themify($themes) {
+							background-image: url('#{themed("bg-url")}/ability/active.png');
+							background-repeat: no-repeat;
+							background-size: contain;
+						}
+					}
+					.dept-name {
+						width: 100%;
+						height: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						@include themify($themes) {
+							background-image: url('#{themed("bg-url")}/ability/default.png');
+							background-repeat: no-repeat;
+							background-size: contain;
+						}
+						color: #fff;
+					}
+				}
+				.dept-name1 {
+					width: 3em;
+					//margin:auto;
+				}
+				.dept-name2 {
+					width: 2em;
+					margin: auto;
+				}
+				.dept-name-active {
+					@include themify($themes) {
+						background-image: url('#{themed("bg-url")}/ability/active.png');
+						background-repeat: no-repeat;
+						background-size: contain;
+					}
+				}
+				.dept-inner {
+					width: 525px;
+					height: 308px;
+					// @include themify($themes) {
+					//     background-image: url('#{themed("bg-url")}/ability/list_bg.png');
+					//     background-repeat: no-repeat;
+					//     background-size: contain;
+					// } 
+					position: relative;
+					//padding:39px 65px;
+					.child-list {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						width: 465px;
+						height: 198px;
+						margin: -118px 0 0 -232px;
+						padding: 20px 0;
+						border-radius: 10px;
+						@include themify($themes) {
+							background-color: themed("box-bg");
+						}
+						.child-li {
+							padding: 20px 26px;
+							padding-right: 0;
+							cursor: pointer;
+							.star-box {
+								// float: left;
+								display: inline-block;
+								vertical-align: middle;
+								margin-right: 18px;
+							}
+							p {
+								display: inline-block;
+								vertical-align: middle;
+								position: relative;
+								max-width: 60%;
+								span {
+									@include themify($themes) {
+										color: rgba(themed("main-color"), .6);
+									}
+									margin-right: 21px;
+								}
+								&:hover {
+									&:after {
+										position: absolute;
+										bottom: 0;
+										left: 0;
+										display: inline-block;
+										content: "";
+										width: 100%;
+										height: 1px;
+										@include themify($themes) {
+											background-color: themed(
+												"main-color"
+											);
+											box-shadow: 0 0 4px 0px
+												themed("main-color");
+										}
+									}
+								}
+							}
+							.child-active {
+								&::after {
+									position: absolute;
+									display: inline-block;
+									content: "";
+									width: 100%;
+									height: 1px;
+									@include themify($themes) {
+										background-color: themed("main-color");
+										box-shadow: 0 0 4px 0px
+											themed("main-color");
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			@each $name, $map in $position {
+				.dept-li-#{$name} {
+					top: map-get($map, "top");
+					left: map-get($map, "left");
+					.dept-name-wraper {
+						top: map-get($map, "cTop");
+						left: map-get($map, "cLeft");
+					}
+				}
+			}
+		}
+	}
+}

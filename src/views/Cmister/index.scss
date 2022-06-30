@@ -1,0 +1,322 @@
+.cmister {
+    box-sizing: border-box;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+
+    .content {
+        margin-left: 38px;
+        .left {
+            width: 1330px;
+            height: 864px;
+            float: left;
+            .leftMar {
+                height: 844px;
+                padding-left: 26px;
+                position: relative;
+                .cmister-checkbox {
+                    position: absolute;
+                    top: 0px;
+                    right: 40px;
+                    font-size: 18px;
+                    color: #fff;
+
+                    .el-checkbox {
+                        margin-right: 35px;
+                    }
+
+                    .el-checkbox__label {
+                        padding-left: 9px;
+                        line-height: 34px;
+                        @include themify($themes) {
+                            color: themed("sub-word-color");
+                        }
+                    }
+                }
+            }
+            .search {
+                position: absolute;
+                width: 270px;
+                left: 228px;
+                top: 0px;
+            }
+            .leftB {
+                width: 1235px;
+                height: 744px;
+                margin-top: 20px;
+                .grid-content {
+                    border-radius: 4px;
+                    min-height: 36px;
+                    height: 744px;
+                    @include themify($themes) {
+                        background: url('#{themed("bg-url")}/cmister/tableBack.png')
+                            no-repeat 100% 100%;
+                        background-size: 100% 100%;
+                    }
+                    h2 {
+                        @include themify($themes) {
+                            color: themed("key-word-color");
+                            border-bottom: themed("box-bd");
+                        }
+                        font-size: 22px;
+                        text-align: center;
+                        padding: 30px 0;
+                    }
+                    .target-list {
+                        height: 600px;
+                        overflow: auto;
+                        .target-item {
+                            width: calc((1235px / 4) - 58px);
+                            height: 20px;
+                            position: relative;
+                            padding: 16px 26px 16px 26px;
+                            cursor: pointer;
+                            .img {
+                                width: 20px;
+                                height: 27px;
+                                margin-top: 2px;
+                            }
+
+                            @each $i in 1, 2, 3 {
+                                .ranking#{$i} {
+                                    @include themify($themes) {
+                                        background-image: url('#{themed("bg-url")}/cmister/ranking#{$i}'+".png");
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                    }
+                                }
+                            }
+                            .rank {
+                                display: inline-block;
+                                font-size: 16px;
+                                vertical-align: -webkit-baseline-middle;
+                            }
+                            .text {
+                                height: 24px;
+                                line-height: 24px;
+                                float: right;
+                                .textcon {
+                                    width: 100px;
+                                    text-align: left;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    font-size: 18px;
+                                }
+                                .valuecon {
+                                    width: 100px;
+                                    text-align: right;
+                                    font-size: 20px;
+                                    .cmister-unit {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                            .general {
+                                width: 90px !important;
+                                text-align: left !important;
+                                padding-left: 14px;
+                                font-size: 18px;
+                            }
+                            .generalText {
+                                width: 150px;
+                                height: 20px;
+                            }
+                        }
+                        .target-item:nth-child(2n) {
+                            @include themify($themes) {
+                                background-color: themed("cmister-table-n");
+                            }
+                        }
+                        .itemText {
+                            width: calc((1235px / 4) - 25px);
+                            height: 24px;
+                            line-height: 24px;
+                            .con {
+                                margin-left: 10px;
+                                width: 240px;
+                            }
+                        }
+                        .noData {
+                            text-align: center;
+                            font-size: 18px;
+                            @include themify($themes) {
+                                color: themed("main-color");
+                            }
+                        }
+                    }
+                }
+                .rule {
+                    font-weight: 200;
+                    position: absolute;
+                    bottom: 14px;
+                    right: 43px;
+                    cursor: pointer;
+                    @include themify($themes) {
+                        color: themed("main-color");
+                    }
+                    &:hover {
+                        font-weight: 600;
+                    }
+                }
+                .divider1,
+                .divider2 {
+                    width: 10px;
+                    height: 720px;
+                    margin-left: -3px;
+                    position: absolute;
+                    z-index: 2;
+                    @include themify($themes) {
+                        background: url("~src/assets/images/theme-1/cmister/c-fgxt.png")
+                            no-repeat;
+                        background-size: 100% 100%;
+                    }
+                }
+                .divider2 {
+                    left: 1232px;
+                }
+            }
+        }
+        .right {
+            width: 475px;
+            height: 864px;
+            float: right;
+            margin-right: 44px;
+            .rightMar {
+                height: 824px;
+            }
+            .rightTop {
+                width: 445px;
+                height: 222px;
+                position: relative;
+                top: 16px;
+                // left: 16px;
+                right: 16px;
+                display: flex;
+                flex: 1;
+                @include themify($themes) {
+                    background: url('#{themed("bg-url")}/cmister/c-first-bg.png')
+                        no-repeat 100% 100%;
+                    background-size: contain;
+                }
+                .headP {
+                    width: 119px;
+                    height: 144px;
+                    position: relative;
+                    top: 38px;
+                    left: 36px;
+                    margin-right: 44px;
+                    text-align: center;
+                    padding: 0;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .headText {
+                    width: 252px;
+                    height: 154px;
+                    position: relative;
+                    top: 30px;
+                    margin-left: 34px;
+                    .text {
+                        font-size: 16px;
+                        line-height: 40px;
+                        label:nth-child(1) {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+                .ranking {
+                    width: 58px;
+                    height: 60px;
+                    position: absolute;
+                    top: -3px;
+                    right: 14px;
+                }
+                @each $i in 1, 2, 3 {
+                    .c-mp#{$i} {
+                        @include themify($themes) {
+                            background-image: url('#{themed("bg-url")}/cmister/c-mp#{$i}'+".png");
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                }
+                .lastBg {
+                    @include themify($themes) {
+                        background: url('#{themed("bg-url")}/cmister/c-rankBg.png')
+                            no-repeat;
+                        background-size: 100% 100%;
+                    }
+                    color: #fff;
+                    line-height: 38px;
+                    span {
+                        display: inline-block;
+                        width: 32px;
+                        height: 60px;
+                        text-align: center;
+                    }
+                }
+            }
+            .rightCenter {
+                width: 445px;
+                height: 270px;
+                position: relative;
+                top: 38px;
+                #radarChart {
+                    width: 445px;
+                    height: 270px;
+                }
+                .detail {
+                    width: 48px;
+                    text-align: right;
+                    padding-right: 26px;
+                    cursor: pointer;
+                    .iconfont {
+                        position: relative;
+                        z-index: 1;
+                        color: #fff;
+                        border-radius: 2px;
+                        opacity: 0.6;
+                        @include themify($themes) {
+                            background: themed("question-mark");
+                        }
+                    }
+                }
+                .back-bg {
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    top: 14px;
+                    left: 0;
+                    z-index: 1;
+                    @include themify($themes) {
+                        background: themed("cmister-radar-color");
+                    }
+                }
+            }
+            .rightBottom {
+                width: 445px;
+                height: 242px;
+                position: relative;
+                top: 76px;
+                #lineChart,
+                #lineGeneral {
+                    width: 445px;
+                    height: 262px;
+                }
+            }
+        }
+    }
+}
+.cmisterBluer {
+    filter: blur(3px);
+}
+.el-tooltip__popper {
+    padding: 10px;
+}
+.questCon {
+    font-size: 14px;
+    max-width: 300px;
+}

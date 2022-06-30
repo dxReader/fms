@@ -1,0 +1,99 @@
+.ecoEffect {
+    .head {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 20px;
+        height: 84px;
+        .date-picker {
+            max-width: 200px;
+        }
+    }
+    .content {
+        position: relative;
+        height: 870px;
+        .left {
+            width: 426px;
+            height: 100%;
+            margin-left: 20px;
+        }
+        .right {
+            position: absolute;
+            left: 446px;
+            top: 0;
+            .card {
+                float: left;
+                position: relative;
+                width: 704px;
+                height: 426px;
+                margin: 0 0 20px 20px;
+                .title {
+                    position: relative;
+                    padding: 20px 0 0 30px;
+                    .tab {
+                        display: inline-block;
+                        margin-left: 40px;
+                        font-size: 16px;
+                        @include themify($themes) {
+                            color: rgba(themed("normal-word-color"), .4);
+                        }
+                        >span {
+                            display: inline-block;
+                            line-height: 16px;
+                            cursor: pointer;
+                            margin: 0 6px;
+                            padding-left: 12px;
+                            @include themify($themes) {
+                                border-left: 1px solid rgba(themed("normal-word-color"), .4);
+                            }
+                            &:first-child {
+                                border-left: none;
+                            }
+                        }
+                        .active {
+                            @include themify($themes) {
+                                color: themed("normal-word-color");
+                            }
+                        }
+                    }
+                    .btnTo {
+                        position: absolute;
+                        font-size: 16px;
+                        right: 30px;
+                        top: 23px;
+                    }
+                }
+                .chart {
+                    width: 640px;
+                    height: 326px;
+                    margin: 40px auto;
+                }
+                .slide {
+                    @include themify($themes) {
+                        color: themed("normal-word-color");
+                    }
+                    font-size: 14px;
+                    margin: 30px 30px 20px;
+                    .slide_outer {
+                        position: relative;
+                        width: 40%;
+                        float: left;
+                        .outer_title{
+                            @include themify($themes) {
+                                color: themed("normal-word-color");
+                            }
+                        }
+                        .outer_con {
+                            margin-top: 10px;
+                            z-index: 5;
+                            width: 300px;
+                            height: 326px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .gl-box-default{
+        padding: 0 !important;
+    }
+}

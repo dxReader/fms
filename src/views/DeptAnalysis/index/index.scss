@@ -1,0 +1,138 @@
+.dept{
+    display: flex;
+    flex-direction: column;
+    .dept-header {
+        margin: -20px 0;
+        height: 150px;
+        display: flex;
+        @include themify($themes) {
+            background-image: url('#{themed("bg-url")}/dept/dept_title_bg.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .dept-select {
+            width: 373px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 40px;
+
+            /deep/ .el-input__inner {
+                border: none !important;
+            }
+            
+
+        }
+        .dept-rank {
+            width: 150px;
+            height: 150px;
+            // margin-top: -20px;
+            // @include themify($themes) {
+            //     background-color: themed("head-bg");
+            // }
+            // border-radius: 50%;
+            .dept-rank-wraper {
+                width: 124px;
+                height: 124px;
+                text-align: center;
+                border-radius: 50%;
+                margin: 13px;
+                .dept-rank-top {
+                    height:30px;
+                    line-height: 30px;
+                    padding-top: 27px;
+                    @include themify($themes) {
+                        color: themed("key-word-color");
+                    }
+                    .dept-rank-name {
+                        margin-left: 3px;
+                    }
+                }
+                .rank-num {
+                    @include themify($themes) {
+                        color: themed("main-color");
+                    }
+                }
+            }
+        }
+        .dept-list {
+            width: 1320px;
+            margin: 20px 50px 0;
+            display: flex;
+            .dept-li {
+                flex: 1;
+                text-align: center;
+                .dept-title {
+                    height: 55px;
+                    line-height: 55px;
+                    span {
+                        @include themify($themes) {
+                            color: themed("normal-word-color");
+                        }
+                    }
+                }
+                .dept-num {
+                    .dept-number {
+                        @include themify($themes) {
+                            color: themed("key-word-color");
+                        }
+                    }
+                    .dept-unit {
+                        @include themify($themes) {
+                            color: themed("normal-word-color");
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .dept-name {
+        height: 54px;
+        line-height: 54px;
+        text-align: center;
+        @include themify($themes) {
+            color: themed("key-word-color");
+        }
+    }
+
+    .dept-cont {
+        margin: 0 20px;
+        // height: calc( 100% - 240px);
+        flex-grow: 1;
+        display: flex;
+       
+        .dept-tabs {
+            width: 56px;
+            margin-right: 14px;
+            .dept-tab {
+                width: 56px;
+                height: 56px;
+                text-align: center;
+                line-height: 56px;
+                margin-bottom: 2px;
+                cursor: pointer;
+                @include themify($themes) {
+                    // background-color: themed("head-bg");
+                    color:themed('main-color');
+                    background-color: themed("vario-bg-color");
+                    border: 1px solid rgba(themed("main-color"), .2);
+                }
+            }
+            .cardActive {
+                @include themify($themes) {
+                   background: themed('main-color');
+                }
+                color:#fff !important;
+           }
+        }
+        .dept-container {
+            flex-grow: 1;
+            height: 100%;
+            // border: 1px solid blue;
+            // @include themify($themes) {
+            //     background-color: themed("vario-bg-color");
+            // }
+        }
+    }
+}

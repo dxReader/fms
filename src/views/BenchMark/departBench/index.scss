@@ -1,0 +1,312 @@
+.departBench {
+    position: relative;
+    .title {
+        height: 65px;
+        line-height: 65px;
+        padding-left: 20px;
+    }
+    
+    .right-top {
+        position: absolute;
+        top: 22px;
+        left: 467px;
+        width: 1432px;
+        height: 437px;
+        >div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            .legend {
+                height: 42px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 10;
+                .legend-item:nth-child(1) {
+                    width: 135px;
+                    margin-right: 25px;
+                    cursor: pointer;
+                    >div:nth-child(1) {
+                        width: 26px;
+                        height: 14px;
+                        margin: 14px;
+                        border-radius: 4px;
+                        @include themify($themes) {
+                            border: 1px solid themed("main-color");
+                            background: rgba(themed("main-color"), .13);
+                        }
+                    }
+                    &.grey {
+                        color: #ccc;
+                        >div:nth-child(1) {
+                            @include themify($themes) {
+                                border: 1px solid #ccc;
+                                background: rgba(204, 204, 204, .13);
+                            }
+                        }
+                    }
+                }
+                .legend-item:nth-child(2) {
+                    width: 135px;
+                    margin-right: 25px;
+                    cursor: pointer;
+                    >div:nth-child(1) {
+                        width: 26px;
+                        height: 14px;
+                        margin: 14px 14px 0 0;
+                        border-radius: 4px;
+                        @include themify($themes) {
+                            border: 1px solid rgba(217, 69, 74, 1);
+                            background: rgba(217, 69, 74, .13);
+                        }
+                    }
+                    &.grey {
+                        color: #ccc;
+                        >div:nth-child(1) {
+                            @include themify($themes) {
+                                border: 1px solid #ccc;
+                                background: rgba(204, 204, 204, .13);
+                            }
+                        }
+                    }
+                }
+                p{
+                    line-height: 42px;
+                }
+            }
+        }
+        .left-chart, .center-chart, .right-chart {
+            width: 475px;
+            height: 400px;
+            margin-top: 30px;
+        }
+    }
+    
+    .right-bottom-left {
+        position: absolute;
+        top: 480px;
+        left: 467px;
+        width: 904px;
+        height: 479px;
+        >div{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            .vs-bg {
+                position: absolute;
+                top: 48px;
+                left: 30px;
+                background-color: #131e39;
+                width: 844px;
+                height: 49px;
+                @include themify($themes) {
+                    background-image: url('#{themed("bg-url")}/benchMark/vs.png');
+                    background-repeat: no-repeat;
+                    background-size: 298px 49px;
+                    background-position: center;
+                }
+            }
+            .tableBox {
+                z-index: 10;
+                position: relative;
+                height: 450px;
+                overflow: scroll;
+                background: none;
+                border: none;
+                margin-top: 48px;
+                .el-table__header {
+                    height: 49px;
+                }
+                .el-table__header-wrapper {
+                    height: 49px;
+                }
+                .el-table__body-wrapper {
+                    height:330px !important;
+                }
+                .el-table__empty-text {
+                    margin-top: 0px;
+                    font-size: 16px;
+                    @include themify($themes) {
+                        color: themed("normal-word-color");
+                    }
+                }
+                .avgPrice {
+                    height: 62px;
+                    line-height: 62px;
+                    padding-left: 32px;
+                    span{
+                        @include themify($themes) {
+                            color: themed('main-color');
+                        }
+                    }
+                }
+            }
+            .el-table {
+                position:relative;
+                z-index: 10;
+                background: none;
+                margin-left: 28px;
+                th, tr, td {
+                    background: none;
+                    border-bottom: 0;
+                    font-size: 16px;
+                }
+                td, th {
+                    padding:12px 0;
+                }
+                &:before{
+                    background: none;
+                }
+                thead{
+                    @include themify($themes) {
+                        color: themed('key-word-color');
+                    }
+                    background: none;
+                    th {
+                        padding:14px 0;
+                    }
+                }
+                tbody {
+                    @include themify($themes) {
+                        color: themed('normal-word-color');
+                    }
+                    .el-table__row {
+                        height: 47px !important;
+                    }
+                }
+                .current-row {
+                    background: rgba(234,239,253,.07);
+                }
+            }
+        }
+    }
+    
+    .right-bottom-right {
+        position: absolute;
+        top: 480px;
+        left: 1393px;
+        width: 506px;
+        height: 479px;
+        >div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            
+            ul {
+                overflow: auto;
+            }
+            li {
+                height: 60px;
+                margin-top: 50px;
+                margin-bottom: 10px;
+                width: 50%;
+                
+                @include themify($themes) {
+                    color: themed('normal-word-color');
+                }
+                div {
+                    float: left;
+                    &.icon{
+                        width: 55px;
+                        height: 55px;
+                        margin-right: 13px;
+                        margin-left: 50px;
+                        background-size: cover;
+                    }
+                    &.op_price {
+                        min-width: 88px;
+                        text-align: left;
+                        margin-top: 5px;
+                        span {
+                            font-size: 14px;
+                        }
+                        em {
+                            font-size: 20px;
+                            @include themify($themes) {
+                                color: themed('key-word-color');
+                            }
+                        }
+                    }
+                }
+                span {
+                    display: block;
+                    text-align: center;
+                }
+                em {
+                    font-style: normal;
+                }
+                &:nth-child(1){
+                    .icon {
+                        @include themify($themes) {
+                            background: url('#{themed("bg-url")}/benchMark/target-depart.png') no-repeat;
+                            background-size: 100% 100%;
+                        }
+                    }
+                }
+                &:nth-child(2){
+                    .icon{
+                        @include themify($themes) {
+                            background: url('#{themed("bg-url")}/benchMark/bench-depart.png') no-repeat;
+                            background-size:100% 100%;
+                        }
+                    }
+                }
+            }
+            .res {
+                margin-top: 30px;
+                padding: 0 38px;
+                line-height: 1.8;
+            }
+        }
+    }
+    
+    .no-data {
+        position: absolute;
+        top: 22px;
+        left: 445px;
+        width: 1432px;
+        height: 937px;
+        text-align: center;
+        @include themify($themes) {
+            background-image: url('#{themed("bg-url")}/benchMark/no-data.png');
+            background-repeat: no-repeat;
+            background-position: 171px 285px;
+            background-size: 651px 274px;
+        }
+        span {
+            display: inline-block;
+            margin-top: 548px;
+            @include themify($themes) {
+                color: themed('develop-main-color');
+            }
+        }
+    }
+}
+
+.theme-2, .theme-3 {
+    .departBench {
+        .legend {
+            .legend-item:nth-child(1) {
+                >div:nth-child(1) {
+                    border: none !important;
+                    background-color: rgba(98, 169, 255, .5) !important;
+                }
+            }
+            .legend-item:nth-child(2) {
+                >div:nth-child(1) {
+                    border: none !important;
+                    background-color: rgba(223, 73, 53, .5) !important;
+                }
+            }
+        }
+        .vs-bg {
+            background-color: #f4f5f7 !important;
+        }
+    }
+}

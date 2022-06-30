@@ -1,0 +1,68 @@
+import Vue from "vue";
+import {
+    Button,
+    ButtonGroup,
+    Dropdown,
+    DropdownMenu,
+    DropdownItem,
+    Tabs,
+    TabPane,
+    Tooltip,
+    Progress,
+    Message,
+    Switch,
+    Select,
+    Option,
+    Cascader,
+    Row,
+    Col,
+    Popover,
+    Table,
+    TableColumn,
+    Input,
+    CheckboxGroup,
+    Checkbox,
+    Tree,
+    Radio,
+    RadioGroup,
+    Pagination
+} from "element-ui";
+import * as ScrollBar from "element-ui";
+
+/**
+ * 按需引入，注册组件
+ */
+export default [
+    Vue.use(Dropdown),
+    Vue.use(DropdownMenu),
+    Vue.use(DropdownItem),
+    Vue.use(Tabs),
+    Vue.use(TabPane),
+    Vue.use(Tooltip),
+    Vue.use(Progress),
+    Vue.use(Switch),
+    Vue.use(Select),
+    Vue.use(Option),
+    Vue.use(Cascader),
+    Vue.use(Row),
+    Vue.use(Col),
+    Vue.use(Popover),
+    Vue.use(Button),
+    Vue.use(ButtonGroup),
+    Vue.use(Table),
+    Vue.use(TableColumn),
+    Vue.use(Input),
+    Vue.use(CheckboxGroup),
+    Vue.use(Checkbox),
+    Vue.use(Tree),
+    Vue.use(Radio),
+    Vue.use(RadioGroup),
+    Vue.use(Pagination),
+    Vue.use(ScrollBar),
+    Vue.component('public-chart',()=> import("src/components/Charts/index.vue") as any),
+    Vue.component('publics-skeleton',()=> import("src/components/Skeleton/index.vue") as any),
+    Vue.component('public-date',()=> import("src/components/Date/index.vue") as any),
+    Vue.component('public-iframe',()=> import("src/components/IframeBox/index.vue") as any),
+    Vue.prototype.$message = Message,
+];
+

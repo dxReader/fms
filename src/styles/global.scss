@@ -1,0 +1,1319 @@
+/**
+ * 全局样式控制
+ */
+
+#fms {
+    //overflow: hidden;
+    height: 100%;
+
+    @include themify($themes) {
+        // background-color: themed('layout-bg-color');
+        color: themed("normal-word-color");
+    }
+}
+
+.gl-align-center {
+    text-align: center;
+}
+
+.gl-align-right {
+    text-align: right;
+}
+
+.gl-float-left {
+    float: left;
+}
+
+.gl-float-right {
+    float: right;
+}
+
+.gl-clearfix {
+    *zoom: 1;
+
+    &:after {
+        display: block;
+        content: "\200B";
+        clear: both;
+        height: 0;
+    }
+}
+
+// 暂无数据
+.gl-noData {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    opacity: .5;
+
+    // position: relative;
+    // top: 50%;
+    // left: 50%;
+    // margin-top: -8px;
+    // margin-left: -32px;
+    @include themify($themes) {
+        color: themed("normal-word-color");
+    }
+}
+
+.gl-loadMore {
+    cursor: pointer;
+    text-align: center;
+
+    // opacity: .6;
+    @include themify($themes) {
+        color: themed("main-color");
+    }
+
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 40px;
+}
+
+// 无报警(颜色)----normal-c
+.gl-color-nowarn {
+    @include themify($themes) {
+        color: themed("no-alarm-color");
+    }
+}
+
+// 黄色报警(颜色)
+.gl-color-warn {
+    @include themify($themes) {
+        color: themed("moderate-alarm-color") !important;
+    }
+}
+
+// 红色报警(颜色)
+.gl-color-alarm {
+    @include themify($themes) {
+        color: themed("severe-alarm-color") !important;
+    }
+}
+
+// 黄色报警(背景色)
+.gl-bg-warn {
+    @include themify($themes) {
+        background-color: themed("severe-alarm-color");
+    }
+}
+
+// 红色报警(背景色)
+.gl-bg-alarm {
+    @include themify($themes) {
+        background-color: themed("severe-alarm-color") !important;
+    }
+}
+
+// 无报警背景色----normal
+.gl-bg-nowarn {
+    @include themify($themes) {
+        background-color: themed("no-alarm-color");
+    }
+}
+
+//上升箭头
+.iconup {
+    @include themify($themes) {
+        color: themed("up-color");
+    }
+}
+
+//下降箭头
+.icondown {
+    @include themify($themes) {
+        color: themed("down-color");
+    }
+}
+
+// 上升颜色绿色----gl-up
+.gl-up {
+    @include themify($themes) {
+        color: themed("up-color");
+    }
+}
+
+// 下降颜色红色---gl-down
+.gl-down {
+    @include themify($themes) {
+        color: themed("down-color");
+    }
+}
+
+// 数据卡片图标
+.iconshujuqiapian {
+    margin-left: 4px;
+    font-size: inherit;
+    cursor: pointer;
+
+    @include themify($themes) {
+        color: themed("main-color");
+    }
+}
+
+//选中卡片的高亮样式 gl-card-active
+.gl-card-active {
+    @include themify($themes) {
+        box-shadow: themed("box-active-shadow1");
+    }
+}
+
+// 渐变边线填充色
+@mixin linear-line-color($opacity: .2) {
+    @include themify($themes) {
+        background-image: linear-gradient(90deg,
+                rgba(themed("layout-bg-color"), $opacity),
+                rgba(themed("sub-main-color"), $opacity),
+                rgba(themed("layout-bg-color"), $opacity));
+    }
+}
+
+// 渐变边线
+.linear-line {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    @include linear-line-color;
+}
+
+// 有渐变边线的块（目前疾病和床位中常用）
+.gl-linear-bd-row {
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 16px 30px;
+    @include linear-line-color(.06);
+    @include themify($themes) {
+        color: themed("key-word-color");
+    }
+
+    &::before {
+        left: 0;
+        top: 0;
+        @extend .linear-line;
+        height: 3px;
+    }
+
+    &::after {
+        left: 0;
+        bottom: 0;
+        @extend .linear-line;
+        height: 3px;
+    }
+}
+
+// 标题渐变背景----column-title-bg
+.gl-bg-title-gradual {
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    font-size: 18px;
+    @include linear-line-color(.16);
+
+    @include themify($themes) {
+        font-weight: normal;
+        // font-weight: themed('box-title-font');
+        padding: themed("box-title-padding");
+        color: themed("box-title-text");
+    }
+
+    &::before {
+        left: 0;
+        top: 0;
+        @extend .linear-line;
+    }
+
+    &::after {
+        left: 0;
+        bottom: 0;
+        @extend .linear-line;
+    }
+}
+
+.gl-item-active {
+    font-weight: bold;
+
+    @include themify($themes) {
+        color: themed("key-word-color");
+        background: themed("menu-active-bg");
+    }
+}
+
+// 卡片 没有边框
+.gl-box-noborder {
+    box-sizing: border-box;
+
+    @include themify($themes) {
+        background-color: themed("box-bg");
+        box-shadow: themed("box-shadow");
+    }
+}
+
+// 带有边框和背景颜色的模块背景
+.gl-box-default {
+    box-sizing: border-box;
+    padding: 20px;
+    height: 100%;
+    @extend .gl-box-noborder;
+
+    @include themify($themes) {
+        border: themed("box-bd");
+    }
+}
+
+// 缺角背景
+.gl-bg-triangle {
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        border-right: 28px solid transparent;
+
+        @include themify($themes) {
+            border-top: 28px solid themed("layout-bg-color");
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        border-right: 18px solid transparent;
+
+        @include themify($themes) {
+            border-top: 18px solid themed("main-color");
+        }
+    }
+}
+
+// 网格背景
+// .gl-box-grid {
+//     width: 100%;
+//     height: 100%;
+//     @include themify($themes) {
+//         background: url("~src/assets/images/theme-1/patient/patientTime_bg.png")
+//             no-repeat top;
+//         background-size: cover;
+//     }
+// }
+
+.gl-box-grid {
+    box-sizing: border-box;
+    padding: 20px;
+
+    @include themify($themes) {
+        background-color: themed("box-bg");
+        box-shadow: themed("box-shadow");
+    }
+}
+
+.theme-1 {
+    .gl-box-grid {
+        background-color: rgba(0, 0, 0, .03);
+        background-image: linear-gradient(rgba(215, 223, 246, .03) 1px, transparent 0), linear-gradient(90deg, rgba(215, 223, 246, .03) 1px, transparent 0), linear-gradient(hsla(0, 0%, 10%, .03) 1px, transparent 0), linear-gradient(90deg, hsla(0, 0%, 10%, .03) 1px, transparent 0);
+        background-size: 8px 8px, 8px 8px;
+    }
+}
+
+
+// 边框四个角(新)
+.gl-box-sub {
+    @include themify($themes) {
+        background-image: url("~src/assets/images/theme-1/card_sub1.png"),
+            url("~src/assets/images/theme-1/card_sub2.png"),
+            url("~src/assets/images/theme-1/card_sub3.png"),
+            url("~src/assets/images/theme-1/card_sub4.png");
+        background-position: -2px -2px, calc(100% + 2px) -2px,
+            -2px calc(100% + 2px), calc(100% + 2px) calc(100% + 2px);
+        background-repeat: no-repeat;
+    }
+}
+
+// 版块默认布局 标题
+.gl-box-title {
+    margin-bottom: 20px;
+
+    @include themify($themes) {
+        color: themed("key-word-color");
+    }
+}
+
+// 版块默认布局 '详情'
+.gl-box-link {
+    float: right;
+    cursor: pointer;
+
+    @include themify($themes) {
+        // color: themed("box-link-text");
+        color: themed("main-color");
+    }
+}
+
+// 版块默认布局 内容区
+.gl-box-content {
+    width: 100%;
+    height: calc(100% - 44px);
+}
+
+// 数据卡片弹框样式
+.gl-card-box {
+    position: relative;
+    width: 438px;
+    height: 666px;
+    padding: 60px 30px 30px 30px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: -333px 0 0 -219px;
+    opacity: 0;
+    transform: rotateY(90deg) scale(.3);
+    transition: .5s all ease;
+    z-index: 12;
+
+    @include themify($themes) {
+        background-image: url('#{themed("bg-url")}/card-bg.png');
+        background-size: 100% 100%;
+    }
+
+    >span {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .gl-card-content {
+        height: 650px;
+        overflow: visible;
+        position: relative;
+
+        .gl-data-card-base {
+            width: 100%;
+            height: 100%;
+
+            @include themify($themes) {
+                border-right: 1px dashed themed("main-color");
+                border-bottom: 1px dashed themed("main-color");
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 95%;
+                width: 2px;
+
+                @include themify($themes) {
+                    border-left: 1px dashed themed("main-color");
+                }
+            }
+        }
+    }
+
+    &.gl-show {
+        transform: scale(1) rotateY(0);
+        opacity: 1;
+    }
+}
+
+.el-cascader.is-disabled {
+    .el-cascader__label {
+        @include themify($themes) {
+            background-color: rgba(themed("input-disabled-bg"), .2);
+            border: 1px solid themed("input-disabled-bd");
+            color: themed("sub-color");
+        }
+    }
+}
+
+// 日期菜单区域
+.gl-date-head {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+
+    .public-date {
+        margin: 12px 0 12px 20px;
+        display: inline-block;
+    }
+
+    .gl-menus-main {
+        display: inline-block;
+    }
+}
+
+// 门急诊、住院等tab样式
+.el-tabs__item {
+    font-size: inherit;
+}
+
+.gl-menus-main {
+    margin: 20px;
+    height: 44px;
+    .el-tabs__header {
+        margin: 0;
+    }
+    .el-tabs__item {
+        width: 150px;
+        height: 44px;
+        line-height: 42px;
+        position: relative;
+        font-size: inherit;
+        display: inline-block;
+        text-align: center;
+        border-radius: 10px;
+        margin: 0 10px;
+        padding: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        // opacity: .5;
+        @include themify($themes) {
+            color: themed("tab-text");
+            background: themed("tab-bg");
+            border: 1px solid themed("tab-bd");
+        }
+
+        &.is-active {
+
+            // font-weight: bold;
+            @include themify($themes) {
+                border: 1px solid themed("tab-change-bd");
+                color: themed("tab-text");
+                background-color: themed("tab-change-bg");
+            }
+        }
+
+        &.is-disabled {
+            @include themify($themes) {
+                cursor: not-allowed;
+                color: themed("select-lise-disabled-text");
+                background-color: rgba(themed("input-disabled-bg"), .2);
+                border: 1px solid themed("input-disabled-bd");
+            }
+        }
+    }
+
+    .el-tabs__active-bar {
+        display: none;
+    }
+
+    .el-tabs__nav-wrap::after {
+        display: none;
+    }
+}
+
+// 返回键
+.gl-return {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    width: 58px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 28px !important;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 2;
+
+    @include themify($themes) {
+        color: themed("back-button-text");
+        background: themed("back-button-bg");
+        border: 1px solid themed("back-button-bd");
+    }
+}
+
+//全屏loading
+.fullScreenLoading {
+    z-index: 20000 !important;
+
+    .el-loading-spinner {
+        position: relative;
+        margin: 30px auto 0;
+
+        svg {
+            display: none;
+        }
+
+        .el-loading-text {
+            @include themify($themes) {
+                background-color: themed("key-word-color");
+            }
+
+            font-size: 18px;
+        }
+
+        &:before {
+            content: "";
+            display: block;
+
+            @include themify($themes) {
+                border: 5px solid themed("sub-main-color");
+                box-shadow: themed("box-shadow");
+            }
+
+            opacity: .9;
+            width: 50px;
+            height: 50px;
+            border-top-color: transparent !important;
+            border-bottom-color: transparent !important;
+            border-radius: 50%;
+            animation: gl-spin-right 1.5s linear infinite normal;
+            animation-delay: 0;
+            margin: 0 auto;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+
+            @include themify($themes) {
+                border: 5px solid themed("sub-main-color");
+                box-shadow: themed("box-shadow");
+            }
+
+            opacity: .9;
+            border-radius: 50%;
+            border-left-color: transparent !important;
+            border-bottom-color: transparent !important;
+            position: absolute;
+            top: 12px;
+            left: calc(50% - 20px);
+            margin: 0 auto;
+            animation: gl-spin-left 1.3s linear infinite normal;
+            animation-delay: 0;
+        }
+    }
+}
+
+@keyframes gl-spin-right {
+    from {
+        transform: rotate(0deg);
+        opacity: .2;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: rotate(360deg);
+        opacity: .2;
+    }
+}
+
+@keyframes gl-spin-left {
+    from {
+        transform: rotate(0deg);
+        opacity: .2;
+    }
+
+    50% {
+        transform: rotate(-180deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: rotate(-360deg);
+        opacity: .2;
+    }
+}
+
+//文字块显示省略号
+.gl-dotw {
+    // display: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 自定义字体大小中使用
+.gl-nowrap {
+    white-space: nowrap;
+}
+
+//element--message
+.el-message {
+    padding: 20px 20px 20px 30px;
+    top: 280px;
+    opacity: .93;
+    border-radius: 6px;
+
+    .el-message__icon {
+        &::before {
+            display: inline-block;
+            transform: scale(1.2);
+        }
+    }
+}
+
+.theme-1 .el-message {
+    background-color: #091e38;
+}
+
+.theme-1 .el-message--success {
+    border: 1px solid rgba(3, 254, 151, .48);
+    box-shadow: rgba(3, 254, 151, .95) 0 0 24px inset;
+
+    .el-message__content {
+        color: rgba(3, 254, 151, 1);
+    }
+}
+
+.theme-1 .el-message--warning {
+    border: 1px solid rgba(224, 177, 53, .85);
+    box-shadow: rgba(224, 177, 53, .95) 0 0 24px inset;
+
+    .el-message__content {
+        color: rgba(224, 177, 53, 1);
+    }
+}
+
+.theme-1 .el-message--error {
+    border: 1px solid rgba(217, 69, 74, .85);
+    box-shadow: rgba(217, 69, 74, .95) 0 0 24px inset;
+
+    .el-message__content {
+        color: rgba(217, 69, 74, 1);
+    }
+}
+
+// element提示框的样式
+.el-tooltip__popper.tooltip,
+.el-tooltip__popper.is-dark {
+    z-index: 48;
+    padding: 4px 10px;
+    line-height: 1.5;
+
+    @include themify($themes) {
+        color: themed("tooltip-text");
+        background-color: themed("tooltip-bg");
+        border: 1px solid themed("tooltip-bd");
+        // box-shadow: themed('tooltip-shadow');
+    }
+
+    .popper__arrow {
+        @include themify($themes) {
+            border-bottom-color: themed("tooltip-bg");
+            opacity: .6;
+        }
+
+        &:after {
+            @include themify($themes) {
+                border-bottom-color: transparent;
+            }
+        }
+    }
+}
+
+.el-tooltip__popper[x-placement^="top"] .popper__arrow {
+    @include themify($themes) {
+        border-top-color: themed("tooltip-bg");
+    }
+
+    &:after {
+        @include themify($themes) {
+            border-top-color: transparent;
+        }
+    }
+}
+
+.el-tooltip__popper[x-placement^="left"],
+.el-tooltip__popper[x-placement^="bottom"],
+.el-tooltip__popper[x-placement^="right"] {
+    .popper__arrow {
+        border-top-color: transparent !important;
+        border-bottom-color: transparent !important;
+        opacity: .4 !important;
+    }
+}
+
+// 下拉框、输入框公共样式
+.el-input {
+    font-size: 16px;
+}
+
+.el-select .el-input .el-input__inner,
+.el-input .el-input__inner {
+    @include themify($themes) {
+        background-color: themed("input-bg");
+        border: 1px solid themed("input-bd");
+        color: themed("input-text");
+    }
+
+    // width: 318px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 16px;
+
+    &:hover {
+        @include themify($themes) {
+            border-color: themed("main-color");
+        }
+    }
+}
+
+.el-input.is-disabled,
+.el-select .el-input.is-disabled {
+    .el-input__inner {
+        @include themify($themes) {
+            background-color: rgba(themed("input-disabled-bg"), .2);
+            border: 1px solid themed("input-disabled-bd");
+        }
+    }
+}
+
+.el-select .el-input .el-select__caret {
+    @include themify($themes) {
+        color: themed("input-text");
+    }
+
+    font-size: 16px;
+    line-height: 34px;
+}
+
+// 下拉列表
+.el-popper {
+    z-index: 5001 !important;
+    // border-color: transparent;
+
+    @include themify($themes) {
+        border: 1px solid themed("popper-bd-color");
+        background-color: themed("popper-bg");
+        box-shadow: themed("popper-shadow");
+    }
+
+    // 一般下拉
+    .el-select-dropdown__item {
+        padding: 0 20px;
+        font-size: 16px;
+        height: 2.4em;
+        line-height: 2.4em;
+
+        @include themify($themes) {
+            color: themed("select-list-text");
+        }
+    }
+
+    .el-select-dropdown__item.hover,
+    .el-select-dropdown__item:hover {
+        background: transparent;
+    }
+
+    .el-select-dropdown__item.selected {
+        @include themify($themes) {
+            color: themed("select-list-active-text");
+        }
+    }
+
+    // 日期下拉
+    .el-cascader-menu {
+        height: auto;
+        min-height: 38px;
+        max-height: 498px;
+        margin: 10px 0;
+        padding: 0;
+        background-color: transparent;
+
+        @include themify($themes) {
+            //     background-color: themed('popper-bg');
+            border-right: 1px solid themed("popper-bd-color");
+        }
+    }
+
+    .el-cascader-menu:last-child {
+        border-right: none;
+    }
+
+    .el-cascader-menu__item,
+    .el-cascader__label {
+        padding: 0 20px;
+        font-size: 16px;
+        height: 2.4em;
+        line-height: 2.4em;
+
+        @include themify($themes) {
+            color: themed("select-list-text");
+        }
+    }
+
+    .el-cascader-menu__item:focus:not(:active),
+    .el-cascader-menu__item:hover {
+        background-color: transparent;
+    }
+
+    .el-cascader-menu__item.is-active {
+        @include themify($themes) {
+            color: themed("select-list-active-text");
+        }
+    }
+
+    .el-cascader-menu__item.is-disabled {
+        background-color: transparent;
+
+        @include themify($themes) {
+            color: themed("select-lise-disabled-text");
+        }
+    }
+}
+
+.el-popper[x-placement^="bottom"] .popper__arrow {
+    @include themify($themes) {
+        border-bottom-color: themed("popper-bd-color");
+    }
+
+    &::after {
+        @include themify($themes) {
+            border-bottom-color: themed("popper-bg");
+        }
+    }
+}
+
+.el-popper[x-placement^="top"] .popper__arrow {
+    @include themify($themes) {
+        border-top-color: themed("popper-bd-color");
+    }
+
+    &::after {
+        @include themify($themes) {
+            border-top-color: themed("popper-bg");
+        }
+    }
+}
+
+// input框中的搜索图标
+.el-input__prefix,
+.el-input__suffix {
+    right: 0;
+    height: 42px;
+    line-height: 42px;
+    font-size: 20px;
+
+    @include themify($themes) {
+        color: themed("key-word-color");
+    }
+}
+
+.el-input--suffix .el-input__inner {
+    padding-right: 50px;
+}
+
+.el-input__icon {
+    width: 50px;
+    height: 42px;
+    line-height: 42px;
+    font-size: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.el-input__suffix .iconfont {
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.el-input.is-disabled {
+
+    .el-input__prefix,
+    .el-input__suffix {
+        @include themify($themes) {
+            color: themed("sub-color");
+        }
+
+        .iconfont {
+            cursor: not-allowed;
+        }
+    }
+}
+
+// 单选按钮
+.el-radio {
+    .el-radio__input {
+        .el-radio__inner {
+            @include themify($themes) {
+                background-color: themed("radio-bg");
+                border: 1px solid themed("radio-bd");
+            }
+        }
+
+        &.is-checked {
+            .el-radio__inner {
+                @include themify($themes) {
+                    background-color: themed("radio-selected-bg");
+                    border: 1px solid themed("radio-selected-bd");
+                }
+            }
+        }
+    }
+
+    .el-radio__label {
+        @include themify($themes) {
+            color: themed("normal-word-color");
+        }
+    }
+}
+
+// 多选框
+.el-checkbox {
+    .el-checkbox__inner {
+        @include themify($themes) {
+            background-color: themed("radio-bg");
+            border: 1px solid themed("radio-bd");
+        }
+    }
+
+    &.is-checked {
+        .el-checkbox__inner {
+            @include themify($themes) {
+                background-color: themed("radio-selected-bg");
+                border: 1px solid themed("radio-selected-bd");
+            }
+        }
+    }
+
+    .el-checkbox__label {
+        @include themify($themes) {
+            color: themed("normal-word-color");
+        }
+    }
+}
+
+// 按钮
+.el-button {
+    padding: 8px 20px;
+    border-radius: 4px;
+
+    @include themify($themes) {
+        background: themed("button-bg");
+        border: 1px solid themed("button-bd");
+        color: themed("button-text");
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+        @include themify($themes) {
+            background: themed("button-hover-bg");
+        }
+    }
+}
+
+//开关
+.el-switch {
+    float: right;
+    margin-top: 24px;
+    height: 33px;
+
+    .el-switch__core {
+        height: 34px;
+        width: 75px !important;
+        border-radius: 17px;
+
+        @include themify($themes) {
+            border: 1px solid rgba(themed("switch-off-bd"), .5);
+            background-color: themed("switch-off-bg");
+        }
+
+        // border-color:#a8a8a8 !important;
+        &:after {
+            top: 1px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.el-switch.is-checked {
+    .el-switch__core {
+
+        // border-color:#206c71 !important;
+        @include themify($themes) {
+            border: 1px solid themed("switch-on-bd");
+            background-color: themed("switch-on-bg");
+        }
+    }
+
+    .el-switch__core::after {
+        top: 1px;
+        margin-left: -1.6vw;
+
+        @include themify($themes) {
+            background-color: themed("switch-on-core");
+        }
+    }
+}
+
+// 表格 表头
+.gl-thead {
+    @include themify($themes) {
+        background-color: themed("th-bg");
+        color: themed("key-word-color");
+    }
+
+    height: 44px;
+    line-height: 44px;
+}
+
+// element的滚动条
+.el-scrollbar {
+    height: 100%;
+}
+
+.el-scrollbar__bar.is-vertical {
+    width: 6px;
+    right: 0;
+}
+
+.el-scrollbar__thumb {
+    @include themify($themes) {
+        background-color: themed("scrollbar-color");
+    }
+}
+
+// element表格样式
+.el-table,
+.el-table__expanded-cell {
+    background-color: transparent;
+}
+
+.el-table,
+.el-table--group {
+    border: none;
+
+    @include themify($themes) {
+        color: themed("normal-word-color");
+    }
+
+    &::after {
+        width: 0;
+    }
+
+    .cell {
+        line-height: 1.2;
+        padding: 0 10px;
+    }
+
+    th>.cell {
+        vertical-align: initial;
+    }
+
+    thead {
+        @include themify($themes) {
+            background-color: themed("th-bg");
+            color: themed("key-word-color");
+        }
+    }
+
+    th,
+    tr,
+    thead.is-group th {
+        padding: 11px 0;
+        border: none;
+        background-color: transparent;
+    }
+
+    td,
+    th.is-leaf {
+        padding: 11px 0;
+        border: none;
+        font-size: 16px;
+        background-color: transparent;
+    }
+
+    .caret-wrapper {
+        width: 12px;
+        height: 16px;
+    }
+
+    .sort-caret {
+        border: 6px solid transparent;
+
+        &.descending {
+            @include themify($themes) {
+                border-top-color: rgba(themed("main-color"), .2);
+            }
+
+            bottom: -5px;
+        }
+
+        &.ascending {
+            @include themify($themes) {
+                border-bottom-color: rgba(themed("main-color"), .2);
+            }
+
+            top: -5px;
+        }
+    }
+}
+
+.el-table .ascending .sort-caret.ascending {
+    @include themify($themes) {
+        border-bottom-color: themed("main-color");
+    }
+}
+
+.el-table .descending .sort-caret.descending {
+    @include themify($themes) {
+        border-top-color: themed("main-color");
+    }
+}
+
+.el-table::before {
+    height: 0;
+}
+
+.el-table--striped .el-table__body tr.el-table__row--striped.current-row td,
+.el-table__body tr.current-row>td,
+.el-table__body tr.hover-row.current-row>td,
+.el-table__body tr.hover-row.el-table__row--striped.current-row>td {
+    @include themify($themes) {
+        background-color: themed("td-selected-bg");
+    }
+}
+
+.el-table__body tr.hover-row.el-table__row--striped>td,
+.el-table__body tr.hover-row>td {
+    @include themify($themes) {
+        background-color: themed("td-hover-bg");
+    }
+}
+
+// 表格中的滚动条
+.el-table--scrollable-x .el-table__body-wrapper::-webkit-scrollbar {
+    cursor: pointer;
+    height: 6px;
+}
+
+.el-table--scrollable-x .el-table__body-wrapper::-webkit-scrollbar-thumb {
+    cursor: pointer;
+
+    @include themify($themes) {
+        background-color: transparent;
+    }
+}
+
+.el-table--scrollable-x .el-table__body-wrapper:hover::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+
+    @include themify($themes) {
+        background-color: themed("scrollbar-color");
+    }
+}
+
+.el-table__body-wrapper::-webkit-scrollbar {
+    cursor: pointer;
+    width: 6px;
+}
+
+.el-table__body-wrapper::-webkit-scrollbar-thumb {
+    cursor: pointer;
+
+    @include themify($themes) {
+        background-color: transparent;
+    }
+}
+
+.el-table__body-wrapper:hover::-webkit-scrollbar-thumb {
+    width: 6px;
+    border-radius: 3px;
+
+    @include themify($themes) {
+        background-color: themed("scrollbar-color");
+    }
+}
+
+// 问号
+.iconfont.iconwenhao2 {
+    // display: inline-block;
+    padding: 2px 3px;
+    // width: 16px;
+    // height: 16px;
+    // line-height: 16px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 2px;
+    vertical-align: 2px;
+
+    @include themify($themes) {
+        background: themed("question-mark");
+    }
+}
+
+.el-table__empty-text {
+    font-size: 16px;
+    opacity: .5;
+
+    @include themify($themes) {
+        color: themed("normal-word-color");
+    }
+}
+
+.gl-bi {
+    &:hover {
+        @include themify($themes) {
+            border-bottom: 1px solid themed('main-color');
+        }
+    }
+}
+
+
+// 卡片形式的tab
+.el-tabs--card {
+    .el-tabs__nav-wrap {
+        margin-bottom: -1px;
+    }
+    .el-tabs__header {
+        margin-bottom: 0;
+        @include themify($themes) {
+            border-bottom: 1px solid themed("tab-bd");
+        }
+        .el-tabs__nav {
+            margin-bottom: -1px;
+            border: none;
+            border-radius: 0;
+        }
+        .el-tabs__item {
+            border-left: none;
+            @include themify($themes) {
+                color: themed('normal-word-color')
+            }
+        }
+        .el-tabs__item.is-active {
+            @include themify($themes) {
+                border: 1px solid themed("tab-bd");
+                border-bottom-color: rgba(themed('box-bg'), 1);
+                color: themed('main-color');
+            }
+        }
+        .el-tabs__item:focus.is-active.is-focus:not(:active) {
+             box-shadow: none;
+        }
+    }
+}

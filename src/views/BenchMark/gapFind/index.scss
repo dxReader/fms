@@ -1,0 +1,113 @@
+.gapFind {
+    position: relative;
+    .ruleIcon {
+        position: absolute;
+        font-size: 16px;
+        right: 50px;
+        top: 24px;
+        cursor: pointer;
+        z-index: 1;
+        @include themify($themes) {
+            color: themed("key-word-color");
+        }
+        .screen {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            @include themify($themes) {
+                color: themed("key-word-color");
+            }
+            position: relative;
+            top: 2px;
+            left: 15px;
+        }
+    }
+    .content {
+        .tab {
+            .head{
+                color: #B6B5CA;
+                font-size: 16px;
+                height: 64px;
+                line-height: 64px;
+                margin: 0 20px;
+                .left {
+                    position: relative;
+                    .icon {
+                        top: -5px;
+                        position: relative;
+                        display: inline-block;
+                        width: 22px;
+                        height: 36px;
+                        font-size: 12px;
+                        text-indent: 2.5px;
+                        line-height: 26px;
+                        margin-left: 10px;
+                        @include themify($themes) {
+                            color: themed("key-word-color");
+                            background: url('#{themed("bg-url")}/jrdt-jb.png');
+                            background-size: 100% 100%;
+                        }
+                    }
+                    .type-title {
+                        margin: 0 50px 0 14px;
+                        @include themify($themes) {
+                            color: themed("key-word-color");
+                        }
+                    }
+                    .name {
+                        font-size: 16px;
+                        @include themify($themes) {
+                            color: themed("normal-word-color");
+                        }
+                    }
+                }
+            }
+            .list {
+                margin: -10px 0 0 0;
+                min-height: 180px;
+                overflow: hidden;
+                &::after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+                .noDataM{
+                    margin-top: 100px;
+                }
+            }
+            .pagination {
+                width: 100%;
+                min-height: 16px;
+                text-align: center;
+                overflow: hidden;
+                > li {
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    @include themify($themes) {
+                        background-color:  rgba(themed('main-color'), .16);
+                    }
+                    margin: 0 10px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    &.active {
+                        @include themify($themes) {
+                            background-color:  rgba(themed('main-color'), 1);
+                        }
+                    }
+                }
+                &::before {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+            }
+            &.totality {
+                .list {
+                    height: 542px;
+                }
+            }
+        }
+    }
+    
+}

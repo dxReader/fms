@@ -1,0 +1,23 @@
+[class*=gl-box-]{
+    background: #fff;
+}
+
+.gl-bg-triangle{
+    &::after,&::before{
+        content: none;
+    }
+}
+
+.gl-box-title {
+    background: transparent;
+}
+
+.gl-bg-title-gradual {
+    background: none;
+    &::before {
+        background: none;
+    }
+    &::after {
+        background: none;
+    }
+}

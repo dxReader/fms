@@ -1,0 +1,105 @@
+@import "src/views/Ability/common";
+$bg-list: "/ability/rank_excellent.png",
+	"/ability/rank_good.png",
+	"/ability/rank_secondary.png",
+	"/ability/rank_difference.png";
+
+.ability-child {
+	@include main-entry;
+	// .el-tabs__nav-scroll {
+    //     width: 330px !important;
+    //     overflow: hidden !important;
+    // }
+    // .el-tabs__nav-prev,.el-tabs__nav-next {
+    //     top: 2px;
+    // }
+    // .el-tabs__nav-wrap.is-scrollable {
+    //     padding: 0 20px;
+    // }
+	.ability-child-list {
+		height: calc(100% - 90px);
+		overflow-y: auto;
+		.ability-child-li { 
+			width: 100%;
+			padding: 20px 0 20px 18px;
+			box-sizing: border-box;
+			font-size: 16px;
+			cursor: pointer;
+
+			.star-box {
+				display: inline-block;
+				vertical-align: middle;
+				// float: left;
+				//margin-top:3px;
+			}
+
+			.code {
+				margin: 0 18px;
+
+				@include themify($themes) {
+					color: themed("main-color");
+				}
+
+			}
+
+			.name {
+				@include themify($themes) {
+					color: themed("key-word-color");
+				}
+
+				margin-left: 20px;
+				display: inline-block;
+				vertical-align: middle;
+				width: calc(100% - 140px);
+				// width: 200px;
+				// overflow:hidden;
+				// text-overflow:ellipsis;
+				// white-space:nowrap;
+			}
+		}
+	}
+
+	.el-col-16 {
+		.back {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			font-size: 26px;
+			cursor: pointer;
+
+			@include themify($themes) {
+				color: rgba(themed("key-word-color"), .3);
+			}
+		}
+	}
+
+	.cascaderBox {
+		margin: 0 0 14px 40px;
+	}
+
+	.return {
+		position: absolute;
+		top: 7px;
+		right: 70px;
+		font-size: 30px;
+	}
+
+	.left-box,
+	.right-box,
+	.center-box {
+		height: 885px;
+		position: relative;
+	}
+
+	.right-wraper {
+		height: calc(100% - 60px) !important;
+	}
+
+	.el-row {
+		height: calc(100% - 55px);
+		overflow: hidden;
+	}
+	.ability-left {
+		padding: 0 !important;
+	}
+}

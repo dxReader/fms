@@ -1,0 +1,562 @@
+.myHospital {
+    @include themify($themes) {
+        color: themed("key-word-color");
+    }
+    .iconbaojing1{
+        @include themify($themes) {
+            color: themed("severe-alarm-color");
+        }
+    }
+    .reset{
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-size: 16px;
+    }
+    .public-date{
+        .el-cascader__label{
+            @include themify($themes) {
+                color:  themed("key-word-color");
+            }
+            cursor: auto !important;
+        }
+        .el-icon-date{
+            @include themify($themes) {
+                color:  themed("key-word-color") !important;
+            }
+        }
+    }
+    
+    table{
+        border-collapse: collapse;
+    }
+    .left-box{
+        width: 364px;
+        height: 910px;
+        position: absolute;
+        top: 47px;
+        left: 20px;
+        .left-child{
+            width: 324px;
+            height: 87px;
+            line-height: 87px;
+            background-color: rgba(98, 169, 255, .13);
+            border:1px dashed rgba(98, 169, 255, .4);
+            border-radius: 5px;
+            margin-bottom: 30px;
+            p:nth-child(1){
+                margin: 5px 0 0 15px;
+            }
+            p:nth-child(2){
+                margin-right: 15px;
+                font-size: 32px;
+            }
+        }
+    }
+    .trans{
+        width: 323px;
+        height: 106px;
+        background-color: #f7f7f7;
+        border-radius: 54px;
+        margin-top: 90px;
+        position: relative;
+        .trans-left{
+            margin: 25px 0 0 37px;
+            .arrow{
+                color: #c8c8c8;
+                font-size: 20px;
+            }
+            .xg{
+                color: #62a9ff;
+            }
+        }
+        .trans-btn{
+            width: 74px;
+            height: 74px;
+            background-color: rgba(244, 244, 244, 1);
+            box-shadow: 3px 1px 14px 0 rgba(172, 116, 237, .38);
+            border-radius: 50%;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+            .inner{
+                width: 48px;
+                height: 43px;
+                line-height: 20px;
+                background-color: rgba(239, 237, 241, 1);
+                box-shadow: 4px 6px 3px 0 rgba(0, 0, 0, .07) inset;
+                border-radius: 50%;
+                position: absolute;
+                top: 13px;
+                left: 13px;
+                text-align: center;
+                vertical-align: middle;
+                padding-top: 5px;
+                @include themify($themes) {
+                    color: themed("main-color");
+                }
+            }
+            @media screen and (max-width: 1366px) {
+                .inner{
+                    height: 46px;
+                    padding-top: 2px;
+                }
+            }
+        }
+    }
+    .center-box{
+        width: 1112px;
+        height: 910px;
+        position: absolute;
+        top: 47px;
+        left: 404px;
+        .center-top{
+            overflow: auto;
+            .top-item{
+                width: 328px;
+                height: 106px;
+                box-shadow: 0 4px 10px 1px rgba(17, 17, 17, .06);
+                border-radius:8px;
+                margin-right: 40px;
+                margin-bottom: 20px;
+                .item-icon{
+                    width: 80px;
+                    height: 78px;
+                    line-height: 78px;
+                    background-color: rgba(111, 118, 251, .1);
+                    border-radius: 8px;
+                    margin: 14px;
+                    text-align: center;
+                    span{
+                        color: #6f76fb;
+                        font-size: 44px;
+                    }
+                }
+                .sec-icon{
+                    background-color: rgba(98, 169, 255, .1);
+                    span{
+                        font-size: 24px;
+                        color: #62a9ff;
+                    }
+                }
+                .third-icon{
+                    @include themify($themes) {
+                        background-color: rgba(themed("main-color"), .12);
+                    }
+                    span{
+                        font-size: 44px;
+                        @include themify($themes) {
+                            color: themed("main-color");
+                        }
+                    }
+                }
+                .item-word{
+                    margin: 20px 0 0 32px;
+                    span{
+                        font-size: 16px;
+                        @include themify($themes) {
+                            color: themed("normal-word-color");
+                        }
+                    }
+                }
+            }
+            .top-item:nth-child(3){
+                margin-right: 0;
+            }
+        }
+        .el-table__body-wrapper{
+            overflow-x: hidden;
+        }
+        th,td{
+            padding: 0 !important;
+            height: 62px !important;
+        }
+        i{
+            font-style: normal;
+        }
+        .change{
+            color: #62a9ff;
+        }
+        .gl-thead{
+            height: 62px !important;
+            line-height: 62px !important;
+        }
+        .table-list .table-content td {
+            height: 62px !important;
+            line-height: 62px !important;
+        }
+        .center-main{
+            width: 1063px;
+            overflow: auto;
+            padding: 5px;
+            padding: 5px;
+            background-color: rgba(237, 150, 116, .06);
+            margin-bottom: 5px;
+            position: relative;
+            h4{
+                line-height: 20px;
+                margin: 5px 0 15px 5px;
+                span{
+                    float: left;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                    @include themify($themes) {
+                        background: url('#{themed("bg-url")}/myHospital/cup.png') no-repeat;
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+            
+            tr:nth-child(even){
+                background-color: rgba(244, 245, 247, .4);
+                border-top: 1px solid rgba(204, 204, 204, .3);
+                border-bottom: 1px solid rgba(204, 204, 204, .3);
+            }
+        }
+        .center-other{
+            h4{
+                line-height: 20px;
+                margin: 5px 0 10px 5px;
+            }
+            width: 1063px;
+            overflow: auto;
+            border: 1px dashed #edc774;
+            padding: 5px;
+            position: relative;
+            .detail{
+                top: 7px;
+            }
+        }
+        .center-bottom{
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 1063px;
+            height: 36px;
+            line-height: 36px;
+            border: 1px dashed #62a9ff;
+            padding: 5px;
+            .detail{
+                top: 4px;
+            }
+        }
+    }
+    .detail{
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 16px;
+        @include themify($themes) {
+            color: themed("main-color");
+        }
+    }
+    .right-box{
+        width: 364px;
+        height: 910px;
+        position: absolute;
+        top: 47px;
+        left: 1536px;
+        .chart{
+            position: relative;
+            width: 324px;
+            height: 324px;
+            .circle{
+                text-align: center;
+                width: 188px;
+                height: 128px;
+                background: #fff;
+                box-shadow: 0 4px 14px 1px rgba(17, 17, 17, .15);
+                border-radius: 50%;
+                position: absolute;
+                left: 68px;
+                top: 68px;
+                padding-top: 60px;
+                p {
+                    margin-bottom: 10px;
+                }
+                i {
+                    font-size: 18px;
+                    margin-right: 5px;
+                    margin-left: -10px;
+                }
+            }
+        }
+        .trans {
+            margin-top: 0;
+        }
+        .right-bottom {
+            overflow: auto;
+            position: relative;
+            margin-top: 70px;
+            width: 324px;
+            >div {
+                width: 100%;
+                height: 60px;
+                line-height: 80px;
+                text-align: center;
+                border-bottom: 1px solid rgba(200, 200, 200, .3);
+                padding-top: 20px;
+                .title{
+                    // margin: 20px 0 27px 0;
+                    float: left;
+                }
+            }
+            i {
+                color: #c8c8c8;
+                font-size: 18px;
+            }
+            p {
+                line-height: 36px;
+                vertical-align:middle;
+                float: right;
+            }
+            .xg {
+                color: #62a9ff;
+            }
+            .top{
+                border-top: 1px solid rgba(200, 200, 200, .3);
+            }
+        }
+    }
+    
+    .all-data-box{
+        width: 1068px;
+        height: 891px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -470px;
+        margin-left: -574px;
+        z-index: 12;
+        text-align: center;
+        padding: 25px 40px;
+        @include themify($themes) {
+            background-image: url('#{themed("bg-url")}/news-bg.png');
+            background-size: 100% 100%;
+        }
+        >span {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .search{
+            margin-bottom: 20px;
+            width: 336px;
+        }
+        tr:nth-child(even){
+            background-color: rgba(244, 245, 247, .4);
+            border-top: 1px solid rgba(204, 204, 204, .3);
+            border-bottom: 1px solid rgba(204, 204, 204, .3);
+        }
+    }
+    .el-table__body-wrapper{
+        overflow-x: hidden;
+    }
+    th,td{
+        padding: 0 !important;
+        height: 62px !important;
+    }
+    i{
+        font-style: normal;
+    }
+    .change{
+        color: #62a9ff;
+    }
+    .el-table i{
+        color: #c8c8c8;
+    }
+    .gl-thead{
+        height: 62px !important;
+        line-height: 62px !important;
+    }
+    .table-list .table-content td {
+        height: 62px !important;
+        line-height: 62px !important;
+    }
+    .el-table__empty-text{
+        height: 62px;
+        line-height: 62px;
+        position: absolute;
+        top: 0;
+    }
+}
+.theme-1{
+    .myHospital{
+        .change{
+            color: #03f9fc !important;
+        }
+        .detail{
+            color: #fff;
+        }
+        .trans{
+            width: 323px;
+            height: 106px;
+            background: rgba(30, 56, 86, .3);
+            border-radius: 54px;
+            position: relative;
+            .trans-left{
+                margin: 25px 0 0 37px;
+                .arrow{
+                    color: #c8c8c8;
+                    font-size: 20px;
+                }
+                .xg{
+                    color: #03f9fc;
+                }
+            }
+            .trans-btn{
+                background-color: #247798;
+                box-shadow: 4px 1px 5px 0 rgba(9, 20, 46, .38);
+                .inner{
+                    background: rgba(5, 77, 105, 1);
+                    box-shadow: 4px 6px 3px 0 rgba(0, 0, 0, .07);
+                }
+            }
+        }
+        .center-box {
+            .center-top {
+                .top-item {
+                    background: linear-gradient(0deg, rgba(0, 201, 190, .3), rgba(23, 133, 197, 0));
+                    .item-icon {
+                        background-color: rgba(3, 250, 252, .12);
+                        span {
+                            color: #03fafc;
+                        }
+                    }
+                    .sec-icon {
+                        background-color: rgba(23, 148, 245, .1);
+                        span{
+                            color: #1794f5;
+                        }
+                    }
+                    .third-icon {
+                        span{
+                            color: #19d39e;
+                        }
+                    }
+                    .item-word{
+                        margin: 20px 0 0 32px;
+                        span{
+                            font-size: 16px;
+                            @include themify($themes) {
+                                color: themed("normal-word-color");
+                            }
+                        }
+                    }
+                }
+            }
+            .el-table__body-wrapper{
+                overflow-x: hidden;
+            }
+            th,td{
+                padding: 0 !important;
+                height: 62px !important;
+            }
+            i{
+                font-style: normal;
+            }
+            
+            .gl-thead{
+                height: 62px !important;
+                line-height: 62px !important;
+            }
+            .table-list .table-content td {
+                height: 62px !important;
+                line-height: 62px !important;
+            }
+            .center-main{
+                background-color: #0d1833;
+                border: 1px dashed rgba(245, 154, 23, .7);
+                h4{
+                    line-height: 20px;
+                    margin: 5px 0 15px 5px;
+                    span{
+                        float: left;
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                        @include themify($themes) {
+                            background: url('#{themed("bg-url")}/myHospital/cup.png') no-repeat;
+                            background-size: 100% 100%;
+                        }
+                    }
+                }
+                
+                tr:nth-child(even){
+                    background-color: rgba(19, 30, 57, .4);
+                    border: none;
+                }
+            }
+            .center-other{
+                border: 1px dashed rgba(3, 249, 252, .3);
+            }
+            .center-bottom{
+                position: absolute;
+                bottom: 10px;
+                left: 20px;
+                width: 1063px;
+                height: 36px;
+                line-height: 36px;
+                border: 1px dashed #62a9ff;
+                padding: 5px;
+                .detail{
+                    top: 4px;
+                }
+            }
+        }
+        .right-box{
+            .chart{
+                .circle{
+                    background-color: #0d1833;
+                    box-shadow: 0 4px 14px 1px rgba(17, 17, 17, .15);
+                }
+            }
+            .right-bottom{
+                overflow: auto;
+                position: relative;
+                margin-top: 70px;
+                width: 324px;
+                >div{
+                    padding-top: 20px;
+                    width: 100%;
+                    height: 60px;
+                    line-height: 80px;
+                    text-align: center;
+                    border-bottom: 1px solid rgba(200, 200, 200, .3);
+                    .title{
+                        // margin: 20px 0 27px 0;
+                        float: left;
+                    }
+                }
+                p{
+                    line-height: 36px;
+                    float: right;
+                }
+                .top{
+                    border-top: 1px solid rgba(200, 200, 200, .3);
+                }
+                .xg {
+                    color: #03f9fc;
+                }
+            }
+        }
+        .all-data-box{
+            tr:nth-child(even){
+                background-color: rgba(30, 56, 86, .4);
+                border: none;
+            }
+        }
+    }
+}
+
+.theme-3 {
+    .trans-btn {
+        box-shadow: 4px 1px 5px 0 rgba(0, 153, 153, .28) !important;
+    }
+}

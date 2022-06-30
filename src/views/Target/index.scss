@@ -1,0 +1,275 @@
+@import "./common";
+$size: 18px;
+$sizeColor: #c4d1f6;
+
+.target {
+	@include main-entry;
+	// .el-tabs__item.is-active {
+	// 	font-size: inherit; 
+	// 	@include themify($themes) {
+	// 		color: themed("indicatords-menu-active-color");
+	// 		font-weight: bold;
+	// 	}
+	// 	opacity: 1;
+    // }
+    // .el-tabs__nav-scroll {
+    //     width: 340px !important;
+    //     overflow: hidden !important;
+    // }
+    // .el-tabs__nav-prev,.el-tabs__nav-next {
+    //     top: 2px;
+    // }
+    // .el-tabs__nav-wrap.is-scrollable {
+    //     padding: 0 20px;
+    // }
+	.left {
+		.project {
+			.sub {
+				position: relative;
+				text-align: center;
+				width: 100%;
+				overflow: auto;
+				.el-tabs__header {
+					padding: 20px 0;
+					height: 18px;
+					.el-tabs__nav-next,
+					.el-tabs__nav-prev {
+						line-height: 22px;
+					}
+					.el-tabs__nav-wrap,
+					.el-tabs__nav-scroll {
+						overflow: inherit;
+						&::after {
+							display: none;
+						}
+					}
+					.el-tabs__item {
+						@include themify($themes) {
+							color: themed("normal-word-color");
+						}
+						font-size: inherit;
+						height: 100%;
+						line-height: 18px;
+						padding: 0 20px;
+					}
+					.el-tabs__item.is-active {
+						@include themify($themes) {
+							color: themed("main-color");
+						}
+						font-weight: 600;
+					}
+			
+					.el-tabs__active-bar {
+						height: 10px;
+						@include themify($themes) {
+							background: themed("indicatords-menu-bar-bg");
+							bottom: themed("indicatords-menu-bar-bottom");
+							background-size: 100% 100%;
+						}
+					}
+				}
+				.el-tabs__content {
+					display: none;
+				}
+				.sub-list {
+					display: inline-block;
+					.sub-item {
+						margin: 0 14px;
+						padding: 0 4px;
+						cursor: pointer;
+					}
+				}
+
+				img {
+					position: absolute;
+					bottom: 10px;
+					height: 10px;
+					left: 0;
+					//transform:translateX(100px);
+					transition: left .3s cubic-bezier(.645, .045, .355, 1),
+						-webkit-transform .3s cubic-bezier(.645, .045, .355, 1);
+				}
+			}
+			.target-list {
+				height: 850px;
+				overflow-y: auto;
+				.target-item {
+					cursor: pointer;
+					width: 100%;
+					//height:90px;
+					position: relative;
+					padding: 15px 20px;
+					padding-right: 0;
+					font-size: 18px;
+					box-sizing: border-box;
+					.img {
+						width: 18px;
+						margin-top: 4px;
+					}
+
+					.bg {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 382px;
+						height: 101px;
+						background: linear-gradient(
+							90deg,
+							rgba(3, 249, 252, .3) 0%,
+							rgba(9, 48, 71, .03) 100%
+						);
+					}
+
+					.con {
+						width: 300px;
+						padding-left: 35px;
+						@include themify($themes) {
+							background: url('#{themed("bg-url")}/arrow.png') no-repeat 0 4px;
+							background-size: 18px 16px;
+						}
+						.text {
+							p {
+								// width: 220px;
+								width: calc(290px - 4em);
+								line-height: 1.4;
+								//overflow: hidden;
+								//text-overflow: ellipsis;
+								//white-space: nowrap;
+							}
+						}
+						.el-progress-bar__inner {
+							@include themify($themes) {
+								background-color: themed("progress-fill-color");
+							}
+						}
+						.el-progress-bar__outer {
+							@include themify($themes) {
+								background-color: themed("progress-track-color");
+							}
+							margin-top: 23px;
+							margin-bottom: 7px;
+							height: 16px !important;
+						}
+					}
+				}
+			}
+		}
+	}
+	.target-left {
+		padding: 0 !important;
+	}
+	.right {
+		.right-wraper {
+			.sidebar {
+				height: 830px !important;
+				overflow: auto;
+			}
+		}
+		.circle {
+			margin: 30px auto;
+			margin-bottom: 10px;
+			text-align: center;
+			position: relative;
+
+			.el-progress-circle {
+				width: 190px !important;
+				height: 190px !important;
+				line-height: 190px !important;
+			}
+
+			.el-progress /deep/ path:first-child {
+				@include themify($themes) {
+					stroke: themed("progress-track-color");
+				}
+			}
+			.el-progress /deep/ path:last-child {
+				@include themify($themes) {
+					stroke: themed("progress-fill-color");
+				}
+			}
+			.num {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 190px;
+				line-height: 190px;
+				text-align: center;
+				@include themify($themes) {
+					color: themed("main-color");
+				}
+				span {
+					font-size: 40px;
+				}
+				i {
+					font-style: normal;
+				}
+			}
+		}
+		.target-circle {
+			margin-right: 20px;
+		}
+		.des {
+			padding: 0 20px;
+			line-height: 30px;
+			text-align: center;
+			font-size: 18px;
+			span {
+				@include themify($themes) {
+					color: themed("main-color");
+				}
+			}
+		}
+
+		.desCon {
+			padding: 0 26px;
+			line-height: 30px;
+			text-indent: 2em;
+			height: 450px;
+			overflow: auto;
+		}
+
+		.right-list {
+			.right-item {
+				margin-bottom: 30px;
+				line-height: 30px;
+
+				span {
+					display: inline-block;
+					width: 11px;
+					height: 11px;
+					@include themify($themes) {
+						background-color: themed("dot-color");
+					}
+					opacity: .5;
+					border-radius: 50%;
+					margin-right: 10px;
+					margin-top: 8.5px;
+					cursor: pointer;
+				}
+
+				p {
+					width: 332px;
+					text-indent: 0;
+				}
+			}
+		}
+
+		.rule {
+			position: absolute;
+			bottom: 15px;
+			right: 15px;
+			cursor: pointer;
+			@include themify($themes) {
+				color: themed("main-color");
+			}
+			span {
+				display: inline-block;
+				transform: scale(.7, .7);
+			}
+			&:hover {
+				font-weight: 600;
+			}
+		}
+	}
+}

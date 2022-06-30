@@ -1,0 +1,202 @@
+.efficiency {
+
+    .content {
+        position: relative;
+
+        .detail {
+            display: inline-block;
+            position: absolute;
+            top: 22px;
+            right: 32px;
+            font-size: 16px;
+            cursor: pointer;
+            @include themify($themes) {
+                color: themed("main-color");
+            }
+        }
+
+        .left {
+            float: left;
+            width: 426px;
+            height: 864px;
+            margin-left: 21px;
+            position: relative;
+            // background-color: rgba(13, 24, 51, 0.63);
+            // border: 1px solid rgba(19, 187, 198, 0.13);
+            // box-shadow: 0px 0px 7px 1px rgba(13, 33, 89, 0.1);
+
+            >div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            // .tree {
+            //     height: 823px;
+            //     width: 396px;
+            //     overflow: auto;
+            //     margin: 20px 0 20px 28px;
+            // }
+        }
+
+        .right {
+            float: left;
+            width: 1432px;
+            height: 864px;
+            margin-left: 20px;
+            position: relative;
+
+            // .title {
+            //     span {
+            //         color: #1794F5;
+            //     }
+
+            //     i {
+            //         font-size: 12px;
+            //         cursor: pointer;
+            //     }
+            // }
+
+            .lineChart {
+                margin-top: 20px;
+                height: 340px;
+            }
+
+            .left-top {
+                position: absolute;
+                left: 0;
+                width: 706px;
+                height: 422px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+                .tableBox {
+                    z-index: 100;
+                    position: relative;
+                    height: 432px;
+                    overflow: scroll;
+                    background: none;
+                    border: none;
+
+                    @include themify($themes) {
+                        background: url('#{themed("bg-url")}/surPatients/net.png');
+                    }
+
+                    .el-table__empty-text {
+                        margin-top: 0px;
+                        font-size: 16px;
+
+                        @include themify($themes) {
+                            color: themed("normal-word-color");
+                        }
+                    }
+
+                    .avgPrice {
+                        height: 62px;
+                        line-height: 62px;
+                        padding-left: 32px;
+
+                        span {
+                            @include themify($themes) {
+                                color: themed('main-color');
+                            }
+                        }
+                    }
+                }
+
+                .el-table {
+                    position: relative;
+                    cursor: pointer;
+                    z-index: 10;
+                    background: none;
+                    margin-left: 28px;
+
+                    th,
+                    tr,
+                    td {
+                        background: none;
+                        border-bottom: 0px;
+                        font-size: 16px;
+                    }
+
+                    &:before {
+                        background: none;
+                    }
+
+                    thead {
+                        color: #fff;
+                        background: #131E39;
+
+                        th {
+                            padding: 10px 0;
+                        }
+                    }
+
+                    tbody {
+                        @include themify($themes) {
+                            color: themed('normal-word-color');
+                        }
+
+                        .el-table__row {
+                            height: 47px !important;
+                        }
+                    }
+
+                    .current-row {
+                        background: rgba(234, 239, 253, .07);
+                    }
+                }
+            }
+
+            .right-top {
+                position: absolute;
+                right: 0;
+                width: 706px;
+                height: 422px;
+            }
+
+            .left-bottom {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 706px;
+                height: 422px;
+            }
+
+            .right-bottom {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 706px;
+                height: 422px;
+            }
+
+        }
+    }
+
+    .detailBox {
+        .numIng {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -8px 0 0 -50px;
+            color: #d7dff5;
+        }
+        .detailChart {
+            margin-top: 30px;
+            height: 560px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 200;
+            position: absolute;
+            top: 41px;
+            left: 31px;
+            @include themify($themes) {
+                color: themed('normal-word-color');
+            }
+        }
+    }
+}

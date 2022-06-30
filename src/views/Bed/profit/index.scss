@@ -1,0 +1,187 @@
+.profit {
+    div,
+    ul {
+        box-sizing: border-box;
+    }
+    .content {
+        margin: 0 auto;
+        width: 1880px;
+
+        .left-main {
+            // position: relative;
+            width: 376px;
+            height: 892px;
+            padding-left: 0;
+            padding-right: 0;
+            .search{
+                padding:0 20px;
+            }
+            .dept-list {
+                margin-top: 30px;
+                height:790px;
+            }
+        }
+
+        .right-main {
+            width: 1484px;
+            .mainsrp {
+                height: 40px;
+                //font-weight: bold;
+                @include themify($themes) {
+                    color: themed('key-word-color');
+                }
+            }
+
+            .top {
+                height:428px;
+                margin-bottom: 20px;
+                @include themify($themes) {
+                    color: themed('key-word-color');
+                }
+                .top-list {
+                    margin: 0 auto;
+                    width: 498px;
+                    .unit {
+                        padding-left: 4px;
+                    }
+                    .top-li {
+                        display: inline-block;
+                        width: 50%;
+                        text-align: center;
+                        .top-name {
+                            margin-bottom: 14px;
+                        }
+                    }
+                }
+                .top-left {
+                    position: relative;
+                    width: 730px;
+                    height: 428px;
+                    .los-chart {
+                        margin-top: 20px;
+                        height: 250px;
+                    }
+                }
+                .top-right {
+                    // position: relative;
+                    width: 732px;
+                    height: 428px;
+                    .right-table {
+                        height: 270px;
+                        th.group-line {
+                            border-top: 1.01px solid #2c3b60;
+                        }
+                    }
+                }
+            }
+            .bottom {
+                height: 403px;
+                .list {
+                    margin-top: 45px;
+                    height: 280px;
+                    overflow-y: auto;
+                    .td {
+                        width: 330px;
+                        height: 56px;
+                        line-height: 52px;
+                        display: inline-block;
+                        @include themify($themes) {
+                            color: themed('key-word-color');
+                        }
+                        margin-bottom: 13px;
+                        font-weight: 400;
+                        padding: 0;
+                        .name {
+                            display: inline-block;
+                            padding-left: 20px;
+                            width: 160px;
+                            font-size: 16px !important;
+                            @include themify($themes) {
+                                color: themed('normal-word-color');
+                            }
+                            white-space: pre-wrap;
+                            display: inline-block;
+                            line-height: 20px;
+                            vertical-align: middle;
+                        }
+                        .value {
+                            margin-left:15px;
+                            display: inline-block;
+                            width: 110px;
+                            vertical-align: middle;
+                            text-align: right;
+                            font-size: 20px !important;
+                            @include themify($themes) {
+                                color: themed('key-word-color');
+                            }
+                        }
+                    }
+                    li:nth-child(odd) {
+                        margin-right: 21px;
+                    }
+                }
+                .bottom-left,
+                .bottom-right {
+                    position: relative;
+                    width: 730px;
+                    .line {
+                        margin: 0 14px;
+                    }
+
+                    .default-color {
+                        @include themify($themes) {
+                            color: rgba(themed('normal-word-color'), .5);
+                        }
+                    }
+                    .default-color:hover{
+                        cursor:pointer;
+                    }
+                    .active:hover{
+                        cursor:pointer;
+                    }
+                    .active {
+                        @include themify($themes) {
+                            color: themed("key-word-color");
+                        }
+                    }
+                    .gl-box-title {
+                        .iconfont {
+                            margin-right: 10px;
+                            @include themify($themes) {
+                                color: themed('em-word-color');
+                            }
+                        }
+                    }
+
+                    .bed-cost {
+                        position: relative;
+                        width: 270px;
+                        height: 190px;
+                        margin: 0 auto;
+                        @include themify($themes) {
+                            background-image: url('#{themed("bg-url")}/bed/profit/line.png');
+                            background-size: 100% 100%;
+                        }
+                        .pie-left {
+                            position: absolute;
+                            top: 0px;
+                            left: -60px;
+                            width: 200px;
+                            height: 200px;
+                            border-radius: 50%;
+                            z-index: 2;
+                        }
+                    }
+
+                    .pie-right {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

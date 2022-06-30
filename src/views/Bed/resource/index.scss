@@ -1,0 +1,229 @@
+.bed-resource {
+    div{
+        box-sizing: border-box;
+    }
+    .content {
+        position: relative;
+        margin: 0 auto;
+        width: 1880px;
+        .left-main {
+            width: 376px;
+            height: 892px;
+            padding-left: 0;
+            padding-right: 0;
+            .search {
+                padding: 0 20px;
+            }
+            .disease {
+                margin-top: 30px;
+                .rank-title {
+                    display: inline-block;
+                    margin: 0 0 10px 20px;
+                    line-height: 1;
+                    cursor: pointer;
+                    .triangle {
+                        display: inline-block;
+                        position: relative;
+                        width: 20px;
+                        height: 20px;
+                    }
+                    .rank-icon {
+                        position: absolute;
+                        font-size: 20px;
+                        transform: scale(.5, .5);
+                        @include themify($themes) {
+                            color: rgba(themed('main-color'), .2);
+                        }
+                        &.iconrankbottom {
+                          top: 8px;
+                            left: 0;
+                        }
+                        &.icon-active {
+                            @include themify($themes) {
+                                color: themed('main-color')
+                            }
+                        }
+                    }
+                }
+                .lists {
+                    height: 745px;
+                    overflow-y: auto;
+                    .item {
+                        height: 58px;
+                        line-height: 58px;
+                        padding: 0 20px;
+                        cursor: pointer;
+                        .name {
+                            display: inline-block;
+                            width: 240px;
+                            height: 100%;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        .num {
+                            float: right;
+                        }
+                    }
+                }
+                .loadMore {
+                    text-align: center;
+                    opacity: .6;
+                    @include themify($themes) {
+                        color: themed("main-color");
+                    }
+                }
+            }
+        }
+        .right-main {
+            position: absolute;
+            top: 0px;
+            left: 397px;
+            width: calc(100% - 397px);
+            .mainsrp {
+                height: 40px;
+                // font-weight: bold;
+                @include themify($themes) {
+                    color: themed("key-word-color");
+                };
+                // span {
+                //     @include themify($themes) {
+                //         color: themed("key-word-color");
+                //     }; 
+                // }
+
+            }
+            .top {
+                margin-bottom: 20px;
+                .top-left {
+                    width: 927px;
+                    height: 438px;
+                    // padding: 20px 31px;
+                    .left-list {
+                        .left-li {
+                            display: inline-block;
+                            width: 25%;
+                            text-align: center;
+                            .left-name {
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                    .re-chart {
+                        margin-top: 20px;
+                        height: 250px;
+                    }
+                }
+                .top-right {
+                    width: 535px;
+                    height: 438px;
+                    // padding: 20px 31px;
+                    .rank-list {
+                        .rank-li {
+                            display: inline-block;
+                            height: 18px;
+                            line-height: 18px;
+                            cursor: pointer;
+                            @include themify($themes) {
+                                color: themed("key-word-color");
+                            }
+                            
+                        }
+                        .rank-li-first {
+                            padding-right: 20px;
+                            @include themify($themes) {
+                                border-right:1px solid rgba(themed("key-word-color"),.5);
+                            }
+                        }
+                        .rank-li-second {
+                            margin-left: 20px;
+                        }
+                        .rank-active {
+                            @include themify($themes) {
+                                color: rgba(themed("key-word-color"),.5);
+                            }
+                        }
+                    }
+
+                    .top-content {
+                        width: 461px;
+                        height: 80px;
+                        line-height: 80px;
+                        padding: 0;
+                        padding-left: 30px;
+                        margin-bottom: 10px;
+                        position: relative;
+                        .listImg {
+                            font-size: 22px;
+                            position: absolute;
+                            top: 0;
+                            left: 42px;
+                            @include themify($themes) {
+                                color: themed("sub-main-color");
+                            }
+                        }
+                        .column1 {
+                            margin: 16px 20px 0 0;
+                            display: inline-block;
+                            width: 46px;
+                            height: 46px;
+                        }
+                        .column2 {
+                            width: 260px;
+                           
+                        }
+                        .column3 {
+                            width: 100px;
+                            .unit {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .bottom {
+                .bottom-left {
+                    width: 927px;
+                    height: 394px;
+                    // padding: 20px 31px;
+                    .re-chart {
+                        margin-top: 20px;
+                        height: 306px;
+                    }
+                }
+                .bottom-right {
+                    width: 535px;
+                    height: 394px;
+                    // padding: 20px 31px;
+                    .bottom-cont{
+                        vertical-align: middle;
+                        img {
+                            width: 70px;
+                            vertical-align: middle;
+                        }
+                    }
+                    .prop-list {
+                        @include themify($themes) {
+                            background-color: themed("vario-bg-color");
+                        }
+                        border-radius:14px;
+                        // @include themify($themes) {
+                        //     background: "red";
+                        // }
+                        margin-top: 20px;
+                        height: 306px;
+                        overflow-y:scroll;
+                        .prop-li {
+                            line-height: 1.5;
+                            margin-bottom: 30px;
+                            padding: 0 57px;
+                            @include themify($themes) {
+                                color: themed("normal-word-color");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

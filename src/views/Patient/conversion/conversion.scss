@@ -1,0 +1,933 @@
+.conversion {
+    position: relative;
+
+    .gl-box-default {
+        padding: 0;
+    }
+
+    .conversion-left {
+        width: 426px;
+        height: 892px;
+        margin: 0 20px;
+
+        .left-content {
+            padding-left: 30px;
+
+            .box {
+                height: 228px;
+                padding: 20px 0;
+                position: relative;
+
+                .chart {
+                    height: 230px;
+                    z-index: 1;
+                }
+
+                .classTitle {
+                    font-size: 16px;
+                    margin-bottom: 20px;
+
+                    @include themify($themes) {
+                        color: themed('key-word-color');
+                    }
+                }
+
+                .gl-noData {
+                    position: absolute;
+                    top: 0;
+                    text-align: center;
+                    width: 100%;
+                }
+
+                .rankIcon {
+                    font-size: 17px;
+
+                    @include themify($themes) {
+                        color: themed('main-color');
+                    }
+                }
+
+                .isRank {
+                    @include themify($themes) {
+                        color: rgba(themed('main-color'), .2);
+                    }
+                }
+            }
+
+            .sex {
+                position: relative;
+                padding-top: 20px;
+            }
+
+            .line-bar {
+                margin-top: 30px;
+
+                .chart {
+                    height: 572px;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    .search {
+        position: absolute;
+        height: 50px;
+        width: 986px;
+        top: 0px;
+        left: 436px;
+
+        .list {
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+            width: 100%;
+            max-height: 100%;
+
+            @include themify($themes) {
+                color: themed('key-word-color');
+            }
+
+            .det {
+                margin-bottom: 20px;
+
+                .typeIcon {
+                    display: inline-block;
+                    vertical-align: top;
+                }
+
+                .category {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin: 0 10px;
+                }
+
+                .content {
+                    display: inline-block;
+                    margin-right: 64px;
+
+                    .names {
+                        position: relative;
+                        margin-bottom: 12px;
+
+                        .name {
+                            margin-right: 10px;
+                        }
+
+                        .close {
+                            position: absolute;
+                            top: 3px;
+                            cursor: pointer;
+                            width: 11px;
+                            height: 11px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .conversion-center {
+        width: 986px;
+        height: 854px;
+        margin-top: 38px;
+        position: relative;
+
+        .center-content {
+            .top-menu {
+                height: 400px;
+                margin: 0 16px 80px;
+                position: relative;
+                top: 68px;
+
+                @include themify($themes) {
+                    color: themed("key-word-color");
+                    background-image: url('#{themed("bg-url")}/conversion/menu_bg.png');
+                    background-size: 100% 100%;
+                }
+
+                .menu-title {
+                    top: -50px;
+                    text-align: center;
+                    font-size: 18px;
+                }
+
+                .menu-content {
+                    width: 100%;
+                    top: -24px;
+
+                    .iconjiankongpinshuai {
+                        font-size: 18px;
+
+                        @include themify($themes) {
+                            color: themed('main-color');
+                        }
+                    }
+
+                    .text {
+                        width: 100px;
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -20px;
+                        text-align: center;
+                        font-size: 16px;
+
+                        .name {
+                            span {
+                                display: inline-block;
+                            }
+                        }
+                    }
+
+                    .menu-left,
+                    .menu-right {
+                        height: 404px;
+                        padding: 18px 12px;
+                        position: relative;
+
+                        .text {
+                            width: 120px;
+                        }
+                    }
+
+                    .menu-center {
+                        height: 404px;
+                        position: relative;
+
+                        @include themify($themes) {
+                            color: themed('normal-word-color');
+                        }
+
+                        .little_bg0,
+                        .little_bg1,
+                        .little_bg2,
+                        .little_bg3,
+                        .little_bg4,
+                        .little_bg5 {
+                            width: 110px;
+                            height: 99px;
+                            margin: 0 auto;
+                            position: absolute;
+                            top: 60px;
+                            left: 94px;
+                        }
+
+                        .little_bg0 {
+                            cursor: pointer;
+                        }
+
+                        .little_bg1 {
+                            top: 158px;
+                            left: 40px;
+                        }
+
+                        .little_bg2 {
+                            top: 256px;
+                            left: 94px;
+                        }
+
+                        .little_bg3 {
+                            top: 60px;
+                            left: 278px;
+                        }
+
+                        .little_bg4 {
+                            top: 158px;
+                            left: 332px;
+                        }
+
+                        .little_bg5 {
+                            top: 256px;
+                            left: 278px;
+                        }
+
+                        .big_bg {
+                            width: 146px;
+                            height: 128px;
+                            margin: 0 auto;
+                            position: absolute;
+                            top: 148px;
+                            left: 170px;
+                            // color: #fff;
+                            cursor: pointer;
+                        }
+
+                        .hexagon {
+                            width: 100px;
+                            height: 96px;
+                            position: absolute;
+                            margin: 0 auto;
+
+                            .one {
+                                width: 54px;
+                                height: 96px;
+                                margin: 0 auto;
+
+                                @include themify($themes) {
+                                    border-top: 1px dashed themed('conver-cmenu-line');
+                                    border-bottom: 1px dashed themed('conver-cmenu-line');
+                                }
+                            }
+
+                            .one::after {
+                                content: '';
+                                width: 6px;
+                                height: 6px;
+                                position: absolute;
+                                border-radius: 50%;
+                                top: -4px;
+                                left: 20px;
+
+                                @include themify($themes) {
+                                    background-color: themed('conver-cmenu-line');
+                                }
+                            }
+
+                            .one::before {
+                                content: '';
+                                width: 6px;
+                                height: 6px;
+                                position: absolute;
+                                border-radius: 50%;
+                                bottom: -4px;
+                                left: 20px;
+
+                                @include themify($themes) {
+                                    background-color: themed('conver-cmenu-line');
+                                }
+                            }
+
+                            .two {
+                                position: absolute;
+                                width: 54px;
+                                height: 96px;
+                                left: 23px;
+                                top: 0;
+                                transform: translate(-50%, -50%);
+                                transform: rotate(60deg);
+
+                                @include themify($themes) {
+                                    border-top: 1px dashed themed('conver-cmenu-line');
+                                    border-bottom: 1px dashed themed('conver-cmenu-line');
+                                }
+                            }
+
+                            .two::after {
+                                content: '';
+                                width: 6px;
+                                height: 6px;
+                                position: absolute;
+                                border-radius: 50%;
+                                top: -4px;
+                                left: -4px;
+
+                                @include themify($themes) {
+                                    background-color: themed('conver-cmenu-line');
+                                }
+                            }
+
+                            .three {
+                                position: absolute;
+                                width: 54px;
+                                height: 96px;
+                                left: 23px;
+                                top: 0;
+                                transform: translate(-50%, -50%);
+                                transform: rotate(300deg);
+
+                                @include themify($themes) {
+                                    border-top: 1px dashed themed('conver-cmenu-line');
+                                    border-bottom: 1px dashed themed('conver-cmenu-line');
+                                }
+                            }
+                        }
+
+                        .hexagon0 {
+                            left: 5px;
+
+                            .text {
+                                top: 36px;
+
+                                .value {
+                                    font-size: 20px;
+                                    font-weight: bold;
+                                    // color: #fff;
+                                }
+                            }
+                        }
+
+                        .hexagon1 {
+                            left: 5px;
+
+                            .two::after {
+                                display: none;
+                            }
+                        }
+
+                        .hexagon2 {
+                            left: 5px;
+
+                            .two::after {
+                                display: none;
+                            }
+
+                            .three::before {
+                                content: '';
+                                width: 6px;
+                                height: 6px;
+                                position: absolute;
+                                border-radius: 50%;
+                                bottom: -4px;
+                                left: -4px;
+
+                                @include themify($themes) {
+                                    background-color: themed('conver-cmenu-line');
+                                }
+                            }
+                        }
+
+                        .hexagon3 {
+                            left: 5px;
+
+                            .one::before {
+                                display: none;
+                            }
+                        }
+
+                        .hexagon4 {
+                            left: 5px;
+
+                            .three::after {
+                                content: '';
+                                width: 6px;
+                                height: 6px;
+                                position: absolute;
+                                border-radius: 50%;
+                                bottom: -4px;
+                                left: -4px;
+
+                                @include themify($themes) {
+                                    background-color: themed('conver-cmenu-line');
+                                }
+                            }
+                        }
+
+                        .hexagon5 {
+                            left: 5px;
+
+                            .one::after,
+                            .two::after {
+                                display: none;
+                            }
+
+                            .three::before {
+                                content: '';
+                                width: 6px;
+                                height: 6px;
+                                position: absolute;
+                                border-radius: 50%;
+                                bottom: -4px;
+                                left: -4px;
+
+                                @include themify($themes) {
+                                    background-color: themed('conver-cmenu-line');
+                                }
+                            }
+                        }
+
+                        .hexagon6 {
+                            width: 140px;
+                            height: 128px;
+                            left: 5px;
+
+                            .text {
+                                width: 140px;
+                                top: 50px;
+
+                                .value {
+                                    font-size: 20px;
+                                    font-weight: bold;
+                                    // color: #fff;
+                                }
+                            }
+
+                            .one,
+                            .two,
+                            .three {
+                                width: 68px;
+                                height: 124px;
+                                position: absolute;
+                                left: 34px;
+                                top: 0;
+
+                                @include themify($themes) {
+                                    border-top: 2px dashed themed('conver-cmenu-line');
+                                    border-bottom: 2px dashed themed('conver-cmenu-line');
+                                }
+                            }
+
+                            .one {
+                                margin: 0 auto;
+                            }
+
+                            .three {
+                                transform: translate(-50%, -50%);
+                                transform: rotate(300deg);
+                            }
+
+                            .one::after {
+                                top: -4px;
+                                left: -4px;
+                            }
+
+                            .one::before,
+                            .two::after {
+                                bottom: -4px;
+                                left: -4px;
+                            }
+
+                            .three::before {
+                                content: '';
+                                width: 6px;
+                                height: 6px;
+                                position: absolute;
+                                border-radius: 50%;
+                                bottom: -4px;
+                                left: -6px;
+
+                                @include themify($themes) {
+                                    background-color: themed('conver-cmenu-line');
+                                }
+                            }
+                        }
+                    }
+
+                    .term {
+                        width: 120px;
+                        height: 62px;
+                        border-radius: 12px;
+                        position: absolute;
+                        z-index: 2;
+
+                        @include themify($themes) {
+                            background: themed("conver-menu-defBg");
+                            background-size: 100% 100%;
+                            border: 1px dashed themed('conver-lrmenu-line');
+                        }
+                    }
+
+                    .isBg {
+                        @include themify($themes) {
+                            color: themed("key-word-color");
+                            background: themed("conver-menu-changeBg");
+                            background-size: 100% 100%;
+                        }
+                    }
+
+                    .isCenBg {
+                        @include themify($themes) {
+                            color: themed("key-word-color");
+                            background-image: url('#{themed("bg-url")}/conversion/menu_center_bg.png');
+                            background-size: 100% 100%;
+                        }
+                    }
+
+                    .line1,
+                    .line2,
+                    .line3,
+                    .line4 {
+                        width: 1px;
+                        height: 90px;
+                        position: absolute;
+                        z-index: 1;
+                        top: 81px;
+                        left: 71px;
+
+                        @include themify($themes) {
+                            border-left: 1px dashed themed('conver-lrmenu-line');
+                        }
+                    }
+
+                    .line2 {
+                        top: 234px;
+                    }
+
+                    .line3,
+                    .line4 {
+                        width: 33px;
+                        height: 1px;
+                        top: 124px;
+                        left: 73px;
+                        border: none;
+
+                        @include themify($themes) {
+                            border-top: 1px dashed themed('conver-lrmenu-line');
+                        }
+                    }
+
+                    .line4 {
+                        top: 282px;
+                    }
+
+                    .left-term1 {
+                        top: 18px;
+                        left: 12px;
+                    }
+
+                    .left-term2 {
+                        top: 170px;
+                        left: 12px;
+                    }
+
+                    .left-term3 {
+                        top: 324px;
+                        left: 12px;
+                    }
+
+                    .left-term4 {
+                        top: 95px;
+                        left: 106px;
+                        cursor: pointer;
+
+                        .name {
+                            span {
+                                margin-right: 4px;
+                            }
+                        }
+
+                        .value {
+                            span:nth-child(1) {
+                                font-size: 20px;
+                                font-weight: bold;
+                                // color: #fff;
+                            }
+                        }
+                    }
+
+                    .left-term5 {
+                        top: 248px;
+                        left: 106px;
+                        cursor: pointer;
+
+                        .name {
+                            span {
+                                margin-right: 4px;
+                            }
+                        }
+
+                        .value {
+                            span:nth-child(1) {
+                                font-size: 20px;
+                                font-weight: bold;
+                                // color: #fff;
+                            }
+                        }
+                    }
+
+                    .menu-right {
+                        .left-term1 {
+                            top: 54px;
+                            left: 12px;
+                        }
+
+                        .left-term2 {
+                            top: 268px;
+                            left: 12px;
+                        }
+
+                        .left-term3 {
+                            top: 160px;
+                            left: 106px;
+                            cursor: pointer;
+
+                            .name {
+                                span {
+                                    margin-right: 4px;
+                                }
+                            }
+
+                            .value {
+                                font-size: 20px;
+                                font-weight: bold;
+                                // color: #fff;
+                            }
+                        }
+
+                        .line1 {
+                            height: 153px;
+                            top: 116px;
+                        }
+
+                        .line3 {
+                            top: 190px;
+                        }
+
+                    }
+                }
+            }
+
+            .analysisChart {
+                width: 946px;
+                height: 370px;
+                position: relative;
+
+                // top: 40px;
+                .tabTitle {
+                    height: 56px;
+                    line-height: 56px;
+                    padding-left: 30px;
+
+                    ul {
+                        li {
+                            @include themify($themes) {
+                                color: rgba(themed('normal-word-color'), .5);
+                            }
+
+                            .detail {
+                                width: 40px;
+                                text-align: right;
+                                padding-right: 12px;
+                                cursor: pointer;
+
+                                .iconfont {
+                                    position: relative;
+                                    z-index: 1;
+                                    color: #fff;
+                                    border-radius: 2px;
+                                    opacity: .6;
+
+                                    @include themify($themes) {
+                                        background: themed('question-mark')
+                                    }
+                                }
+                            }
+
+                            .title {
+                                margin-right: 22px;
+                                cursor: pointer;
+
+                                @include themify($themes) {
+                                    color: themed('key-word-color');
+                                }
+                            }
+
+                            .is-active {
+                                opacity: 1;
+                                color: #fff;
+
+                                .iconfont {
+                                    opacity: 1;
+                                }
+                            }
+
+                            .el-tooltip {
+                                height: 20px;
+                            }
+                        }
+
+                        li:last-child {
+                            .divider {
+                                background: transparent;
+                            }
+                        }
+                    }
+                }
+
+                .lineBox {
+                    width: 940px;
+                    height: 294px;
+                    padding-left: 30px;
+
+                    #LineChart {
+                        height: 294px;
+                    }
+                }
+
+                .gl-noData {
+                    position: absolute;
+                    top: 0;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .conversion-right {
+        width: 426px;
+        margin: 0 20px;
+        height: 854px;
+        margin-top: 38px;
+
+        .right-content {
+            padding: 0 30px;
+
+            .box {
+                padding-top: 20px;
+                position: relative;
+
+                .pieNo {
+                    width: 100%;
+                    height: 248px;
+                }
+
+                .chart {
+                    height: 248px;
+                    z-index: 1;
+                }
+
+                .classTitle {
+                    // font-size: 16px;
+                    // margin-bottom: 20px;
+                    // @include themify($themes) {
+                    //     color: themed('key-word-color');
+                    // }
+                }
+
+                .gl-noData {
+                    position: absolute;
+                    top: 0;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+
+            .sex {
+                position: relative;
+                padding-top: 20px;
+            }
+
+            .line-bar {
+                .chart {
+                    height: 470px;
+                    // margin-top: 6px;
+                    overflow: hidden;
+                }
+
+                i {
+                    cursor: pointer;
+
+                    @include themify($themes) {
+                        color: themed('main-color');
+                    }
+                }
+            }
+        }
+    }
+
+    .title-card {
+        .data-card-base {
+            width: 100%;
+            height: 100%;
+
+            @include themify($themes) {
+                border-right: 1px dashed themed('main-color');
+                border-bottom: 1px dashed themed('main-color');
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 100%;
+                width: 2px;
+
+                @include themify($themes) {
+                    border-left: 1px dashed themed('main-color');
+                }
+            }
+
+            .card-wraper {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 2px;
+
+                @include themify($themes) {
+                    border-top: 1px dashed themed('main-color');
+                }
+            }
+
+            .card-title {
+                font-size: 20px;
+                position: absolute;
+                top: -15px;
+                left: 0;
+
+                @include themify($themes) {
+                    color: themed('main-color');
+                }
+            }
+
+            .top {
+                height: 640px;
+                overflow: auto;
+            }
+        }
+
+        .headP {
+            width: 126px;
+            height: 157px;
+            position: relative;
+            top: 38px;
+            left: 36px;
+            margin-right: 40px;
+            text-align: center;
+            border: 1px solid #06719c;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .headText {
+            width: 236px;
+            margin-top: 30px;
+            margin-left: 30px;
+
+            .text {
+                font-size: 16px;
+                line-height: 30px;
+
+                label:nth-child(1) {
+                    opacity: .7;
+                    vertical-align: top;
+                }
+
+                label:nth-child(2) {
+                    display: inline-block;
+                    width: 180px;
+                }
+            }
+        }
+
+        .expertise {
+            width: 380px;
+            position: relative;
+            margin: 10px 0 30px 28px;
+            font-size: 16px;
+            line-height: 20px;
+
+            label:nth-child(1) {
+                opacity: .7;
+            }
+        }
+
+        .detail {
+            width: 380px;
+            position: relative;
+            margin-left: 30px;
+            font-size: 16px;
+            line-height: 30px;
+
+            label {
+                text-indent: 2em;
+                display: inline-block;
+            }
+        }
+    }
+}

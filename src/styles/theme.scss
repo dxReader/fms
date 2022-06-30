@@ -1,0 +1,690 @@
+/**
+ * 主题换肤
+ */
+ $line-color-list: #03f9fc, #1794f5, #f5c917, #641ff3, #19d39e, #25b346, #87cd00, #e8f517, #f59a17, #f57017, #f517f2, #ec3838;
+ $themes: (
+    1: (
+        nav-line-color: #243a6c, //头部导航的分割线
+        org-color: #3fa2ff, //头部“朔州中心医院”
+        vario-bg-color: rgba(13, 66, 128, .1), //方差图的背景色
+        popover-header-bg-color:#1d3754,
+        dot-color: #0ea7c8,
+        up-color: #69b034,
+        down-color: #d9454a,
+        
+        tree-bottom-bg-0: linear-gradient(90deg, rgba(15, 253, 255, .4) 0%, rgba(15, 253, 255, .92) 40%, rgba(134, 254, 255, .99) 47%, rgba(15, 253, 255, .92) 54%, rgba(15, 253, 255, .4) 100%),
+        tree-bottom-bg-1: linear-gradient(90deg, rgba(199, 136, 255, .4) 0%, rgba(199, 136, 255, .62) 17%, rgba(234, 210, 255, .99) 47%, rgba(199, 136, 255, .61) 81%, rgba(199, 136, 255, .4) 100%),
+        tree-bottom-bg-2: linear-gradient(90deg, rgba(176, 221, 112, .3) 0%, rgba(190, 239, 120, .91) 40%, rgba(226, 255, 185, .99) 47%, rgba(190, 239, 120, .91) 54%, rgba(176, 221, 112, .3) 100%),
+        tree-bottom-bg-3: linear-gradient(90deg, rgba(40, 127, 235, .4) 0%, rgba(32, 63, 254, .76) 28%, rgba(113, 213, 255, .99) 47%, rgba(32, 63, 254, .75) 69%, rgba(40, 127, 235, .4) 100%),
+        bg-url: "~src/assets/images/theme-1",
+        
+        // 报告
+        pre-last-td: #03f9fc, //日报 表格last-td
+        pre-edit: #92feff,   //编辑
+        pre-edit-border: #92feff, //编辑边框
+        table-th: #19314a,        //表格表格表头
+        table-td: #0b2037,        //表格表格td
+        table-border: #0f273f,        //表格边框
+        table-title: #d7dff5,
+       
+        pre-scroll: #0d1323,
+        pre-scrollb: #101f3b,
+        question-mark: #11829c,   //问号图标的颜色
+        // table表格背景色
+        table-bg: linear-gradient(0deg, rgba(10, 71, 89, .2) 0%, rgba(9, 23, 50, .2) 100%),
+        main-color-1: #1794f5,
+        button-bd-color: #055055,
+        
+
+
+        /* 新整理的深色主题 */
+        /* 公共样式类 */
+        main-color: #03f9fc,
+        sub-main-color: #03f9fc,
+        sub-color: #055055,
+        normal-word-color: #d7dff5,
+        key-word-color: #fff,
+        key-word-color2: #03f9fc,
+        em-word-color: #1794F5,
+        sub-word-color: #d7dff5,
+        special-word-color: #fff,
+        white-word-color: #fff,
+        no-alarm-color: #17b2d3,
+        moderate-alarm-color: #e0b135,
+        severe-alarm-color: #d9454a,
+        layout-bg-color: #050f29,
+        layout-bg: #050f29 url('~src/assets/images/theme-1/bg.png') no-repeat bottom,
+        // menu-active-bg: none, // 左侧菜单选中样式
+        menu-active-bg: linear-gradient(90deg, rgba(9, 48, 71, .03) 0%, rgba(3, 249, 252, .3) 100%),
+        echart-color1: nth($line-color-list, 1),
+        echart-color2: nth($line-color-list, 2),
+        echart-color3: nth($line-color-list, 5),
+
+        
+        // 基础版块样式
+        box-bg: rgba(13, 24, 51, .63),
+        box-bd: 2px solid rgba(19, 187, 198, .13),
+        box-shadow: 0 0 7px 1px rgba(13, 33, 89, .1) inset,
+        box-active-shadow: 0 1px 11px 1px rgba(3, 249, 252, .58), //详情卡片选中高亮
+        box-active-shadow1: 0 4px 12px 1px rgba(3, 249, 252, .56), //单独卡片选中高亮
+        box-bg2: rgba(13, 24, 51, .2),
+        // box-title-bg: linear-gradient(90deg,rgba(6,17,46,1),rgba(0,149,162,1),rgba(0,228,246,1),rgba(0,149,162,1),rgba(6,17,46,1)),  // 版块标题背景
+        box-title-bg: linear-gradient(90deg, rgba(17, 32, 65, .61), rgba(3, 249, 252, 1), rgba(17, 32, 65, .61)),
+        box-title-text: #03f9fc,  // 版块标题文字
+        box-title-font: normal,
+        box-title-padding: 6px 30px,
+        box-link-text: #03f9fc,
+
+        // 进度条
+        progress-fill-color: #03f9fc,
+        progress-track-color: rgba(5, 80, 85, .3),
+        // 滚动条
+        scrollbar-color: #03f9fc, //滚动条滑块颜色
+        scrollbar-track-color: transparent, //滚动条轨道颜色
+        // 返回按钮
+        back-button-bg: rgba(3, 249, 252, .2),
+        // back-button-bg: rgba(6, 21, 44, .5),
+        back-button-bd: #23304e,
+        // back-button-text: #23304e,
+        back-button-text: #fff,
+        // 表格
+        th-bg: #131e39,
+        th-text-color: #fff,
+        td-text-color: #d7dff5,
+        td-hover-bg: rgba(234, 239, 253, .07),
+        td-selected-bg: rgba(234, 239, 253, .07),
+        // 提示框
+        tooltip-bg: rgba(29, 55, 84, .9),
+        tooltip-bd: rgba(3, 249, 252, .1),
+        tooltip-shadow: rgba(6, 23, 41, .5) 0 0 4px 1px,
+        tooltip-text: #d7dff5,
+        // 表单类
+        label-text: #d7dff5,
+        input-bg: #0f1933, //输入框和下拉框正常背景
+        input-bd: #29576b, //输入框和下拉框正常边框
+        input-text:#fff, //输入框和下拉框中文字颜色
+        input-disabled-bg: rgba(158, 158, 158, .2), //禁用的输入框和下拉框背景
+        input-disabled-bd: #606060, //禁用的输入框和下拉框边框
+        // 下拉列表和日期弹框
+        popper-bg: #092a49,   // 背景色
+        popper-shadow: 0 0 6px 1px rgba(52, 117, 193, .33),  // 边框外阴影
+        popper-bd-color: #0e4272,
+        select-list-text: #d7dff5, //下拉框的下拉列表文字颜色
+        select-list-active-text: #03f9fc, //下拉框的下拉列表选中的文字颜色
+        select-lise-disabled-text: #606266, //下拉框的下拉列表禁选的文字颜色
+        button-text: #fff,
+        button-bd: #055055, //按钮边框
+        button-bg: rgba(3, 249, 252, .4), //按钮背景
+        button-hover-bg: rgba(3, 249, 252, .4), //按钮滑上去背景
+        radio-bd: #29576b, //单选或多选边框
+        radio-bg: transparent, //单选或多选背景
+        radio-selected-bd:  rgba(3, 249, 252, .75), //单选或多选选中的边框
+        radio-selected-bg: rgba(3,249,252, .3), //单选或多选选中的背景
+        radio-selected-label: #d7dff5, //单选或多选选中的label文字颜色
+        switch-on-bg: rgba(3, 249, 252, .3), //开关打开时的背景
+        switch-on-bd: rgba(3, 249, 252, .5), //开关打开时的边框
+        switch-on-core:#03f9fc, //开关打开时的滑块颜色
+        switch-off-bg: #c8c9cf, //开关关闭时的背景
+        switch-off-bd: rgba(168, 168, 168, .5), //开关关闭时的边框
+        switch-off-core: #fff, //开关关闭时的滑块颜色
+
+        /* 公共组件 */
+        //头部
+        head-bg: rgba(13, 24, 51, .63),
+        head-title-color: #03f9fc,
+        head-active-menu-color:  -webkit-gradient(linear, 0 0, 0 bottom, from(#03f9fc), to(#03f9fc)),
+        head-def-color: #03f9fc,
+        head-text-color: #fff,
+        setting-back-color: #03f9fc,
+        setting-color: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#fff)),
+        setting-def-color: #fff,
+
+        //重点指标中的横向柱图
+        ranking-num-bg: rgba(28, 60, 74, .4),
+        ranking-num-border: 1px solid rgba(4, 63, 84, 1),
+        ranking-num-boxShadow: 0 0 5px 1px rgba(3, 249, 252, .9),
+
+        // 页面中tab标签（带背景边框） 
+        tab-text: #fff,
+        tab-bd: #29576b,
+        tab-bg: #0f1933,
+        tab-change-bg: rgba(3, 249, 252, .4),
+        tab-change-bd: #055055,
+
+        /* 具体页面 */
+
+        //发展预测
+        develop-main-color: #03f9fc,
+        develop-progress-color: #03f9fc,
+        develop-progress-out-color: rgba(5, 80, 85, .3),
+        
+        //重点指标&今日动态&疫情防控菜单
+        indicatords-menu-active-color: #03f9fc,
+        indicatords-menu-bar-bg: url('~src/assets/images/theme-1/jrdt_tabe_bg.png'),
+        indicatords-menu-bar-bottom: -12px,
+
+        // 核心医生
+        cmister-background: none,
+        cmister-input-border: #29576b,
+        cmister-input-search: #03f9fc,
+        cmister-radar-color: #050f29,
+        cmister-table-n: rgba(0, 187, 189, .02),
+        cmister-active-color: #0a152f,
+        cmister-border-opacity: .15,
+        cmister-page-bg: rgba(30, 56, 86, .3),
+        cmister-card-left-bg: #6c80a8,
+        cmister-card-right-bg: #7b1204,
+
+        //科室能力
+        ability-home-bg: url('~src/assets/images/theme-1/ability/bg.png'),
+        ability-detail-bg: url('~src/assets/images/theme-1/ability/star_bg.png'),
+        ability-list-bg: transparent,
+
+        //投资回收期测算
+        recovery-select: #19324a,
+        recovery-tbody-border: rgba(19, 30, 57, 1),
+        recovery-tr-border: rgba(19, 30, 57, .6),
+
+
+        // 入院患者转化
+        conver-cmenu-line: #03f9fc,
+        conver-lrmenu-line: #4b669C,
+        conver-menu-defBg: url('~src/assets/images/theme-1/conversion/menu_term.png'),
+        conver-menu-changeBg: url('~src/assets/images/theme-1/conversion/menu_term_bg.png'),
+
+        // 患者费用负担
+        costburden-line-color: #2683a5,
+        //疾病成本收益分析
+        disease-active-bg: #eaeffd,
+        //投资回收期
+        decovery-de-box: rgba(18, 27, 50, .85),
+        decovery-box-cancel: #29576b,
+        decovery-calculator-header: #1791a4,
+        decovery-calculator-bg: #293657,
+        decovery-calculator-btn: #e4edfa,
+        //知识图谱
+        know-word-color: #172d51,
+        //解读
+        unscramble-bg: #0a1733,
+        unscramble-border: #075067,
+        unscramble-shadow: rgba(255, 255, 255, .3),
+        unscramble-eject-bg: #09152f,
+        unscramble-eject-border: rgba(0, 215, 233, .78),
+        unscramble-eject-wborder: #075067,
+        unscramble-eject-title: #fff,
+        //指标关联
+        indexRelaAnaly-active-color: #03f9fb,
+        indexRelaAnaly-active-bg: rgba(3, 249, 251, .2),
+
+        // 手术模块
+        icon-color1: #6579de,
+        icon-color2: #65b1e7,
+        icon-color3: #00d8cd,
+
+        //综合目标
+       target-title-color: #050f29,
+    ),
+    2: (
+        nav-line-color: rgba(255, 255, 255, .3),
+        org-color: #3fff95,
+        vario-bg-color:rgba(200, 200, 200, .1),
+        dot-color: rgb(119, 200, 14),
+        up-color: #69b034,
+        down-color: #d9454a,
+        button-bd-color: #550055,
+        popover-header-bg-color: #583683,
+        
+        tree-bottom-bg-0: #86b5d5,
+        tree-bottom-bg-1: #86b5d5,
+        tree-bottom-bg-2: #86b5d5,
+        tree-bottom-bg-3: #86b5d5,
+        bg-url: "~src/assets/images/theme-2",
+        
+        // 报告
+        pre-last-td: #323232, //日报 表格last-td
+        pre-edit: #ac74ed,   //编辑
+        pre-edit-border: #ac74ed, //编辑边框
+        table-th: #f4f5f7,        //表格表格表头
+        table-td: rgba(0, 0, 0, 0),        //表格表格td
+        table-border: #eee,        //表格边框
+        table-title:#111,
+
+        pre-scroll: #0d1323,
+        pre-scrollb: #cb2d01,
+        question-mark: rgba(30, 30, 30, .6),   //问号图标的颜色
+        // table表格背景色
+        table-bg: linear-gradient(0deg, rgba(10, 71, 89, .2) 0%, rgba(9, 23, 50, .2) 100%),
+
+        
+
+        /* 新整理的浅色主题 */
+        /* 公共样式类 */
+        main-color: #ac74ed, //主题色
+        sub-main-color: #62a9ff, //次级主题色（用于一些高亮效果或大色块）
+        sub-color: #c8c8c8, //底色、禁选色、边框、分割线等辅助类的颜色
+        normal-word-color: #323232, //普通文字颜色（大块文字及表格内部文字以及一些页面中描述性文字）
+        key-word-color: #111, //重点文字颜色
+        key-word-color2: #111, //页面中深色版本用主题色突出的文字颜色
+        em-word-color: #62a9ff, //对应深色版本中的深蓝色
+        sub-word-color: rgba(50, 50, 50, .7), //次级文字颜色
+        special-word-color: #657592, //特殊文字颜色（暂定首页中心文字颜色）
+        white-word-color: #fff, //白色，特殊标题文字颜色 (例如科室能力导航页的科室分类）
+        no-alarm-color: #62a9ff, //无报警的文字或图标颜色
+        moderate-alarm-color: #fbc11f, //中度报警的文字或图标颜色
+        severe-alarm-color: #df4935, //重度报警的文字或图标颜色
+        layout-bg-color: #f2f3f8,
+        layout-bg: #f2f3f8, //页面大背景
+        // menu-active-bg: linear-gradient(90deg,rgba(98, 169, 255, 0) 0%,rgba(98, 169, 255, .3) 100%), // 左侧菜单选中样式
+        menu-active-bg: linear-gradient(90deg,rgba(98, 169, 255, 0) 0%,rgba(98, 169, 255, .3) 100%), // 左侧菜单选中样式
+        echart-color1: nth($line-color-list, 1),
+        echart-color2: nth($line-color-list, 2),
+        echart-color3: nth($line-color-list, 5),
+        
+        // 基础版块样式
+        box-bg: #fff, //版块背景
+        box-bd: none, //版块边框
+        box-shadow: 0 4px 6px 1px rgba(33, 35, 39, .06), //版块阴影
+        box-active-shadow: 0 0 32px 0 rgba(130, 127, 147, .26),
+        box-active-shadow1: 0 4px 26px 0 rgba(30, 30, 30, .22), 
+        box-bg2: #fff, //对应深色背景的今日动态、科室能力内页等左中右结构的中间版块 背景
+        box-title-bg: none,  // 版块标题背景
+        box-title-text: #111,  // 版块标题文字
+        box-title-font: bold,  // 版块标题文字加粗
+        box-title-padding: 0,  // 版块标题位置居左
+        box-link-text: #323232,
+
+        // 进度条
+        progress-fill-color: rgba(172, 116, 237, .7),
+        progress-track-color: rgba(200, 200, 200, .3),
+        // 滚动条
+        scrollbar-color: #d5d5d5, //滚动条滑块颜色
+        scrollbar-track-color: #f1f1f1, //滚动条轨道颜色
+        // 右上角返回按钮
+        back-button-bg: rgba(172, 116, 237,.3), //背景
+        back-button-bd: rgba(172, 116, 237,.3), //边框
+        back-button-text: #fff, //中间图标颜色
+        // 表格
+        th-bg: #f4f5f7, //表头背景
+        th-text-color: #111, //表头文字颜色
+        td-text-color: #323232, //表格内文字颜色
+        td-hover-bg: rgba(244, 245, 247, .6), //选中行背景
+        td-selected-bg:rgba(98, 169, 255, .15),
+        // 提示框
+        tooltip-bg: rgba(30, 30, 30, .55),
+        tooltip-bd: rgba(50, 50, 50, .1),
+        tooltip-shadow: 0 0 6px 2px rgba(1, 6, 18, .72),
+        tooltip-text: #fff,
+        // 表单类
+        label-text: #323232,
+        input-bg: #fff, //输入框和下拉框正常背景
+        input-bd: #c8c8c8, //输入框和下拉框正常边框
+        input-text: #323232, //输入框和下拉框中文字颜色
+        input-disabled-bg: rgba(200, 200, 200, .3), //禁用的输入框和下拉框背景
+        input-disabled-bd: #c8c8c8, //禁用的输入框和下拉框边框
+        // 下拉列表和日期下拉列表
+        popper-bg: #fff,   //背景色
+        popper-shadow: 0 1px 6px 0 rgba(30, 30, 30, .07),  //边框外阴影
+        popper-bd-color: rgba(200, 200, 200, .64),
+        select-list-text: #323232, //下拉框的下拉列表文字颜色
+        select-list-active-text: #ac74ed, //下拉框的下拉列表选中的文字颜色
+        select-lise-disabled-text: #c8c8c8, //下拉框的下拉列表禁选的文字颜色
+        button-text: #fff,
+        button-bd: #ac74ed, //按钮边框
+        button-bg: #ac74ed, //按钮背景
+        button-hover-bg: #bb80ff, //按钮滑上去背景
+        radio-bd: #c8c8c8, //单选或多选边框
+        radio-bg: #fff, //单选或多选背景
+        radio-selected-bd: #ac74ed, //单选或多选选中的边框
+        radio-selected-bg: #ac74ed, //单选或多选选中的背景
+        radio-selected-label: #ac74ed, //单选或多选选中的label文字颜色
+        switch-on-bg: rgba(172, 116, 237, .3), //开关打开时的背景
+        switch-on-bd: #ac74ed, //开关打开时的边框
+        switch-on-core:#ac74ed, //开关打开时的滑块颜色
+        switch-off-bg: rgba(200, 200, 200, .3), //开关关闭时的背景
+        switch-off-bd: #c8c8c8, //开关关闭时的边框
+        switch-off-core: #c8c8c8, //开关关闭时的滑块颜色
+        
+        /* 公共组件 */
+        //头部
+        head-bg: #583683,
+        head-title-color: #fff,
+        head-active-menu-color: -webkit-gradient(linear, 0 0, 0 bottom, from(#ecb66a), to(#fbf293)),
+        head-def-color: #ecb66a,
+        head-text-color: #fff,
+        setting-back-color: rgba(255, 255, 255, 0),
+        setting-color: -webkit-gradient(linear, 0 0, 0 bottom, from(#ecb66a), to(#fbf293)),
+        setting-def-color: #ecb66a,
+
+        //重点指标中的横向柱图
+        ranking-num-bg: rgba(200, 200, 200, .3),
+        ranking-num-border: none,
+        ranking-num-boxShadow: none,
+
+        // 页面中tab标签（带背景边框）
+        tab-text: #323232,
+        tab-bd: #c8c8c8,
+        tab-bg: #f5f7f8,
+        tab-change-bg: rgba(172, 116, 237, .4),
+        tab-change-bd: #ac74ed,
+
+
+        /* 具体页面 */
+
+        // 发展预测
+        develop-main-color: #111,
+        develop-progress-color: rgba(98, 169, 255, .4),
+        develop-progress-out-color: #e5e5e5,
+        
+        //重点指标&今日动态&疫情防控菜单
+        indicatords-menu-active-color: #583683,
+        indicatords-menu-bar-bg: rgba(150, 110, 196, .4),
+        indicatords-menu-bar-bottom: 0,
+        
+        // 核心医生
+        cmister-background: #fff,
+        cmister-input-border: #c8c8c8,
+        cmister-input-search: #1e232e,
+        cmister-radar-color: #fff,
+        cmister-table-n: rgba(242, 245, 246, .6),
+        cmister-active-color: #fff,
+        cmister-border-opacity: .6,
+        cmister-page-bg: #f7f7f7,
+        cmister-card-left-bg: #6c80a8,
+        cmister-card-right-bg: #7b1204,
+        
+        //科室能力
+        ability-home-bg: transparent,
+        ability-detail-bg: transparent,
+        ability-list-bg: #f2f3f8,
+
+        //投资回收期测算
+        recovery-select: #c8c8c8,
+        recovery-tbody-border: rgba(19, 30, 57, .1),
+        recovery-tr-border: rgba(19, 30, 57, .1),
+
+
+        // 入院患者转化
+        conver-cmenu-line: #62a9ff,
+        conver-lrmenu-line: #62a9ff,
+        conver-menu-defBg: #fff,
+        conver-menu-changeBg: rgba(98, 169, 255, .3),
+
+        // 患者费用负担
+        costburden-line-color: #62a9ff,
+         //疾病成本收益分析
+        disease-active-bg: #62a9ff,
+          //投资回收期
+        decovery-de-box: #fff,
+        decovery-box-cancel: #ac74ed,
+        decovery-calculator-header: #3c3c3c,
+        decovery-calculator-bg: #fff,
+        decovery-calculator-btn: #e4edfA,
+        //知识图谱
+        know-word-color: #fcfcfd,
+         //解读
+         unscramble-bg: #fbfbfb,
+         unscramble-border: #e0eeff,
+         unscramble-shadow: rgba(0, 0, 0, .28),
+         unscramble-eject-bg: #fff,
+         unscramble-eject-border: #61a9ff,
+         unscramble-eject-wborder: #61a9ff,
+         unscramble-eject-title: #61a9ff,
+         //指标关联
+         indexRelaAnaly-active-color: #573583,
+         indexRelaAnaly-active-bg:rgba(172, 116, 237, .2),
+
+         // 手术模块
+         icon-color1: #6579de,
+         icon-color2: #65b1e7,
+         icon-color3: #00d8cd,
+
+         //综合目标
+        target-title-color: #fff,
+    ),
+    3: ( //Tiffany蓝
+        nav-line-color: #006f6f,
+        org-color: #194754,
+        vario-bg-color: rgba(200, 200, 200, .1),
+        dot-color: #77c80e,
+        up-color: #69b034,
+        down-color: #d9454a,
+        popover-header-bg-color: #099,
+        
+        tree-bottom-bg-0: #86b5d5,
+        tree-bottom-bg-1: #86b5d5,
+        tree-bottom-bg-2: #86b5d5,
+        tree-bottom-bg-3: #86b5d5, 
+        bg-url: "~src/assets/images/theme-3",
+        
+        // 报告
+        pre-last-td: #323232, //日报 表格last-td
+        pre-edit: #81d8cd,   //编辑
+        pre-edit-border: #099, //编辑边框
+        table-th: #f4f5f7,        //表格表格表头
+        table-td: rgba(0, 0, 0, 0),        //表格表格td
+        table-border: #eee,        //表格边框
+        table-title: #111,
+
+        pre-scroll: #0d1323,
+        pre-scrollb: #cb2d01,
+        question-mark: rgba(30, 30, 30, .6),   //问号图标的颜色
+        // table表格背景色
+        table-bg: linear-gradient(0deg, rgba(10, 71, 89, .2) 0%, rgba(9, 23, 50, .2) 100%),
+
+        
+
+        /* 新整理的浅色主题 */
+        /* 公共样式类 */
+        main-color: #099, //主题色
+        sub-main-color: #65b1e7, //次级主题色（用于一些高亮效果或大色块）
+        sub-color: #c8c8c8, //底色、禁选色、边框、分割线等辅助类的颜色
+        normal-word-color: #323232, //普通文字颜色（大块文字及表格内部文字以及一些页面中描述性文字）
+        key-word-color: #111, //重点文字颜色
+        key-word-color2: #111, //页面中深色版本用主题色突出的文字颜色
+        em-word-color: #65b1e7, //对应深色版本中的深蓝色
+        sub-word-color: rgba(50, 50, 50, .7), //次级文字颜色
+        special-word-color: #657592, //特殊文字颜色（暂定首页中心文字颜色）
+        white-word-color: #fff, //白色，特殊标题文字颜色 (例如科室能力导航页的科室分类）
+        no-alarm-color: #65b1e7, //无报警的文字或图标颜色
+        moderate-alarm-color: #fbc11f, //中度报警的文字或图标颜色
+        severe-alarm-color: #df4935, //重度报警的文字或图标颜色
+        layout-bg-color: #f2f3f8,
+        layout-bg: #f2f3f8, //页面大背景
+        // menu-active-bg: linear-gradient(90deg,rgba(98, 169, 255, 0) 0%,rgba(98, 169, 255, .3) 100%), // 左侧菜单选中样式
+        menu-active-bg: linear-gradient(90deg, rgba(101, 177, 231, 0) 0%, rgba(101, 177, 231, .3) 100%), // 左侧菜单选中样式
+        echart-color1: nth($line-color-list, 1),
+        echart-color2: nth($line-color-list, 2),
+        echart-color3: nth($line-color-list, 5),
+        
+        // 基础版块样式
+        box-bg: #fff, //版块背景
+        box-bd: none, //版块边框
+        box-shadow: 0 4px 6px 1px rgba(33, 35, 39, .06), //版块阴影
+        box-active-shadow: 0 0 32px 0 rgba(130, 127, 147, .26),
+        box-active-shadow1: 0 4px 26px 0 rgba(30, 30, 30, .22), 
+        box-bg2: #fff, //对应深色背景的今日动态、科室能力内页等左中右结构的中间版块 背景
+        box-title-bg: none,  // 版块标题背景
+        box-title-text: #111,  // 版块标题文字
+        box-title-font: bold,  // 版块标题文字加粗
+        box-title-padding: 0,  // 版块标题位置居左
+        box-link-text: #323232,
+
+        // 进度条
+        progress-fill-color: #81d8cd,
+        progress-track-color: rgba(200, 200, 200, .3),
+        // 滚动条
+        scrollbar-color: #d5d5d5, //滚动条滑块颜色
+        scrollbar-track-color: #f1f1f1, //滚动条轨道颜色
+        // 右上角返回按钮
+        back-button-bg: rgba(0, 153, 153, .3), //背景
+        back-button-bd: rgba(0, 153, 153, .3), //边框
+        back-button-text: #fff, //中间图标颜色
+        // 表格
+        th-bg: #f4f5f7, //表头背景
+        th-text-color: #111, //表头文字颜色
+        td-text-color: #323232, //表格内文字颜色
+        td-hover-bg: rgba(244, 245, 247, .6), //选中行背景
+        td-selected-bg: rgba(98, 169, 255, .15),
+        // 提示框
+        tooltip-bg: rgba(30, 30, 30, .55),
+        tooltip-bd: rgba(50, 50, 50, .1),
+        tooltip-shadow: 0px 0px 6px 2px rgba(1, 6, 18, .72),
+        tooltip-text: #fff,
+        // 表单类
+        label-text: #323232,
+        input-bg: #fff, //输入框和下拉框正常背景
+        input-bd: #c8c8c8, //输入框和下拉框正常边框
+        input-text:#323232, //输入框和下拉框中文字颜色
+        input-disabled-bg: rgba(200, 200, 200, .3), //禁用的输入框和下拉框背景
+        input-disabled-bd: #c8c8c8, //禁用的输入框和下拉框边框
+        // 下拉列表和日期下拉列表
+        popper-bg: #fff,   //背景色
+        popper-shadow: 0 1px 6px 0 rgba(30, 30, 30, .07),  //边框外阴影
+        popper-bd-color: rgba(200, 200, 200, .64),
+        select-list-text: #323232, //下拉框的下拉列表文字颜色
+        select-list-active-text: #099, //下拉框的下拉列表选中的文字颜色
+        select-lise-disabled-text: #c8c8c8, //下拉框的下拉列表禁选的文字颜色
+        button-text: #fff,
+        button-bd: #099, //按钮边框
+        button-bg: #81d8cd, //按钮背景
+        button-hover-bg: #099, //按钮滑上去背景
+        button-bd-color: #099,
+        radio-bd: #c8c8c8, //单选或多选边框
+        radio-bg: #fff, //单选或多选背景
+        radio-selected-bd: #099, //单选或多选选中的边框
+        radio-selected-bg: #81d8cd, //单选或多选选中的背景
+        radio-selected-label: #81d8cd, //单选或多选选中的label文字颜色
+        switch-on-bg: rgba(129, 216, 205, .3), //开关打开时的背景
+        switch-on-bd: #099, //开关打开时的边框
+        switch-on-core:#81d8cd, //开关打开时的滑块颜色
+        switch-off-bg: rgba(200, 200, 200, .3), //开关关闭时的背景
+        switch-off-bd: #c8c8c8, //开关关闭时的边框
+        switch-off-core:#c8c8c8, //开关关闭时的滑块颜色
+        
+        /* 公共组件 */
+        //头部
+        head-bg: #81d8cd,
+        head-title-color: #194754,
+        head-active-menu-color: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#fff)),
+        head-def-color: #fff,
+        head-text-color: #194754,
+        setting-back-color: rgba(255,255,255,0),
+        setting-color: -webkit-gradient(linear, 0 0, 0 bottom, from(#194754), to(#194754)),
+        setting-def-color: #194754,
+
+        //重点指标中的横向柱图
+        ranking-num-bg: rgba(200, 200, 200, .3),
+        ranking-num-border: none,
+        ranking-num-boxShadow: none,
+
+        // 页面中tab标签（带背景边框）
+        tab-text: #111,
+        tab-bd: #c8c8c8,
+        tab-bg: #f5f7f8,
+        tab-change-bg: #81d8cd,
+        tab-change-bd: #099,
+
+
+        /* 具体页面 */
+
+        // 发展预测
+        develop-main-color: #111,
+        develop-progress-color: rgba(98, 169, 255, .4),
+        develop-progress-out-color: #e5e5e5,
+        
+        //重点指标&今日动态&疫情防控菜单
+        indicatords-menu-active-color: #099,
+        indicatords-menu-bar-bg: rgba(0, 153, 153, .4),
+        indicatords-menu-bar-bottom: 0,
+        
+        // 核心医生
+        cmister-background: #fff,
+        cmister-input-border: #c8c8c8,
+        cmister-input-search: #1e232e,
+        cmister-radar-color: #fff,
+        cmister-table-n:rgba(242, 245, 246, .6),
+        cmister-active-color: #fff,
+        cmister-border-opacity: .6,
+        cmister-page-bg: #f7f7f7,
+        cmister-card-left-bg: #6c80a8,
+        cmister-card-right-bg: #7b1204,
+        
+        //科室能力
+        ability-home-bg: transparent,
+        ability-detail-bg: transparent,
+        ability-list-bg: #f2f3f8,
+
+        //投资回收期测算
+        recovery-select: #c8c8c8,
+        recovery-tbody-border: rgba(19, 30, 57, .1),
+        recovery-tr-border: rgba(19, 30, 57, .1),
+
+
+        // 入院患者转化
+        conver-cmenu-line: #65b1e7,
+        conver-lrmenu-line: #65b1e7,
+        conver-menu-defBg: #fff,
+        conver-menu-changeBg: rgba(98, 169, 255, .3),
+
+        // 患者费用负担
+        costburden-line-color: #65b1e7,
+        //疾病成本收益分析
+        disease-active-bg: #62a9ff,
+        //投资回收期
+        decovery-de-box: #fff,
+        decovery-box-cancel: #81d8cd,
+        decovery-calculator-header: #3c3c3c,
+        decovery-calculator-bg: #fff,
+        decovery-calculator-btn: #e4edfA,
+        //知识图谱
+        know-word-color: #fcfcfd,
+        //解读
+        unscramble-bg: #fbfbfb,
+        unscramble-border: #e0eeff,
+        unscramble-shadow: rgba(0, 0, 0, .28),
+        unscramble-eject-bg: #fff,
+        unscramble-eject-border: #61a9ff,
+        unscramble-eject-wborder: #61a9ff,
+        unscramble-eject-title: #61a9ff,
+        //指标关联
+        indexRelaAnaly-active-color: #52a8a7,
+        indexRelaAnaly-active-bg: rgba(130, 216, 206, .2),
+
+        // 手术模块
+        icon-color1: #6579de,
+        icon-color2: #65b1e7,
+        icon-color3: #00d8cd,
+
+        //综合目标
+        target-title-color: #fff,
+    ),
+    
+);
+
+@mixin themify($themes: $themes) {
+    @each $theme-name, $map in $themes {
+        .theme-#{$theme-name} & {
+            $theme-map: () !global;
+            @each $key, $value in $map {
+                $theme-map: map-merge($theme-map, ($key: $value)) !global;
+            }
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}
+
+@for $i from 10 to 41 {
+    .ft-#{$i}, 
+    .table-ths-#{$i} .el-table__header th, 
+    .table-tds-#{$i} .el-table__body td{
+        font-size: #{$i}px !important;
+    }
+}
+
+
+

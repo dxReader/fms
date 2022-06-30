@@ -1,0 +1,143 @@
+.disScatter {
+    .header {
+        position: relative;
+        height: 64px;
+        // margin-left: 20px;
+        .cascaderBox {
+            top: 15px;
+        }
+    }
+    .content {
+        position: relative;
+        height: 890px;
+    }
+    .leftMain {
+        width: 426px;
+        height: 100%;
+        margin-left: 20px;
+        padding: 0;
+        .departs {
+            height: calc(100% - 22px);
+        }
+        .public-rank {
+            .rank-title {
+                margin: 20px 0 0 25px;
+            }
+            .list {
+                margin-left: 20px;
+            }
+        }
+    }
+    .rightMain {
+        position: absolute;
+        top: 8px;
+        left: 464px;
+        .dept {
+            height: 22px;
+        }
+        .selected {
+            font-size: 16px;
+            font-weight: bold;
+            .name,
+            .close {
+                @include themify($themes) {
+                    color: themed("key-word-color");
+                }
+            }
+            .close {
+                font-size: 12px;
+                margin-left: 12px;
+                cursor: pointer;
+            }
+        }
+        .card {
+            width: 626px;
+            height: 414px;
+            float: left;
+            margin: 16px 20px 0 0;
+            &:nth-child(2n+1) {
+                width: 780px;
+                .chart {
+                    width: 720px;
+                }
+            }
+            .chart {
+                width: 586px;
+                height: 336px;
+                .el-table__body-wrapper {
+                    height: 300px;
+                    overflow-y: auto;
+                }
+                table thead tr th .cell {
+                    font-size: 16px;
+                }
+            }
+        }
+        .doctor {
+            font-size: 16px;
+            .sjkp {
+                display: inline-block;
+                color: #03f9fc;
+                // cursor: pointer;
+            }
+            .el-table {
+                tr th,
+                tr td {
+                    padding: 0;
+                    height: 44px;
+                }
+                .iconshujuqiapian{
+                    @include themify($themes) {
+                        color: themed("main-color");
+                    }
+                }
+            }
+        }
+        .diags {
+            .numPre {
+                height: 10px;
+                width: 97px;
+                margin-top: 3px;
+                padding: 1px;
+                float: left;
+                border-radius: 20px;
+                @include themify($themes) {
+                    background-color: themed("ranking-num-bg");
+                    color: themed("normal-word-color");
+                }
+                .have {
+                    height: 100%;
+                    border-radius: 20px;
+                    margin: 0;
+                    @include themify($themes) {
+                        background:  url('#{themed("bg-url")}/ranks.png') no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.theme-1 .disScatter {
+    .diags {
+        background-color:rgba(0, 0, 0, .03);
+        background-image: linear-gradient(rgba(215, 223, 246, .03) 1px,transparent 0),
+            linear-gradient(90deg, rgba(215, 223, 246, .03) 1px,transparent 0),
+            linear-gradient(hsla(0, 0%, 10%, .03) 1px,transparent 0),
+            linear-gradient(90deg,hsla(0, 0%, 10%, .03) 1px,transparent 0);
+        background-size: 8px 8px, 8px 8px;
+        background-repeat: inherit;
+        border: none;
+        thead {
+            background-color:rgba(19, 30, 57, .72);
+        }
+        .el-table__row td {
+            cursor: pointer;
+            border-bottom: 1px solid rgba(215, 223, 246, .13) !important;
+        }
+        .numPre {
+            border: 1px solid rgba(4, 63, 84, 1);
+        }
+    }
+}

@@ -1,0 +1,296 @@
+.surPatients {
+    position: relative;
+
+    .content {
+        position: relative;
+        margin: 0 auto;
+        .left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 426px;
+            height: 892px;
+            margin-left: 21px;
+            padding: 0;
+            >div{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                
+            }
+            .chart{
+                height: 838px;
+                margin: 20px 0 0 30px;
+            }
+        }
+
+        .right {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin-left: 22px;
+            .title {
+                height: 40px;
+                span {
+                    @include themify($themes) {
+                        color: themed('key-word-color');
+                    }
+                }
+                i {
+                    // font-size: 12px;
+                    cursor: pointer;
+                }
+            }
+            .right-top {
+                width: 1430px;
+                height: 486px;
+                position: relative;
+                padding: 0;
+                .month{
+                    position: absolute;
+                    right: 36px;
+                    top: 26px;
+                    .month-item{
+                        float: left;
+                        margin-left: 56px;
+                        cursor: pointer;
+                        span{
+                            display: inline-block;
+                            width: 18px;
+                            height: 9px;
+                            margin-right: 9px;
+                            border-radius: 2px;
+                            background: blue;
+                        }
+                    }
+                    
+                }
+                .right-title {
+                    height: 65px;
+                    line-height: 65px;
+                    padding-left: 20px;
+                }
+                .tableBox {
+                    z-index: 19;
+                    position: relative;
+                    height: 366px;
+                    overflow: scroll;
+                    .el-scrollbar__view{
+                        position: relative;
+                    }
+                    .el-table{
+                        position: relative;
+                        cursor: pointer;
+                        z-index: 10;
+                    }
+                    .el-table__empty-text{
+                        margin-top: 150px;
+                        font-size: 16px;
+                        @include themify($themes) {
+                            color: themed("normal-word-color");
+                        }
+                    }
+                    .icon-box{
+                        vertical-align: super;
+                    }
+                    .icon-line{
+                        display: inline-block;
+                        height: 3px;
+                        width: 11px;
+                        background: #fff;
+                    }
+                }
+                .activeLine{
+                    position: absolute;
+                    width: 1425px;
+                    height: 47px;
+                    top: 150px;
+                    @include themify($themes) {
+                        background: themed("td-selected-bg");
+                    }
+                    cursor: pointer;
+                    z-index: 19;
+                }
+                .table-head {
+                    .el-table__empty-block {
+                        display: none;
+                    }
+                }
+                .el-table {
+                    background: none;
+                    th, tr, td{
+                        background: none;
+                        border-bottom: 0;
+                        font-size: 16px;
+                    }
+                    .cell {
+                        white-space: nowrap;
+                    }
+                    &:before {
+                        background: none;
+                    }
+                    thead {
+                        color: #fff;
+                        @include themify($themes) {
+                            color: themed('key-word-color');
+                            background-color: themed('th-bg');
+                        }
+                        th{
+                            padding: 10px 0;
+                        }
+                    }
+                    tbody{
+                        @include themify($themes) {
+                            color: themed('normal-word-color');
+                        }
+                        .el-table__row {
+                            height: 47px !important;
+                            &:hover{
+                                background: none;
+                            }
+                        }
+                        .momChart, .bar {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                        }
+                        .bar{
+                            width: 90%;
+                            .first-bar {
+                                position: absolute;
+                                top: 50%;
+                                margin-top: -7px;
+                                height: 10px;
+                                border-radius: 0 5px 5px 0;
+                                .value {
+                                    position: absolute;
+                                    right: -40px;
+                                    top: 50%;
+                                    margin-top: -17px;
+                                    height: 30px;
+                                    line-height: 30px;
+                                    font-size: 12px;
+                                    vertical-align: middle;
+                                }
+                            }
+                            .second-bar {
+                                position: absolute;
+                                top: 50%;
+                                margin-top: 7px;
+                                height: 10px;
+                                border-radius: 0 5px 5px 0;
+                                .value {
+                                    position: absolute;
+                                    right: -40px;
+                                    top: 50%;
+                                    margin-top: -13px;
+                                    height: 30px;
+                                    line-height: 30px;
+                                    font-size: 12px;
+                                    vertical-align: middle;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .right-bottom {
+                margin-top: 20px;
+                .bottom-content {
+                    position: relative;
+                    width: 705px;
+                    height: 347px;
+                    float: left;
+                    margin-right: 20px;
+                    padding: 0;
+                    >div {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                    }
+                    .content-title {
+                        margin: 22px 0 0 32px;
+                    }
+                    .sex1 {
+                        position: absolute;
+                        left: 242px;
+                        top: 137px;
+                        width: 124px;
+                        height: 124px;
+                        @include themify($themes) {
+                            background: url('#{themed("bg-url")}/surPatients/men.png') no-repeat;
+                            background-size: 100% 100%;
+                        }
+                    }
+                    .sex2 {
+                        right: 182px;
+                        position: absolute;
+                        top: 137px;
+                        width: 124px;
+                        height: 124px;
+                        @include themify($themes) {
+                            background: url('#{themed("bg-url")}/surPatients/women.png') no-repeat;
+                            background-size: 100% 100%;
+                        }
+                    }
+                    .tootipItem {
+                        >div {
+                            margin-bottom: 10px;
+                        }
+                    }
+                    #bar {
+                        height: 274px;
+                    }
+                    .con-chart {
+                        margin-top: 10px;
+                        height: 254px;
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .gl-box-title {
+        margin-bottom: 0;
+    }
+}
+
+.theme-1 {
+    .surPatients {
+        .first-legend {
+            background-color: #03f9fc !important;
+        }
+        .second-legend {
+            background-color: rgba(3, 249, 252, .4) !important;
+        }
+        .first-bar {
+            background-color: #03f9fc !important;
+        }
+        .second-bar {
+            background-color: rgba(3, 249, 252, .4) !important;
+        }
+    }
+}
+
+.theme-2, 
+.theme-3 {
+    .surPatients {
+        .first-legend {
+            background-color: #62a9ff !important;
+        }
+        .second-legend {
+            background-color: #c3e14d !important;
+        }
+        .first-bar {
+            background-color: #62a9ff !important;
+        }
+        .second-bar {
+            background-color: #c3e14d !important;
+        }
+    }
+}

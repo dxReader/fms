@@ -1,0 +1,229 @@
+.disease-cost {
+    .gl-box-head  {
+        padding: 20px 20px 0 20px;
+    }
+    .content {
+        position: relative;
+        height: 892px;
+        display: flex;
+        .leftMain {
+            width: 374px;
+            height: 100%;
+            margin-left: 20px;
+            padding-left: 0;
+            padding-right: 0;
+            // .triangle {
+            //     display: none;
+            // }
+            // .rank-title {
+            //     margin: 0 0 10px 20px;
+            // }
+        }
+        .rightMain {
+            height: 100%;
+            margin-left: 20px;
+            .naDept {
+                //font-weight: bold;
+                height: 30px;
+                margin-bottom: 18px;
+                @include themify($themes) {
+                    color: themed('key-word-color');
+                }
+            }
+            .top {
+                display: flex;
+                .gl-box-grid {
+                    padding-top: 0;
+                }
+                // .gl-box-default {
+                //     padding: 0 !important;
+                // }
+                .table {
+                    width: 848px;
+                    // .box-sub {
+                    //     height: 432px !important;
+                    // }
+                    .search {
+                        // height: 108px;
+                        margin-bottom: 12px;
+
+                        .input-title {
+                            margin: 0 0 0 20px;
+                            padding-top: 7px;
+                            position: relative;
+                        }
+                    }
+
+                    .vue-table {
+                        width: 100%;
+                        height: 350px;
+                        // background-color: rgba(0, 0, 0, 0.03);
+                        // background-image: linear-gradient(rgba(215, 223, 246, 0.03) 1px, transparent 0), linear-gradient(90deg, rgba(215, 223, 246, 0.03) 1px, transparent 0), linear-gradient(hsla(0, 0%, 10%, 0.03) 1px, transparent 0), linear-gradient(90deg, hsla(0, 0%, 10%, 0.03) 1px, transparent 0);
+                        // background-size: 8px 8px, 8px 8px;
+
+                        // .t {
+                        //     width: 799px;
+                        //     height: 346px;
+                        //     margin: 0 auto;
+                        // }
+                    }
+                }
+                .scatter {
+                    width: 615px;
+                    height: 432px;
+                    margin-left: 20px;
+                    padding: 0;
+                    position: relative;
+                    .right-scatter {
+                        // position: relative;
+                        width: 100%;
+                        height: 364px;
+                    }
+                    .I {
+                        // z-index: 2;
+                        position: absolute;
+                        top: 65px;
+                        right: 60px;
+                        font-size: 12px;
+                        @include themify($themes) {
+                            color: themed('normal-word-color');
+                        }
+                    }
+                    .II {
+                        // z-index: 2;
+                        position: absolute;
+                        top: 65px;
+                        left: 80px;
+                        font-size: 12px;
+                        @include themify($themes) {
+                            color: themed('normal-word-color');
+                        }
+                    }
+                    .III {
+                        // z-index: 2;
+                        position: absolute;
+                        bottom: 47px;
+                        left: 80px;
+                        font-size: 12px;
+                        @include themify($themes) {
+                            color: themed('normal-word-color');
+                        }
+                    }
+                    .IIII {
+                        // z-index: 2;
+                        position: absolute;
+                        bottom: 47px;
+                        right: 60px;
+                        font-size: 12px;
+                        @include themify($themes) {
+                            color: themed('normal-word-color');
+                        }
+                    }
+
+                    .bg1 {
+                        position: absolute;
+                        @include themify($themes) {
+                            background-color: themed('td-selected-bg');
+                        }
+                        z-index: 0;
+                    }
+
+                    .bg2 {
+                        position: absolute;
+                        @include themify($themes) {
+                            background-color: themed('td-selected-bg');
+                        }
+                        z-index: 0;
+                    }
+
+                    .bg3 {
+                        position: absolute;
+                        @include themify($themes) {
+                            background-color: themed('td-selected-bg');
+                        }
+                        z-index: 0;
+                    }
+
+                    .bg4 {
+                        position: absolute;
+                        @include themify($themes) {
+                            background-color: themed('td-selected-bg');
+                        }
+                        z-index: 0;
+                    }
+                }
+            }
+            .bottom {
+                display: flex;
+                height: 393px;
+                margin-top: 20px;
+                .gl-box-default {
+                    padding: 0 !important;
+                }
+                .char-left {
+                    position: relative;
+                    width: 847px;
+                    .left-bar {
+                        height: 326px;
+                        width: 100%;
+                    }
+                }
+                .char-right {
+                    position: relative;
+                    width: 615px;
+                    margin-left: 20px;
+                    .right-pie {
+                        height: 326px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .I:hover,
+    .II:hover,
+    .III:hover,
+    .IIII:hover,
+    .tab-limit:hover,
+    .tab-cost:hover,
+    .details:hover {
+        cursor: pointer;
+    }
+
+    .echart-details-title {
+        font-size: 20px;
+        font-family: Lantinghei SC;
+        font-weight: 200;
+        margin: 20px 0 0 40px;
+        .tab-cost {
+            margin-right: 62px;
+        }
+        .tab-active {
+            @include themify($themes) {
+                color: themed('main-color') !important;
+            }
+        }
+    }
+    .echart-details-scatter {
+        width: 1600px;
+        height: 850px;
+        margin: 0 auto;
+        .details-table {
+            margin-top: 40px;
+            // thead {
+            //     @include themify($themes) {
+            //         color: themed('th-bg')!important;
+            //     }
+            // }
+        }
+    }
+}
+
+// .theme-2, .theme-3 {
+//     .disease-cost {
+//         .vue-table {
+//             background: transparent !important;
+//             background-image: transparent !important;   
+//         }
+//     }
+// }

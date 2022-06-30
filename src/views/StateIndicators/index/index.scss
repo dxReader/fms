@@ -1,0 +1,137 @@
+.state-indicators {
+    .gl-box-title {
+        z-index: 2;
+        position: relative;
+        margin-bottom: 0;
+        @include themify($themes) {
+            color: themed("main-color");
+        }
+        .iconfont.iconwenhao2 {
+            margin-right: 10px;
+            @include themify($themes) {
+                background-color: rgba(themed("main-color"), .8);
+            }
+        }
+    }
+    .el-table thead, .el-table--group thead {
+        background-color: transparent;
+        @include themify($themes) {
+            color: themed("normal-word-color");
+        }
+        th {
+            font-weight: normal;
+        }
+    }
+    .el-table td, .el-table th.is-leaf, .el-table--group td, .el-table--group th.is-leaf {
+        padding: 12px 0;
+        @include themify($themes) {
+            color: themed("key-word-color");
+        }
+    }
+    .content {
+        position: relative;
+        width: 100%;
+        height: 892px;
+    }
+    .center-wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -202px;
+        margin-left: -202px;
+        width: 404px;
+        height: 404px;
+        @include themify($themes) {
+            background:  url('#{themed("bg-url")}/stateIndicators/index_center_bg4.png') no-repeat center;
+            background-size: contain;
+        }
+    }
+    .center-box {
+        margin: 40px;
+        padding: 20px;
+        width: 324px;
+        height: 324px;
+        border-radius: 50%;
+        p {
+            margin: 60px 10px;
+            .name {
+                display: inline-block;
+                width: 130px;
+                // text-align: right;
+            }
+            .val {
+                @include themify($themes) {
+                    color: themed("key-word-color");
+                }
+            }
+        }
+    }
+    .card-box {
+        box-sizing: border-box;
+        position: absolute;
+        width: 714px;
+        height: 328px;
+        padding: 30px 20px;
+        cursor: pointer;
+        .box-content {
+            margin-top: -20px;
+            height: 272px;
+        }
+    }
+    .card-1 {
+        top: 40px;
+        left: 40px;
+    }
+    .card-2 {
+        top: 40px;
+        right: 40px;
+    }
+    .card-3 {
+        bottom: 40px;
+        left: 40px;
+    }
+    .card-4 {
+        bottom: 40px;
+        right: 40px;
+    }
+
+    .content-2 {
+        .card-1 {
+            top: 50%;
+            margin-top: -164px;
+        }
+        .card-2 {
+            top: 50%;
+            margin-top: -164px;
+        }
+        .center-wrap {
+            background:  url('~src/assets/images/theme-2/stateIndicators/index_center_bg2.png') no-repeat center;
+            background-size: contain;
+        }
+    }
+
+    .content-3 {
+        .card-1 {
+            top: 50%;
+            margin-top: -164px;
+        }
+        .card-3 {
+            bottom: 40px;
+            right: 40px;
+            left: auto;
+        }
+        .center-wrap {
+            background:  url('~src/assets/images/theme-2/stateIndicators/index_center_bg3.png') no-repeat center;
+            background-size: contain;
+        }
+    }
+}
+
+.theme-1 {
+    .state-indicators {
+        .center-box {
+            background-color: rgba(3, 249, 252, .2);
+            box-shadow:0px 0px 7px 1px rgba(13, 33, 89, .1);
+        }
+    }
+}

@@ -1,0 +1,141 @@
+.survey {
+    .detail {
+        font-size: 16px;
+        cursor: pointer;
+        @include themify($themes) {
+            color: themed('main-color');
+        }
+    }
+    .content {
+        overflow-y: hidden;
+    }
+    .iconList {
+        width: 340px;
+        height: 76px;
+        line-height: 76px;
+        padding: 0;
+        padding-left: 30px;
+        margin-bottom: 29px;
+        position: relative;
+        .listImg {
+            font-size: 22px;
+            position: absolute;
+            top: 0;
+            left: 42px;
+            @include themify($themes) {
+                color: themed("sub-main-color");
+            }
+        }
+        .column1 {
+            margin: 16px 20px 0 0;
+            display: inline-block;
+            width: 46px;
+            height: 46px;
+        }
+        .column2 {
+            width: 200px;
+        }
+        .column3 {
+            width: 200px;
+            .unit {
+                margin-left: 10px;
+            }
+        }
+    }
+    .left {
+        width: 428px;
+        height: 894px;
+        margin-left: 20px;
+        .gl-linear-bd-row {
+            
+        }
+    }
+    .right {
+        width: 1472px;
+        .child {
+            margin: 0 0 20px 20px;
+            width: 706px;
+            height: 437px;
+        }
+        .income {
+            margin-top: 64px;
+            margin-left: 25%;
+            overflow: auto;
+            .in-child {
+                width: 30%;
+                text-align: center;
+            }
+        }
+        .charts {
+            .charts-child {
+                width: 50%;
+                height: 276px;
+            }
+        }
+        .content {
+            padding: 40px 0 0 0;
+            .el-scrollbar__thumb {
+                height: auto !important;
+            }
+            .el-scrollbar__wrap {
+                overflow: hidden;
+            }
+            .type {
+                height: 70px;
+                position: relative;
+                padding-left: 180px;
+            }
+            .num {
+                width: 310px;
+            }
+            .text {
+                width: auto;
+            }
+            .name {
+                width: 180px;
+                position: absolute;
+                left: 20px;
+            } 
+            .iconList {
+                width: 270px;
+                float: left;
+                margin-right: 30px;
+                margin: 15px 0;
+            }
+        }
+        .right-bottom {
+            overflow: auto;
+            position: relative;
+            margin-top: 40px;
+            width: 100%;
+            >div {
+                width: 45%;
+                height: 150px;
+                text-align: center;
+                .title{
+                    margin: 20px 0 27px 0;
+                }
+            }
+            p {
+                line-height: 36px;
+            }
+            .top {
+                border-bottom: 1px solid rgba(200, 200, 200, .3);
+            }
+            .left {
+                border-right: 1px solid rgba(200, 200, 200, .3);
+            }
+            .num {
+                margin-top: 50px;
+            }
+            .title {
+                margin-top: 0 !important;
+            }
+            .iconfont {
+                @include themify($themes) {
+                    color: themed("sub-main-color");
+                }
+            }
+        }
+    }
+}

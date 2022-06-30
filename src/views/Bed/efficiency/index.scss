@@ -1,0 +1,314 @@
+.bed-efficiency {
+    div, ul {
+        box-sizing: border-box;
+    }
+    .content {
+        margin: 0 auto;
+        width: 1880px;
+        .left-main {
+            position: relative;
+            width: 376px;
+            height: 892px;
+            padding: 20px 0;
+            .search {
+                padding: 0 20px;
+            }
+            .dept-list {
+                // margin: 30px 10px 10px;
+                margin-top: 30px;
+                height: 790px;
+                // .rank-title {
+                //     display: inline-block;
+                //     margin: 0 0 10px 5px;
+                //     font-size: 18px;
+                //     line-height: 18px;
+                //     cursor: pointer;
+                //     .triangle {
+                //         display: inline-block;
+                //         position: relative;
+                //         width: 20px;
+                //         height: 20px;
+                //     }
+                //     .rank-icon {
+                //         position: absolute;
+                //         font-size: 10px;
+                //         width: 8px;
+                //         height: 8px;
+                //         @include themify($themes) {
+                //             color: rgba(themed('main-color'), .2);
+                //         }
+                //         &.iconrankbottom {
+                //             bottom: 3px;
+                //             left: 0;
+                //         }
+                //         &.icon-active {
+                //             @include themify($themes) {
+                //                 color: themed('main-color')
+                //             }
+                //         }
+                //     }
+                // }
+                // .lists {
+                //     position: absolute;
+                //     left: 0;
+                //     width: 100%;
+                //     .dept-scroll {
+                //         height: 680px;
+                //     }
+                //     li {
+                //         padding: 18px 30px;
+                //         cursor: pointer;
+                //         .name {
+                //             display: inline-block;
+                //             width: 200px;
+                //             // white-space: normal;
+                //             overflow: hidden;
+                //             text-overflow: ellipsis;
+                //             white-space: nowrap;
+                //         }
+                //         .num {
+                //             display: inline-block;
+                //             width: calc(100% - 210px);
+                //         }
+                //         &.total {
+                //             position: relative;
+                //             &::before {
+                //                 position: absolute;
+                //                 bottom: 0;
+                //                 left: 50px;
+                //                 display: block;
+                //                 content: '';
+                //                 width: 1px;
+                //                 height: 30%;
+                //                 @include themify($themes) {
+                //                     border-right: 1px dashed themed("main-color");
+                //                 }
+                //             } 
+                //         }
+                //         &.item {
+                //             position: relative;
+                //             margin-left: 50px;
+                //             &::before {
+                //                 position: absolute;
+                //                 top: 0;
+                //                 left: 0;
+                //                 display: block;
+                //                 content: '';
+                //                 width: 1px;
+                //                 height: 100%;
+                //                 @include themify($themes) {
+                //                     border-right: 1px dashed themed("main-color");
+                //                 }
+                //             }
+                //             &::after {
+                //                 position: absolute;
+                //                 top: 50%;
+                //                 left: 8px;
+                //                 display: block;
+                //                 content: '';
+                //                 width: 18px;
+                //                 height: 1px;
+                //                 @include themify($themes) {
+                //                     border-top: 1px solid themed("main-color");
+                //                 }
+                //             }
+                //         }
+                //     }
+                // }
+            }
+        }
+
+        .right-main {
+            width: 1484px;
+            
+            .mainsrp {
+                height: 40px;
+                // line-height: 44px;
+                font-weight: bold;
+                @include themify($themes) {
+                    color: themed("key-word-color");
+                };
+            }
+            
+            .gl-linear-bd-row {
+                line-height: 1.2;
+                align-items: center;
+                .td {
+                    flex: 1;
+                }
+                .td.name {
+                    flex: 0 0 120px;
+                    width: 120px;
+                }
+                .td.icon {
+                    flex: 0 0 40px;
+                    width: 40px;
+                    @include themify($themes) {
+                        color: rgba(themed('normal-word-color'), .5);
+                    }
+                }
+                .td.value-change {
+                    flex: 0 0 110px;
+                    width: 110px;
+                    @include themify($themes) {
+                        color: themed('normal-word-color');
+                    }
+                }
+            }
+
+            .top {
+                margin-bottom: 20px;
+                @include themify($themes) {
+                    color: themed("key-word-color");
+                }
+                .top-list {
+                    margin: 0 auto;
+                    width: 498px;
+                    height: 72px;
+                    .top-li {
+                        display: inline-block;
+                        width: 50%;
+                        text-align: center;
+                        .top-name {
+                            margin-bottom: 14px;
+                        }
+                    }
+                }
+                .top-left {
+                    width: 730px;
+                    height: 428px;
+                    
+                    .los-chart {
+                        margin-top: 20px;
+                        height: 250px;
+                    }
+                }
+                .top-right {
+                    width: 732px;
+                    height: 428px;
+                    .gl-linear-bd-row {
+                        height: 56px;
+                        .td {
+                            text-align: center;
+                        }
+                    }
+                    .right-table {
+                        height: 268px;
+                        th.group-line {
+                            border-top: 1px solid #2C3B60;
+                        }
+                    }
+                    .right-bottom {
+                        margin-top: 20px;
+                        .bed-dept-chart {
+                            height: 184px;
+                        }
+                    }
+                }
+            }
+            .bottom {
+                height: 404px;
+                .gl-linear-bd-row {
+                    padding-right: 0;
+                }
+                .bottom-left, .bottom-right {
+                    position: relative;
+                    width: 484px;
+                    height: 380px;
+                    .gl-box-title {
+                        .iconfont {
+                            margin-right: 10px;
+                            @include themify($themes) {
+                                color: themed('em-word-color');
+                            }
+                        }
+                    }
+                    .value-change2 {
+                        flex: 1;
+                    }
+                }
+                .bottom-center {
+                    position: relative;
+                    width: 472px;
+                    padding: 20px;
+                    height: 380px;
+                    .iconfont {
+                        margin-right: 10px;
+                    }
+
+                    .estimate-select {
+                        width: 80px;
+                        .el-input__inner {
+                            padding-left: 12px;
+                            padding-right: 30px;
+                            background-color: transparent;
+                            border-color: transparent;
+                            @include themify($themes) {
+                                color: themed('em-word-color');
+                            }
+                        }
+                        .el-input__icon {
+                            width: 30px;
+                            @include themify($themes) {
+                                color: themed('em-word-color');
+                            }
+                        }
+
+                        .el-input.is-disabled {
+                            .el-input__inner {
+                                @include themify($themes) {
+                                    color: themed('sub-color');
+                                }
+                            }
+                            .el-input__icon {
+                                @include themify($themes) {
+                                    color: themed('sub-color');
+                                }
+                            }
+                        }
+                    }
+                    
+
+                    .note {
+                        text-align: center;
+                    }
+                    .bottom-center-value {
+                        margin-top: 60px;
+                        text-align: center;
+                        @include themify($themes) {
+                            color: themed('key-word-color');
+                        }
+                        & > div {
+                            display: inline-block;
+                        }
+                        .value-item {
+                            margin: 30px;
+                            width: 84px;
+                            height: 84px;
+                            line-height: 84px;
+                            text-align: center;
+                            @include themify($themes) {
+                                background-image: url('#{themed("bg-url")}/bed/circle_bg.png');
+                                background-size: 100% 100%;
+                            }
+                        }
+                    }
+
+                }
+
+                .income-chart {
+                    position: absolute;
+                    bottom: 0;
+                    height: 144px;
+                }
+                .income-chart2 {
+                    height: 180px;
+                }
+            }
+        }
+    }
+}
+.theme-1 .bedEfficiency .bottom-center {
+    background-image: url('~src/assets/images/theme-1/bed/bed_calculation.png');
+    background-size: 100% 100%;
+}

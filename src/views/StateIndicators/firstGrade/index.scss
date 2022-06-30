@@ -1,0 +1,136 @@
+.firstGrade {
+    .gl-date-head .public-date {
+        z-index: 2;
+    }
+    .tab-box{
+        position: absolute;
+        width: 100%;
+        top:0;
+        .el-tabs {
+            height: 100%;
+        }
+        .el-tabs__header {
+            height: 18px;
+            margin: 0;
+            padding: 20px 0;
+            .el-tabs__nav-wrap,.el-tabs__nav-scroll {
+                overflow: inherit;
+                &::after {
+                    display: none;
+                }
+            }
+            .el-tabs__item {
+                font-size: inherit;
+                @include themify($themes) {
+                    color: themed('normal-word-color');
+                    font-weight: themed('tab-font');
+                }
+                opacity:0.7;
+                height: 100%;
+                line-height: 18px;
+            }
+            .el-tabs__item.is-active {
+                font-size: inherit;
+                @include themify($themes) {
+                    color: themed('indicatords-menu-active-color');
+                    font-weight: bold;
+                }
+                opacity: 1;
+            }
+            .el-tabs__active-bar {
+                height: 10px;
+                @include themify($themes) {
+                    background: themed("indicatords-menu-bar-bg");
+                    bottom: themed("indicatords-menu-bar-bottom");
+                    background-size: 100% 100%;
+                }
+            }
+        }
+
+        .el-tabs__content {
+            top: 6px;
+        }
+    }
+    .content {
+        position: relative;
+        margin: 0 auto;
+        width: 1880px;
+        .grid-content {
+            width: 455px;
+            height: 892px;
+            margin-right: 20px;
+            h2 {
+                margin-bottom: 20px;
+                @include themify($themes) {
+                    color: themed("sub-main-color");
+                }
+            }
+            .target-item {
+                margin-bottom: 18px;
+                .target {
+                    position: relative;
+                    cursor: pointer;
+                    .detail {
+                        cursor: not-allowed;
+                    }
+                    .naIndex {
+                        width: 306px;
+                        @include themify($themes) {
+                            color: themed("key-word-color");
+                        }
+                    }
+                    .score {
+                        margin-right: 28px;
+                    }
+                    .iconfont {
+                        position: absolute;
+                        right: 1px;
+                        top: 2px;
+                        font-size: 18px;
+                        font-weight: normal;
+                    }
+                    .icondabiaokongzhi {
+                        @include themify($themes) {
+                            color: themed("up-color");
+                        }
+                    }
+                    .iconguanbi2 {
+                        @include themify($themes) {
+                            color: themed("down-color");
+                        }
+                    }
+                }
+
+                .text {
+                    margin-top: 12px;
+                    position: relative;
+                        @include themify($themes) {
+                            color: themed("key-word-color");
+                        }
+                    .valuePlan {
+                        position: absolute;
+                        left: 124px;
+                        opacity: .8;
+                        @include themify($themes) {
+                            color: themed("normal-word-color");
+                        }
+                    }
+                    .diff {
+                        position: absolute;
+                        left: 270px;
+                        opacity: .8;
+                        @include themify($themes) {
+                            color: themed("normal-word-color");
+                        }
+                    }
+                }
+            }
+        }
+        .grid-content:nth-child(4) {
+            margin: 0;
+        }
+    }
+}
+.firstGrade-tooltip {
+    max-width: 200px;
+}

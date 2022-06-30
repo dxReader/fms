@@ -1,0 +1,350 @@
+.workload {
+    .content {
+        position: relative;
+        margin: 0 auto;
+        width: 1880px;
+
+        .left-main {
+            width: 376px;
+            height: 872px;
+            padding-left: 0;
+            padding-right: 0;
+
+            .search {
+                padding: 0 20px;
+            }
+
+            .disease {
+                margin: 30px 0 10px 0;
+
+                .rank-title {
+                    display: inline-block;
+                    margin: 0 0 10px 20px;
+                    line-height: 1;
+                    cursor: pointer;
+
+                    .triangle {
+                        display: inline-block;
+                        position: relative;
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    .rank-icon {
+                        position: absolute;
+                        font-size: 20px;
+                        transform: scale(.5, .5);
+                        @include themify($themes) {
+                            color: rgba(themed('main-color'), .2);
+                        }
+
+                        &.iconrankbottom {
+                            top: 8px;
+                            left: 0;
+                        }
+
+                        &.icon-active {
+                            @include themify($themes) {
+                                color: themed('main-color')
+                            }
+                        }
+                    }
+                }
+
+                .lists {
+                    height: 734px;
+                    overflow-y: auto;
+
+                    .item {
+                        height: 58px;
+                        line-height: 58px;
+                        padding: 0 20px;
+                        cursor: pointer;
+
+                        .name {
+                            display: inline-block;
+                            width: 240px;
+                            height: 100%;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+
+                        .num {
+                            float: right;
+                        }
+                    }
+                }
+
+                .loadMore {
+                    text-align: center;
+                    opacity: .6;
+
+                    @include themify($themes) {
+                        color: themed("main-color");
+                    }
+                }
+            }
+        }
+
+        .top-main {
+            position: absolute;
+            top: 5px;
+            left: 398px;
+            width: 1483px;
+
+            .title {
+                height: 38px;
+
+                @include themify($themes) {
+                    color: themed("key-word-color");
+                }
+            }
+
+            .block {
+                position: relative;
+                height: 428px;
+
+                .top-left {
+                    width: 746px;
+                    height: 350px;
+                    position: relative;
+
+                    .top-item {
+                        height: 84px;
+                        border-radius: 5px;
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+
+                        @include themify($themes) {
+                            border: 1px solid rgba(themed('sub-main-color'), .2);
+                        }
+
+                        .item-icon {
+                            width: 60px;
+                            height: 60px;
+                            line-height: 60px;
+                            border-radius: 8px;
+                            margin: 14px;
+                            text-align: center;
+                            font-size: 30px;
+
+                            @include themify($themes) {
+                                color: themed('icon-color1');
+                                background-color: rgba(themed('icon-color1'), .12);
+                            }
+                        }
+
+                        .sec-icon {
+                            @include themify($themes) {
+                                color: themed('icon-color2');
+                                background-color: rgba(themed('icon-color2'), .12);
+                            }
+                        }
+
+                        .third-icon {
+                            @include themify($themes) {
+                                color: themed('icon-color3');
+                                background-color: rgba(themed('icon-color3'), .12);
+                            }
+                        }
+
+                        .item-word {
+                            height: 84px;
+                            line-height: 84px;
+                            font-size: 28px;
+
+                            span {
+                                font-size: 16px;
+
+                                @include themify($themes) {
+                                    color: themed("normal-word-color");
+                                }
+                            }
+                        }
+
+                        table {
+                            width: 164px;
+
+                            tr {
+                                height: 80px;
+                                font-size: 20px;
+                            }
+
+                        }
+                    }
+
+                    .item-width1 {
+                        width: 270px;
+
+                        @include themify($themes) {
+                            background-color: rgba(themed('icon-color1'), .02);
+                        }
+                    }
+
+                    .item-width2 {
+                        width: 210px;
+
+                        @include themify($themes) {
+                            background-color: rgba(themed('icon-color2'), .02);
+                        }
+                    }
+
+                    .item-width3 {
+                        width: 220px;
+
+                        @include themify($themes) {
+                            background-color: rgba(themed('icon-color3'), .02);
+                        }
+                    }
+
+                    .top-item:nth-child(3) {
+                        margin-right: 0;
+                    }
+
+                    .bottom-con {
+                        position: relative;
+                        clear: both;
+                        top: 0;
+
+                        .line1 {
+                            width: 746px;
+                            height: 1px;
+                            position: absolute;
+                            top: 116px;
+                            opacity: .5;
+
+                            @include themify($themes) {
+                                border-top: 1px solid themed("sub-color");
+                            }
+                        }
+
+                        .line2 {
+                            width: 1px;
+                            height: 234px;
+                            position: absolute;
+                            left: 378px;
+                            opacity: .5;
+
+                            @include themify($themes) {
+                                border-left: 1px solid themed("sub-color");
+                            }
+                        }
+
+                        .term {
+                            width: 328px;
+                            height: 116px;
+                            padding: 10px 0 0 44px;
+
+                            .term-left {
+                                width: 184px;
+                                margin-right: 10px;
+
+                                .text {
+                                    margin-bottom: 20px;
+
+                                    i {
+                                        font-size: 30px;
+                                        margin-right: 14px;
+
+                                        @include themify($themes) {
+                                            color: themed("sub-main-color");
+                                        }
+                                    }
+
+                                    .value {
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+
+                            .term-right {
+                                width: 134px;
+                                padding-top: 10px;
+
+                                p {
+                                    margin-bottom: 22px;
+
+                                    .value {
+                                        margin: 0 10px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .term2,
+                        .term3 {
+                            height: 100px;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+
+                .top-right {
+                    width: 670px;
+                    height: 338px;
+                    margin-left: 20px;
+                    position: relative;
+                    padding: 15px 0 0 0;
+
+                    @include themify($themes) {
+                        border: 1px solid rgba(themed("sub-color"), 0.2);
+                        background-color: rgba(themed("td-hover-bg"), 0.08);
+                    }
+
+
+                    .tab {
+                        display: inline-block;
+
+                        @include themify($themes) {
+                            color: rgba(themed("normal-word-color"), .4);
+                        }
+
+                        >span {
+                            display: inline-block;
+                            line-height: 20px;
+                            cursor: pointer;
+                            margin: 0 6px;
+                            padding-left: 12px;
+
+                            @include themify($themes) {
+                                border-left: 1px solid rgba(themed("normal-word-color"), .4);
+                            }
+
+                            &:first-child {
+                                border-left: none;
+                            }
+                        }
+
+                        .active {
+                            @include themify($themes) {
+                                color: themed("normal-word-color");
+                            }
+                        }
+                    }
+
+                    .chart {
+                        width: 670px;
+                        height: 260px;
+                    }
+                }
+            }
+        }
+
+        .bottom-main {
+            position: absolute;
+            width: 1483px;
+            left: 398px;
+            top: 490px;
+
+            .block {
+                width: 480px;
+                height: 382px;
+            }
+
+            .block:nth-child(2) {
+                margin: 0 20px;
+            }
+        }
+    }
+}

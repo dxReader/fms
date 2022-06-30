@@ -1,0 +1,128 @@
+.patient-new {
+    .content {
+        margin-top: -20px;
+        margin-left: 20px;
+    }
+    .patient-box {
+        margin-right: 20px;
+        margin-top: 20px;
+        width: 612px;
+        height: 426px;
+        .patient-box-header {
+            white-space: nowrap;
+            .name {
+                @include themify($themes) {
+                    color: themed("normal-word-color");
+                }
+                cursor: pointer;
+            }
+            .value {
+                @include themify($themes) {
+                    color: themed("key-word-color");
+                }
+            }
+        }
+        .chart2 {
+            margin-top: 20px;
+            height: calc(100% - 70px);
+        }
+        .el-table td {
+            padding: 20px 0;
+        }
+    }
+
+    .process-table {
+        li {
+            display: flex;
+            align-items: center;
+            padding: 0 18px;
+            height: 42px;
+            &:hover {
+                @include themify($themes) {
+                    background-color: themed("td-hover-bg");
+                }
+            }
+            .icon1 {
+                flex: 0 0 40px;
+                width: 40px;
+                .iconfont {
+                    vertical-align: middle;
+                    margin-right: 20px;
+                    width: 22px;
+                    font-size: 22px;
+                    @include themify($themes) {
+                        color: themed("em-word-color");
+                    }
+                }
+            }
+            .icon {
+                flex: 0 0 100px;
+                width: 100px;
+                height: 100%;
+                position: relative;
+            }
+            .name,
+            .value {
+                flex: 1;
+            }
+            .step-inner {
+                position: absolute;
+                top: calc(50% - 3px);
+                right: 10px;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                @include themify($themes) {
+                    background-color: rgba(themed("sub-main-color"), 0.6);
+                }
+            }
+            .line {
+                position: absolute;
+                top: 0;
+                right: 12px;
+                width: 2px;
+                height: 100%;
+                @include themify($themes) {
+                    background-color: rgba(themed("sub-main-color"), 0.11);
+                }
+                &::after {
+                    display: block;
+                    position: absolute;
+                    width: 80px;
+                    height: 1px;
+                    top: 50%;
+                    right: 3px;
+                    content: "";
+                    @include themify($themes) {
+                        border-top: 1px rgba(themed("sub-main-color"), 0.39)
+                            dashed;
+                    }
+                }
+            }
+            .guahao {
+                .step-inner {
+                    top: calc(50% - 4px);
+                    right: 9px;
+                    width: 8px;
+                    height: 8px;
+                    &::before {
+                        position: absolute;
+                        right: -3px;
+                        top: -3px;
+                        content: "";
+                        display: inline-block;
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 50%;
+                        @include themify($themes) {
+                            background-color: rgba(
+                                themed("sub-main-color"),
+                                0.3
+                            );
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

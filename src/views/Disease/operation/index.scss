@@ -1,0 +1,211 @@
+.disOperation {
+    .content {
+        position: relative;
+        margin: 0 auto;
+        width: 1880px;
+        .left-main {
+            width: 382px;
+            height: 892px;
+            padding: 20px 0;
+            .search {
+                padding: 0 20px;
+            }
+            .disease {
+                margin: 30px 0 10px;
+                .rank-title {
+                    display: inline-block;
+                    margin: 0 20px 10px 28px;
+                    line-height: 1;
+                    cursor: pointer;
+                    .triangle {
+                        display: inline-block;
+                        position: relative;
+                        width: 20px;
+                        height: 20px;
+                        top: 3px;
+                    }
+                    .rank-icon {
+                        position: absolute;
+                        font-size: 20px;
+                        transform: scale(.5, .5);
+                        @include themify($themes) {
+                            color: rgba(themed('main-color'), .2);
+                        }
+                        &.iconrankbottom {
+                            top: 8px;
+                            left: 0;
+                        }
+                        &.icon-active {
+                            @include themify($themes) {
+                                color: themed('main-color')
+                            }
+                        }
+                    }
+                }
+                .lists {
+                    position: relative;
+                    height: 740px;
+                    overflow-y: auto;
+                    .item {
+                        padding: 25px 28px;
+                        cursor: pointer;
+                        .name {
+                            display: inline-block;
+                            width: 260px;
+                            height: 100%;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        .num {
+                            float: right;
+                        }
+                    }
+                    .loadMore {
+                        cursor: pointer;
+                        text-align: center;
+                        opacity: .6;
+                        @include themify($themes) {
+                            color: themed("main-color");
+                        }
+                    }
+                    .gl-noData {
+                        position: absolute;
+                        top: 0;
+                    }
+                }
+            }
+        }
+        .right-main {
+            position: absolute;
+            top: 0;
+            left: 404px;
+            width: calc(100% - 404px);
+            .mainsrp {
+                // margin: 6px 0;
+                height: 40px;
+                & > div {
+                    display: inline-block;
+                    @include themify($themes) {
+                        color: themed("key-word-color");
+                    }
+                }
+                .gl-box-link {
+                    margin-left: 27px;
+                    cursor: pointer;
+                }
+                .det {
+                    .names {
+                        display: inline-block;
+                        margin-right: 10px;
+                    }
+                    .close {
+                        cursor: pointer;
+                        margin: 0 4px;
+                        // font-size: 14px;
+                    }
+                }
+                .clearAll {
+                    margin-left: 15px;
+                    cursor: pointer;
+                    font-weight: 100;
+                    @include themify($themes) {
+                        color: themed('main-color')
+                    }
+                }
+            }
+            .block {
+                height: 416px;
+            }
+            .creens {
+                position: relative;
+                margin-bottom: 20px;
+                .card {
+                    position: absolute;
+                    width: 380px;
+                    height: 180px;
+                    .type-icon{
+                        display: inline-block;
+                        width: 26px;
+                        height: 22px;
+                        vertical-align: top;
+                        margin-right: 10px;
+                        @include themify($themes) {
+                            background: url('#{themed("bg-url")}/disease/type_icon.png');
+                            background-size: 100% 100%;
+                        }
+                    }
+                    .chart {
+                        width: 100%;
+                        height: 140px;
+                    }
+                    &:nth-child(2){
+                        top: 20px;
+                        right: 0;
+                    }
+                    &:nth-child(3){
+                        left: 20px;
+                        bottom: 0;
+                    }
+                    &:nth-child(4){
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+                .center {
+                    position: absolute;
+                    width: 410px;
+                    height: 100%;
+                    top: 0;
+                    left: calc((100% - 410px) / 2);
+                    .center-chart {
+                        position: absolute;
+                        top: 106px;
+                        width: 410px;
+                        height: 220px;
+                        @include themify($themes) {
+                            background: url('#{themed("bg-url")}/disease/op_bg.png');
+                            background-size: 100% 100%;
+                        }
+                        
+                    }
+                    .des {
+                        position: absolute;
+                        bottom: 54px;
+                        width: 100%;
+                        font-size: 16px;
+                        text-align: center;
+                    }
+                    .statis {
+                        position: absolute;
+                        top: 83px;
+                        // font-size: 30px;
+                        width: 100%;
+                        text-align: center;
+                        .num {
+                            margin: 0 30px;
+                            > strong {
+                                @include themify($themes) {
+                                    color: themed('normal-word-color')
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .totalNum {
+                font-size: 16px;
+                @include themify($themes) {
+                    color: themed('normal-word-color')
+                }
+            }
+            .el-table__body-wrapper {
+                height: 260px;
+                overflow-y: auto;
+                tr {
+                    pointer-events: none;
+                } 
+            }
+        }
+    }
+}

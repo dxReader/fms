@@ -1,0 +1,105 @@
+.workload {
+    .left {
+        width: 396px;
+        height: 729px;
+        &.gl-box-default {
+            padding: 20px 0;
+        }
+        .left-head {
+            padding-left: 20px;
+            input {
+                width: 98px;
+                height: 44px;
+                font-size: 26px;
+                color: #111;
+                margin: -10px 0 0 7px;
+                background:rgba(101, 177, 231, .08);
+                border:1px solid rgba(101, 177, 231, 1);
+                text-align: right;
+            }
+            .iconxiugai2 {
+                margin-left: 10px;
+                margin-top: 3px;
+                cursor: pointer;
+                @include themify($themes) {
+                    color: themed('main-color');
+                }
+            }
+        }
+        .left-content {
+            margin-top: 60px;
+            .title {
+                padding-left: 20px;
+            }
+            .table-head {
+                height: 50px;
+                line-height: 50px;
+                background: rgba(244, 245, 247, 1);
+                padding: 0 20px;
+                margin-top: 20px;
+                .header-name{
+                    float: left;
+                }
+                .sort-box {
+                    line-height: normal !important;
+                    display: block !important;
+                    padding: 0;
+                    display: inline-block !important;
+                    margin-left: 5px;
+                    margin-top: 2px;
+                    div:nth-child(1) {
+                        line-height: normal !important;
+                        display: block !important;
+                        height: 0;
+                        line-height: 0;
+                        font-size: 0;
+                        width: 0;
+                        border-right: 7px solid transparent;
+                        border-left: 7px solid transparent;
+                        cursor: pointer;
+                        @include themify($themes) {
+                            border-bottom: 7px solid rgba(themed('main-color'), .2);
+                        }
+                        padding: 0;
+                        margin-bottom: 2px;
+                        &.active {
+                            @include themify($themes) {
+                                border-bottom: 7px solid themed('main-color');
+                            }
+                        }
+                    }
+                    div:nth-child(2) {
+                        line-height: normal !important;
+                        display: block !important;
+                        height: 0;
+                        line-height: 0;
+                        font-size: 0;
+                        width: 0;
+                        border-left: 7px solid transparent;
+                        border-right: 7px solid transparent;
+                        cursor: pointer;
+                        padding: 0;
+                        @include themify($themes) {
+                            border-top: 7px solid rgba(themed('main-color'), .2);
+                        }
+                        &.active {
+                            @include themify($themes) {
+                                border-top: 7px solid themed('main-color');
+                            }
+                        }
+                    }
+                }
+            }
+            .table-line {
+                height: 50px;
+                line-height: 50px;
+                padding: 0 20px;
+            }
+        }
+    }
+    .right {
+        width: 1396px;
+        height: 729px;
+        position: relative;
+    }
+}

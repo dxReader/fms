@@ -1,0 +1,453 @@
+.patient1 {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0;
+    position: relative;
+
+    @include themify($themes) {
+        background: url('#{themed("bg-url")}/patient2/patient_bg.jpg') no-repeat top;
+        background-size: contain;
+    }
+
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity .5s;
+    }
+
+    .fade-enter,
+    .fade-leave-to
+
+    /* .fade-leave-active below version 2.1.8 */
+        {
+        opacity: 0;
+    }
+
+    // 菜单样式
+    .patient1-top {
+        display: inline-block;
+        margin-left: 50px;
+        font-size: 14px;
+        width: 100%;
+        height: 100px;
+        overflow: hidden;
+        overflow-x: auto;
+
+        // 日期样式
+        .patient1-date-box {
+            width: 160px;
+            height: 40px;
+            position: relative;
+            z-index: 2;
+            top: 50%;
+            margin: -20px 0 0 12px;
+
+            .cascaderBox {
+                top: 10px;
+            }
+        }
+
+        .gl-menus-main {
+            margin-left: 140px;
+        }
+    }
+
+    .patient1-left,
+    .patient1-right {
+        width: 526px;
+        height: 884px;
+        margin: 0 0 0 20px;
+        position: relative;
+    }
+
+    .patient1-right {
+        margin: 0 20px 0 0;
+    }
+
+    .patient1-center {
+        width: calc(100% - 1096px);
+        height: 884px;
+        margin-top: 0;
+        position: relative;
+
+        .patient1-right-top {
+            width: 760px;
+            height: 484px;
+            margin: 0 32px;
+            position: relative;
+
+            .process-box {
+                width: 200px;
+                min-height: 200px;
+
+                .title {
+                    width: 200px;
+                    text-align: center;
+                }
+
+                .icon {
+                    margin: 0 auto;
+                }
+
+                .detail {
+                    width: 290px;
+                    text-align: left;
+                    margin-top: 4px;
+
+                    >div {
+                        width: 290px;
+                        height: 28px;
+
+                        i {
+                            margin: 4px;
+                            cursor: pointer;
+
+                            @include themify($themes) {
+                                color: themed('main-color');
+                            }
+                        }
+                    }
+                }
+
+                .title-change {
+                    font-size: 16px;
+                    position: relative;
+
+                    @include themify($themes) {
+                        color: themed('sub-main-color');
+                    }
+                }
+
+                .title-def {
+                    font-size: 16px;
+                    position: relative;
+
+                    @include themify($themes) {
+                        color: themed('normal-word-color');
+                    }
+                }
+
+                .text-change {
+                    @include themify($themes) {
+                        color: themed('sub-main-color');
+                    }
+
+                    .num {
+                        font-size: 18px;
+                        padding-left: 12px;
+                    }
+                }
+
+                .text-def {
+                    font-size: 14px;
+
+                    @include themify($themes) {
+                        color: themed('normal-word-color');
+                    }
+
+                    .num {
+                        font-size: 18px;
+                        padding-left: 12px;
+                    }
+                }
+
+                .text {
+                    display: inline-block;
+                    height: 26px;
+                    line-height: 26px;
+                    .iconshujuqiapian {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .icon {
+                .icon-def {
+                    width: 50px;
+                    height: 58px;
+                    margin: 0 auto;
+                    transition: all .5s;
+                    cursor: pointer;
+
+                    @include themify($themes) {
+                        background: url('#{themed("bg-url")}/patient2/line_icon_d.png') no-repeat top;
+                        background-size: 100% 100%;
+                    }
+                }
+
+                .icon-change {
+                    width: 70px;
+                    height: 82px;
+                    transition: all .5s;
+                    margin: 0 auto;
+                    cursor: pointer;
+
+                    @include themify($themes) {
+                        background: url('#{themed("bg-url")}/patient2/line_icon_d.png') no-repeat;
+                        background-size: 100% 100%;
+                        filter: drop-shadow(0 0 0 themed('main-color')) drop-shadow(0 0 0 themed('main-color')) drop-shadow(0 0 12px themed('main-color'));
+                        -webkit-filter: drop-shadow(0 0 0 themed('main-color')) drop-shadow(0 0 0 themed('main-color')) drop-shadow(0 0 12px themed('main-color'));
+                    }
+                }
+            }
+
+            .process0 {
+                position: absolute;
+                top: 152px;
+                left: 0;
+
+                .icon {
+                    .icon-def {
+                        cursor: default;
+                    }
+                }
+
+                .text {
+                    cursor: default;
+                }
+            }
+
+            .process1 {
+                position: absolute;
+                top: 300px;
+                left: 98px;
+
+                .detail {
+                    width: 190px;
+                    position: absolute;
+                    left: 10px;
+                }
+            }
+
+            .process2 {
+                position: absolute;
+                top: 82px;
+                left: 196px;
+
+                .detail {
+                    width: 160px;
+                    position: absolute;
+                    top: -60px;
+                    left: 6px;
+                }
+            }
+
+            .process3 {
+                position: absolute;
+                top: 168px;
+                left: 404px;
+
+                .detail {
+                    position: absolute;
+                    top: -60px;
+                }
+            }
+
+            .process4 {
+                position: absolute;
+                top: 197px;
+                left: 550px;
+
+                .detail {
+                    width: 190px;
+                    position: absolute;
+                    left: 10px;
+                }
+            }
+
+            .process5 {
+                position: absolute;
+                top: 320px;
+                left: 350px;
+            }
+        }
+
+        .patient1-right-bottom {
+            width: 784px;
+            height: 386px;
+            margin: 0 20px;
+            position: absolute;
+            bottom: 0;
+
+            #leftLine {
+                width: 720px;
+                height: 304px;
+                margin-left: 14px;
+
+                .lineHeighChart {
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+
+    .patient1-box {
+        float: left;
+        width: 456px;
+
+        .con-bg {
+            @include themify($themes) {
+                background-color: themed('table-bg');
+            }
+        }
+
+        .box-con {
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            width: 482px;
+            height: 380px;
+
+            .detail-link {
+                position: absolute;
+                right: 0;
+                width: 88px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+                text-align: center;
+
+                @include themify($themes) {
+                    color: themed('main-color');
+                }
+            }
+
+            .con {
+                width: 482px;
+            }
+
+            #myBar {
+                width: 478px;
+                height: 356px;
+            }
+
+            .gl-noData {
+                position: absolute;
+            }
+        }
+    }
+
+    h4 {
+        padding-bottom: 20px;
+        width: 300px;
+        font-size: 18px;
+
+        @include themify($themes) {
+            color: themed('normal-word-color');
+        }
+    }
+
+    .title-card {
+        .data-card-base {
+            width: 100%;
+            height: 100%;
+
+            @include themify($themes) {
+                border-right: 1px dashed themed('main-color');
+                border-bottom: 1px dashed themed('main-color');
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 95%;
+                width: 2px;
+
+                @include themify($themes) {
+                    border-left: 1px dashed themed('main-color');
+                }
+            }
+
+            .card-wraper {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 2px;
+
+                @include themify($themes) {
+                    border-top: 1px dashed themed('main-color');
+                }
+            }
+
+            .card-title {
+                font-size: 20px;
+                position: absolute;
+                top: -15px;
+                left: 0;
+
+                @include themify($themes) {
+                    color: themed('main-color');
+                }
+            }
+
+            .top {
+                height: 640px;
+                overflow: auto;
+            }
+        }
+
+        .headP {
+            width: 126px;
+            height: 157px;
+            position: relative;
+            top: 38px;
+            left: 36px;
+            margin-right: 40px;
+            text-align: center;
+            border: 1px solid #06719c;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .headText {
+            width: 236px;
+            margin-top: 30px;
+            margin-left: 30px;
+
+            .text {
+                font-size: 16px;
+                line-height: 30px;
+
+                label:nth-child(1) {
+                    opacity: .7;
+                    vertical-align: top;
+                }
+
+                label:nth-child(2) {
+                    display: inline-block;
+                    width: 180px;
+                }
+            }
+        }
+
+        .expertise {
+            width: 380px;
+            position: relative;
+            margin: 10px 0 30px 28px;
+            font-size: 16px;
+            line-height: 20px;
+
+            label:nth-child(1) {
+                opacity: .7;
+            }
+        }
+
+        .detail {
+            width: 380px;
+            position: relative;
+            margin-left: 30px;
+            font-size: 16px;
+            line-height: 30px;
+
+            label {
+                text-indent: 2em;
+                display: inline-block;
+            }
+        }
+    }
+}

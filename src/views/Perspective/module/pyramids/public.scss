@@ -1,0 +1,193 @@
+/*全局透视*/
+//金字塔背景
+$pyramid: "/perspective/pyramid.png";
+//左节点背景
+$node: "/perspective/nodeleft.png";
+//右边背景图
+$noderight: "/perspective/noderight.png";
+//选中
+$selection: "/perspective/selection.png";
+$selectionright: "/perspective/selectionright.png";
+//节点边框位置
+$nodeList: (
+    (
+        bgimg: $node,
+        left: -250px,
+        titleLeft: 280px,
+        titleTop: 90px,
+        children: (
+            (
+                top: 70px,
+            ),
+            (
+                top: 30px,
+            ),
+            (
+                top: 0,
+            ),
+            (
+                top: -50px,
+            ),
+            (
+                top: -100px,
+            ),
+            (
+                top: -170px,
+            ),
+        ),
+    ),
+    (
+        bgimg: $noderight,
+        left: 720px,
+        titleLeft: 280px,
+        titleTop: 220px,
+        children: (
+            (
+                top: 107px,
+            ),
+            (
+                top: 80px,
+            ),
+            (
+                top: 85px,
+            ),
+            (
+                top: 20px,
+            ),
+            (
+                top: -40px,
+            ),
+            (
+                top: -100px,
+            ),
+        ),
+    ),
+    (
+        bgimg: $node,
+        left: -250px,
+        titleLeft: 270px,
+        titleTop: 352px,
+        children: (
+            (
+                top: 330px,
+            ),
+            (
+                top: 300px,
+            ),
+            (
+                top: 280px,
+            ),
+            (
+                top: 280px,
+            ),
+            (
+                top: 260px,
+            ),
+            (
+                top: 240px,
+            ),
+        ),
+    ),
+    (
+        bgimg: $noderight,
+        left: 720px,
+        titleLeft: 280px,
+        titleTop: 529px,
+        children: (
+            (
+                top: 503px,
+            ),
+            (
+                top: 470px,
+            ),
+            (
+                top: 430px,
+            ),
+            (
+                top: 390px,
+            ),
+            (
+                top: 320px,
+            ),
+            (
+                top: 300px,
+            ),
+        ),
+    )
+);
+
+//背景图片
+@mixin bg($img, $w, $h, $x, $y) {
+    @include themify($themes) {
+        background-image: url('#{themed("bg-url")}'+$img);
+        background-size: $w $h;
+        background-repeat: no-repeat;
+        background-position: $x $y;
+    }
+    //position: relative;
+    // background-image: url($img);
+    // background-size: $w $h;
+    // background-repeat: no-repeat;
+    // background-position: $x $y;
+}
+
+//定位1是上左侧 2是上右侧
+@mixin positions($type, $option, $l, $t) {
+    position: $option;
+    top: $t;
+    @if $type==1 {
+        left: $l;
+    } @else {
+        right: $l;
+    }
+}
+
+//字体
+@mixin font($h, $f, $weight, $c, $margin) {
+    height: $h;
+    font-size: $f;
+    font-weight: $weight;
+    color: $c;
+    margin: $margin;
+}
+
+//全局透视节点
+@mixin nodeLists($clor, $defaultColor) {
+    height: 62px;
+    line-height: 62px;
+    color: $defaultColor;
+    .icon {
+        width: 32px;
+        display: inline-block;
+        color: $clor;
+    }
+    .node {
+        width: 140px;
+        font-size: 20px;
+        display: inline-block;
+        color: $defaultColor;
+    }
+    .proportion {
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+
+//数据层标题
+@mixin title($titleColor, $titleColor1, $titleColor2) {
+    height: 30px;
+    font-size: 28px;
+    font-weight: 600;
+    color: $titleColor;
+    line-height: 24px;
+    // background: linear-gradient(0deg, $titleColor1 0%, $titleColor2 51.904296875%, $default 100%);
+    background-image: -webkit-gradient(
+        linear,
+        0 0,
+        0 bottom,
+        from($titleColor1),
+        to($titleColor2)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

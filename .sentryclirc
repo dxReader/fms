@@ -1,0 +1,7 @@
+[defaults]
+url=http://192.168.199.211:9000/
+org=sentry
+project=vue
+
+[auth]
+token=95a673121cec4c77ba86271d069620b33bc19a1e776c4145a442f53274fa859e

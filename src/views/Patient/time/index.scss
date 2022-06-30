@@ -1,0 +1,304 @@
+.patient-time {
+    $top-h: 436px;
+    $bottom-h: 416px;
+    $op-bottom-content-h: 328px;
+    $ip-bottom-content-h: 332px;
+    .sub-title {
+        @include themify($themes) {
+            color: themed('normal-word-color');
+        } 
+    }
+    .trend-wrap {
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    .search {
+        height: 36px;
+        // font-weight: bold;
+        @include themify($themes) {
+            color: themed('key-word-color');
+        }
+        .close {
+            margin-left: 6px;
+            // font-size: 14px;
+            // font-weight: normal;
+        }
+    }
+    .time-left {
+        width: 426px;
+        height: 872px;
+        margin: 0 20px;
+        padding-right: 0;
+        .left-content {
+            height: 100%;
+        }
+        .rankIcon {
+            font-size: 17px;
+            @include themify($themes) {
+                color: themed('main-color');
+            }
+            cursor: pointer;
+        }
+        .isRank {
+            @include themify($themes) {
+                color: rgba(themed('main-color'), .2);
+            }
+            cursor: not-allowed;
+        }
+    }
+    .op {
+        .time-center {
+            width: 1016px;
+            .center-top {
+                margin-bottom: 20px;
+                .center-left {
+                    width: 396px;
+                    height: $top-h;
+                    .process-table {
+                        height: 370px;
+                        .table {
+                            height: 100%;
+                            li {
+                                display: flex;
+                                align-items: center;
+                                height: 46px;
+                                &:hover {
+                                    @include themify($themes) {
+                                        background-color: themed("td-hover-bg");
+                                    }
+                                }
+                                .icon1 {
+                                    flex: 0 0 40px;
+                                    width: 40px;
+                                    .iconfont {
+                                        vertical-align: middle;
+                                        margin-right: 20px;
+                                        width: 22px;
+                                        font-size: 22px;
+                                        @include themify($themes) {
+                                            color: themed("em-word-color");
+                                        }
+                                    }
+                                }
+                                .icon {
+                                    flex: 0 0 40px;
+                                    width: 40px;
+                                    height: 100%;
+                                    position: relative;
+                                }
+                                .name {
+                                    flex: 0 0 160px;
+                                    width: 160px;
+                                    white-space: nowrap;
+                                }
+                                .value {
+                                    flex: 1;
+                                    white-space: nowrap; 
+                                }
+                                .step-inner{
+                                    position: absolute;
+                                    top: calc(50% - 3px);
+                                    right: 6px;
+                                    width: 6px;
+                                    height: 6px;
+                                    border-radius: 50%;
+                                    @include themify($themes) {
+                                        background-color: rgba(themed("sub-main-color"), .6);
+                                    }
+                                }
+                                .line {
+                                    position: absolute;
+                                    top:0;
+                                    right: 8px;
+                                    width: 2px;
+                                    height: 100%;
+                                    @include themify($themes) {
+                                        background-color: rgba(themed("sub-main-color"), .1);
+                                    }
+                                    &::after {
+                                        display: block;
+                                        position: absolute;
+                                        width: 30px;
+                                        height: 1px;
+                                        top: 50%;
+                                        right: 3px;
+                                        content: '';
+                                        @include themify($themes) {
+                                            border-top: 1px rgba(themed("sub-main-color"), .39) dashed;
+                                        }
+                                    }
+                                }
+                                .guahao {
+                                    .step-inner {
+                                        top: calc(50% - 4px);
+                                        right: 5px;
+                                        width: 8px;
+                                        height: 8px;
+                                        &::before{
+                                            position: absolute;
+                                            right: -3px;
+                                            top: -3px;
+                                            content: '';
+                                            display: inline-block;
+                                            width: 14px;
+                                            height: 14px;
+                                            border-radius: 50%;
+                                            @include themify($themes) {
+                                                background-color: rgba(themed("sub-main-color"), .3);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }                        
+                    }
+                }
+                .center-right {
+                    width: 600px;
+                    height: $top-h;
+                    .opDept-legend {
+                        display: flex;
+                        justify-content: center;
+                        padding: 0 60px;
+                        height: 42px;
+                        p {
+                            padding-top: 16px;
+                            padding-left: 36px;
+                            flex: 1;
+                            text-align: center;
+                            @include themify($themes) {
+                                color: themed("key-word-color");
+                            }
+                        }
+                    }
+                    .chart {
+                        height: 318px;
+                    }
+                }
+            }
+            .center-bottom {
+                height: $bottom-h;
+                .chart {
+                    height: $op-bottom-content-h;
+                }
+            }
+
+            // #op-time-trend {
+            //     height: 100%; 
+            // }
+            // #peakology {
+            //     height: 100%;
+            // }
+        }
+        .time-right {
+            width: 396px;
+            // height: 880px;
+            margin: 0 20px;
+            .right-top {
+                margin-bottom: 20px;
+                height: $top-h;
+                .rank-table {
+                    height: 350px;
+                    .el-table td {
+                        padding: 12px 0;
+                    }
+                }
+            }
+            .right-bottom {
+                // height: 380px;
+                height: $bottom-h;
+                .chart {
+                    height: $op-bottom-content-h;
+                }
+                #op-pie {
+                    height: $op-bottom-content-h;
+                }
+            }
+        }
+    }
+    .ip {
+        .chart {
+            height: 100%;
+        }
+        .search {
+            height: 36px;
+        }
+        .time-center {
+            width: 946px;
+            .center-top {
+                height: $top-h;
+                margin-bottom: 20px;
+                .chart {
+                    height: 290px; 
+                }
+            }
+            .center-bottom {
+                height: $bottom-h;
+                .chart {
+                    width: 420px;
+                    height: $ip-bottom-content-h;
+                }
+            }
+            // #ep-time-trend {
+            //     height: $ip-bottom-content-h; 
+            // }
+            // #ep-age-pie, #ep-medical-time {
+            //     height: $ip-bottom-content-h;
+            // }
+        }
+        .time-right {
+            width: 464px;
+            margin: 0 20px;
+            .right-top {
+                margin-bottom: 20px;
+                height: $top-h;
+                .rank-table {
+                    margin-top: 40px;
+                    height: 318px;
+                    .table {
+                        height: 100%;
+                        .tbody {
+                            height: 100%;
+                            overflow: auto;
+                            li {
+                                display: flex;
+                                align-items: center;
+                                padding: 0 18px;
+                                height: 52px;
+                                .name, .value, .pre {
+                                    flex: 1;
+                                }
+                                .value, .pre {
+                                    text-align: right;
+                                }
+                                &.key {
+                                    @include themify($themes) {
+                                        color: themed('em-word-color');
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .right-bottom {
+                height: $bottom-h;
+                .rank-table {
+                    height: $ip-bottom-content-h;
+                    .el-table td {
+                        padding: 15px 0;
+                    }   
+                }
+            }
+        }
+    }
+}
+.theme-1 {
+    .patient-time {
+        .trend-wrap {
+            background-color: rgba(0, 0, 0, 0.03);
+            background-image: linear-gradient(rgba(215, 223, 246, 0.03) 1px, transparent 0), linear-gradient(90deg, rgba(215, 223, 246, 0.03) 1px, transparent 0), linear-gradient(hsla(0, 0%, 10%, 0.03) 1px, transparent 0), linear-gradient(90deg, hsla(0, 0%, 10%, 0.03) 1px, transparent 0);
+            background-size: 8px 8px, 8px 8px;
+        }
+    }
+}

@@ -1,0 +1,204 @@
+.quality {
+    .left {
+        width: 804px;
+        height: 892px;
+        margin-left: 20px;
+        padding-left: 0;
+        padding-right: 0;
+
+        .el-select {
+            margin: 0 12px;
+        }
+
+        .left-top {
+            width: 804px;
+            height: 448px;
+            margin-bottom: 20px;
+        }
+
+        .left-bottom {
+            width: 804px;
+            height: 424px;
+
+            .bottom-title {
+                height: 50px;
+            }
+
+            .bottom-top {
+                overflow: auto;
+
+                .top-item {
+                    height: 84px;
+                    border-radius: 5px;
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                    @include themify($themes) {
+                        border: 1px solid rgba(themed('sub-main-color'), .2);
+                    }
+
+                    .item-icon {
+                        width: 58px;
+                        height: 58px;
+                        line-height: 58px;
+                        border-radius: 8px;
+                        margin: 14px;
+                        text-align: center;
+                        font-size: 30px;
+                        @include themify($themes) {
+                            color: themed('icon-color1');
+                            background-color: rgba(themed('icon-color1'), .12);
+                        }
+                    }
+
+                    .sec-icon {
+                        @include themify($themes) {
+                            color: themed('icon-color2');
+                            background-color: rgba(themed('icon-color2'), .12);
+                        }
+                    }
+
+                    .third-icon {
+                        @include themify($themes) {
+                            color: themed('icon-color3');
+                            background-color: rgba(themed('icon-color3'), .12);
+                        }
+                    }
+
+                    .item-word {
+                        height: 84px;
+                        line-height: 84px;
+                        font-size: 28px;
+
+                        span {
+                            font-size: 16px;
+                            @include themify($themes) {
+                                color: themed("normal-word-color");
+                            }
+                        }
+                    }
+
+                    table {
+                        width: 164px;
+
+                        tr {
+                            height: 80px;
+                            font-size: 20px;
+                        }
+
+                    }
+                }
+
+                .item-width1 {
+                    width: 268px;
+                    @include themify($themes) {
+                        background-color: rgba( themed('icon-color1'), .02);
+                    }
+                }
+
+                .item-width2 {
+                    width: 218px;
+                    @include themify($themes) {
+                        background-color: rgba( themed('icon-color2'), .02);
+                    }
+                }
+
+                .item-width3 {
+                    width: 228px;
+                    @include themify($themes) {
+                        background-color: rgba( themed('icon-color3'), .02);
+                    }
+                }
+
+                .top-item:nth-child(3) {
+                    margin-right: 0;
+                }
+            }
+
+            .bottom-con {
+                margin-left: 40px;
+                position: relative;
+
+                .line1 {
+                    width: 690px;
+                    height: 1px;
+                    position: absolute;
+                    top: 116px;
+                    opacity: .5;
+                    @include themify($themes) {
+                        border-top: 1px solid themed("sub-color");
+                    }
+                }
+
+                .line2 {
+                    width: 1px;
+                    height: 234px;
+                    position: absolute;
+                    left: 344px;
+                    opacity: .5;
+                    @include themify($themes) {
+                        border-left: 1px solid themed("sub-color");
+                    }
+                }
+
+                .term {
+                    width: 256px;
+                    height: 116px;
+                    padding-left: 88px;
+
+                    .text {
+                        margin: 20px 0;
+
+                        i {
+                            font-size: 30px;
+                            margin-right: 22px;
+                            @include themify($themes) {
+                                color: themed("sub-main-color");
+                            }
+                        }
+
+                        .value {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .center {
+        width: 516px;
+        height: 892px;
+        margin: 0 20px;
+        padding: 20px;
+
+        .gl-box-title {
+            margin-bottom: 38px;
+        }
+    }
+
+    .right {
+        width: 516px;
+        height: 892px;
+        padding: 20px;
+        
+        .gl-box-title {
+            margin-bottom: 38px;
+        }
+    }
+
+    .table-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 129px;
+    }
+
+    .table-box {
+        .el-table--scrollable-y .el-table__body-wrapper {
+            overflow-y: hidden;
+        }
+        .table-row {
+            height: 74px;
+        }
+    }
+}

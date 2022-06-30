@@ -1,0 +1,250 @@
+.three-grade {
+    .content {
+        display: flex;
+        margin: 0 20px;
+        .left {
+            width: 1270px;
+            height: 100px;
+            margin-right: 20px;
+            .left-top {
+                position: relative;
+                width: 100%;
+                height: 496px;
+                margin-bottom: 20px;
+                .title {
+                    @include themify($themes) {
+                        color: themed('key-word-color');
+                    }
+                    font-size: 26px;
+                    font-family: Microsoft YaHei;
+                    font-weight: 400;
+                }
+                .con {
+                    position: relative;
+                    // width: 1214px;
+                    height: 170px;
+                    margin: 30px 8px;
+                    padding: 20px 24px 40px;
+                    // background-color: rgba(204, 204, 204, 0.1);
+                    @include themify($themes) {
+                        background-color: themed('vario-bg-color');
+                    }
+                    .str {
+                        height: 100%;
+                        // margin: 30px 22px 30px 25px;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        line-height: 32px;
+                        @include themify($themes) {
+                            color: themed('normal-word-color');
+                        }
+                        .li {
+                            position: relative;
+                            margin-bottom: 18px;
+                            text-indent: 30px;
+                        }
+                        .li::before {
+                            display: inline-block;
+                            content: ' ';
+                            position: absolute;
+                            width: 8px;
+                            height: 8px;
+                            top: 12px;
+                            left: 10px;
+                            border-radius: 50%;
+                            @include themify($themes) {
+                                background-color: themed('normal-word-color');
+                            }
+                        }
+                    }
+                    .details {
+                        position: absolute;
+                        font-size: 16px;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        @include themify($themes) {
+                            color: themed('main-color');
+                        }
+                        bottom: 8px;
+                        right: 28px;
+                    }
+                    .details:hover {
+                        cursor: pointer;
+                    }
+                }
+                .list {
+                    display: flex;
+                    margin-left: 8px;
+                    li {
+                        text-align: center;
+                        width: 262px;
+                        height: 121px;
+                        margin-right: 53px;
+                        background: rgba(98, 169, 255, 0.06);
+                        border: 1px dashed rgba(98, 169, 255, 1);
+                        .li-title {
+                            line-height: 121px;
+                            font-family: Microsoft YaHei;
+                            font-weight: 400;
+                            @include themify($themes) {
+                                color: themed('key-word-color');
+                            }
+                        }
+                        .nowrap {
+                            line-height: 60px !important;
+                            width: 100%;
+                            display: inline-block;
+                        }
+                        .num {
+                            // line-height: 121px;
+                            margin-left: 11px;
+                            font-size: 36px;
+                            font-family: Microsoft YaHei;
+                            font-weight: 400;
+                            @include themify($themes) {
+                                color: themed('key-word-color');
+                            }
+                            vertical-align: -4px;
+                        }
+                    }
+                }
+                .list li:last-child {
+                    margin-right: 0;
+                }
+            }
+            .left-bottom {
+                width: 100%;
+                height: 376px;
+            }
+        }
+        .right {
+            width: 590px;
+            height: 892px;
+            .list-title {
+                font-size: 18px;
+                font-family: Microsoft YaHei;
+                font-weight: 400;
+                color: #111111;
+            }
+            .right-con {
+                height: 791px;
+                margin-top: 34px;
+                // overflow-y: auto;
+                li {
+                    display: flex;
+                    height: 90px;
+                    // background-color: rgba(204, 204, 204, 0.1);
+                    @include themify($themes) {
+                        background-color: themed('vario-bg-color');
+                    }
+                    line-height: 90px;
+                    margin-bottom: 20px;
+                    .right-title {
+                        width: 72%;
+                        padding-left: 21px;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        @include themify($themes) {
+                            color: themed('normal-word-color');
+                        }
+                        .span-title {
+                            height: 24px;
+                            line-height: 24px;
+                            display: inline-block;
+                            max-width: 90%;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            -o-text-overflow: ellipsis;
+                            white-space: nowrap;
+                            vertical-align: middle;
+                        }
+                        .iconshujuqiapian,
+                        .iconguanlian {
+                            vertical-align: -2px;
+                        }
+                    }
+                    .right-num {
+                        width: 28%;
+                        font-size: 20px;
+                        font-family: Microsoft YaHei;
+                        font-weight: 400;
+                        @include themify($themes) {
+                            color: themed('key-word-color');
+                        }
+                        text-align: right;
+                        padding-right: 33px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -o-text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+    .gl-bi:hover {
+        cursor: pointer;
+    }
+    .warning {
+        color: #d9454a !important;
+    }
+
+    .success {
+        color: #69b034 !important;
+    }
+
+    .iconguanlian {
+        margin-left: 8px;
+        font-size: 18px !important;
+        cursor: pointer;
+        @include themify($themes) {
+            color: themed('main-color');
+        }
+    }
+
+    .iconshujuqiapian {
+        font-size: 18px !important;
+    }
+
+    .fgDisplay {
+        position: absolute;
+        top: 18px;
+        right: 23px;
+        font-size: 59px;
+        // transform: translate(-50%, -50%);
+        animation: change .8s;
+        -moz-animation: change .8s;
+        -webkit-animation: change .8s;
+        -o-animation: change .8s;
+    }
+    @keyframes change {
+        from {
+            font-size: 350px;
+            opacity: 0;
+        }
+        to {
+            font-size: 59px;
+            opacity: 1;
+        }
+    }
+}
+
+.theme-1 {
+    .three-grade {
+        .content {
+            .left .left-top {
+                // .con {
+                //     background:rgba(22, 209, 235, .03);
+                // }
+                .list li {
+                    border: 1px solid rgba(3, 249, 252, .05);
+                    background: url('~src/assets/images/theme-1/stateIndicators/grid_bg.png') no-repeat center;
+                    background-size: contain;
+                }
+            }
+            // .right .right-con li {
+            //     background-color: rgba(22, 209, 235, .03);
+            // }
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.dept-income {
+    display: flex;
+    height: 728px;
+    justify-content: space-between;
+    .left {
+        padding: 10px;
+        width: 396px;
+        height: 100%;
+        // .current-row {
+        //     @include themify($themes) {
+        //         color: themed("key-word-color");
+        //         background: themed("menu-active-bg");
+        //     }
+        // }
+        /deep/ .el-table__body td {
+            padding: 20px 0;
+        }
+        // .el-table--striped .el-table__body tr.el-table__row--striped.current-row td,
+        // .el-table__body tr.current-row > td,
+        // .el-table__body tr.hover-row.current-row > td,
+        // .el-table__body tr.hover-row.el-table__row--striped.current-row > td {
+        //     background-color: transparent;
+        // }
+        /deep/ .el-tab-pane {
+            padding-top: 15px;
+        }
+    }
+    .center,
+    .right {
+        // padding: 0;
+        width: 687px;
+        height: 100%;
+        .head {
+            margin-bottom: 10px;
+            padding: 0 30px;
+            display: flex;
+            text-align: right;
+            .dept {
+                flex: 1;
+            }
+            .detail {
+                flex: 0 0 260px;
+            }
+        }
+        .list {
+            li {
+                height: 122px;
+                & > div {
+                    flex: 1;
+                }
+                .name {
+                    @include themify($themes) {
+                        color: themed("normal-word-color");
+                    }
+                }
+                .val {
+                    text-align: right;
+                    @include themify($themes) {
+                        color: themed("key-word-color");
+                    }
+                }
+                .val2 {
+                    flex: 0 0 260px;
+                }
+                .compare {
+                    margin-top: 20px;
+                    vertical-align: bottom;
+                    @include themify($themes) {
+                        color: rgba(themed("normal-word-color"), .8);
+                    }
+                }
+                .per {
+                    display: inline-block;
+                    width: 100px; 
+                }
+            }
+            
+        }
+    }
+}

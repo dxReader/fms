@@ -1,0 +1,133 @@
+.costIllness {
+    height: auto !important;
+    .content {
+        position: relative;
+        .left {
+            float: left;
+            width: 426px;
+            height: 873px;
+            margin-left: 21px;
+            padding-right: 0;
+            .chart{
+                height: 828px;
+                // margin:20px 0 0 30px;
+            }
+        }
+        .right {
+            float: left;
+            width: 1432px;
+            height: 898px;
+            margin-left: 21px;
+            position: relative;
+            .title {
+                span {
+                    @include themify($themes) {
+                        color: themed('key-word-color');
+                    }
+                }
+                i {
+                    font-size: 12px;
+                    cursor: pointer;
+                }
+            }
+            >div {
+                >div {
+                    .content-title {
+                        margin:22px 0 0 32px;
+                    }
+                }
+            }
+            #line {
+                margin-top: 20px;
+                height: 300px;
+            }
+            .pieChart {
+                margin-top: 20px;
+                height: 300px;
+            }
+            .left-top {
+                position: absolute;
+                top: 45px;
+                left: 0;
+                width: 848px;
+                height: 432px;
+                .tableBox {
+                    z-index: 10;
+                    position: relative;
+                    height: 432px;
+                    overflow: scroll;
+                    border: none;
+                    padding: 0 20px;
+                    @include themify($themes) {
+                        background: url('#{themed("bg-url")}/surPatients/net.png');
+                    }
+                    .el-table__empty-text {
+                        margin-top: 0;
+                        font-size: 16px;
+                        @include themify($themes) {
+                            color: themed("normal-word-color");
+                        }
+                    }
+                    .avgPrice {
+                        height: 62px;
+                        line-height: 62px;
+                        span {
+                            @include themify($themes) {
+                                color: themed('key-word-color');
+                            }
+                        }
+                    }
+                }
+            }
+            .gl-box-sub {
+                >div {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            .right-top {
+                position: absolute;
+                top: 45px;
+                right: 0;
+                width: 564px;
+                height: 432px;
+            }
+            .left-bottom {
+                position: absolute;
+                bottom: 26px;
+                left: 0;
+                width: 848px;
+                height: 376px;
+            }
+            .right-bottom {
+                position: absolute;
+                bottom: 26px;
+                right: 0;
+                width: 564px;
+                height: 376px;
+            }
+        }
+    }
+    .gl-box-title {
+        margin-bottom: 0;
+    }
+}
+.theme-2, .theme-3 {
+    .costIllness {
+        .tableBox {
+            z-index: 10;
+            position: relative;
+            height: 432px;
+            overflow: scroll;
+            background: none;
+            border: none;
+            padding: 0 20px;
+            background: #fff !important;
+            border: none !important; //版块边框
+            box-shadow: 0 4px 6px 1px rgba(33, 35, 39, .06) !important; //版块阴影
+        }
+    }
+}
